@@ -1,0 +1,67 @@
+# Localization configuration for peyajAuth using MiniMessage format
+# All standard RGB, gradients and styles are supported.
+
+prefix: "<gradient:gold:yellow>[peyajAuth]</gradient> "
+
+auth:
+  not-logged-in: "<red>You must authenticate to play on this server!</red>"
+  please-register: "<yellow>Please register using: <gold>/register <password> <confirmPassword></gold></yellow>"
+  please-login: "<yellow>Please log in using: <gold>/login <password></gold></yellow>"
+  already-authenticated: "<red>You are already authenticated!</red>"
+  already-registered: "<red>This account is already registered! Please log in.</red>"
+  success-register: "<green>You have successfully registered and logged in!</green>"
+  success-login: "<green>You have successfully logged in!</green>"
+  success-logout: "<green>You have logged out. Re-authenticate to play.</green>"
+  success-change-password: "<green>Your password has been changed successfully!</green>"
+  not-registered: "<red>Your account is not registered yet!</red>"
+  incorrect-password: "<red>Incorrect password! Please try again.</red>"
+  password-mismatch: "<red>The passwords do not match!</red>"
+  login-timeout: "<red>Login timeout exceeded!</red>"
+  premium-autologin: "<green>You are using a unique (premium) account! You have been auto-logged in.</green>"
+
+captcha:
+  gui-title: "Click the target item: <green>{target}</green>"
+  prompt: "<yellow>Solve the captcha to register/login! Code: <gold>{code}</gold> (Type: <gold>/captcha <code></gold>)</yellow>"
+  failed: "<red>Incorrect captcha! Please try again.</red>"
+  success: "<green>Captcha solved successfully! You may now authenticate.</green>"
+
+validation:
+  password-too-short: "<red>Password must be at least {min} characters long!</red>"
+  password-too-long: "<red>Password cannot be longer than {max} characters!</red>"
+  password-require-number: "<red>Password must contain at least one number!</red>"
+  password-require-uppercase: "<red>Password must contain at least one uppercase letter!</red>"
+  password-require-lowercase: "<red>Password must contain at least one lowercase letter!</red>"
+  max-accounts-exceeded: "<red>You have reached the maximum number of accounts allowed for your IP address ({max})!</red>"
+
+bruteforce:
+  account-locked: "<red>Your account has been locked due to too many failed login attempts! Try again in {minutes} minutes.</red>"
+  ip-locked: "<red>Your IP address has been locked due to too many failed login attempts! Try again in {minutes} minutes.</red>"
+  admin-alert: "<gold>[peyajAuth ALERT] Player {player} (IP: {ip}) has failed {attempts} login attempts!</gold>"
+
+admin:
+  reload: "<green>peyajAuth configurations reloaded successfully!</green>"
+  player-not-found: "<red>Player {player} was not found.</red>"
+  force-login-success: "<green>Successfully forced player {player} to log in.</green>"
+  force-logout-success: "<green>Successfully forced player {player} to log out.</green>"
+  unregister-success: "<green>Successfully unregistered player {player}.</green>"
+  set-premium-success: "<green>Successfully set {player} auth mode to PREMIUM.</green>"
+  set-cracked-success: "<green>Successfully set {player} auth mode to CRACKED.</green>"
+  info-title: "<yellow>--- peyajAuth Account Info: <gold>{player}</gold> ---</yellow>"
+  info-uuid-offline: "<yellow>Offline UUID: <gold>{uuid}</gold></yellow>"
+  info-uuid-premium: "<yellow>Premium UUID: <gold>{uuid}</gold></yellow>"
+  info-premium-status: "<yellow>Is Premium: <gold>{status}</gold></yellow>"
+  info-last-ip: "<yellow>Last IP: <gold>{ip}</gold></yellow>"
+  info-last-login: "<yellow>Last Login: <gold>{time}</gold></yellow>"
+  info-first-join: "<yellow>First Join: <gold>{time}</gold></yellow>"
+
+general:
+  no-permission: "<red>You do not have permission to execute this command!</red>"
+  only-players: "<red>This command can only be executed by players!</red>"
+  invalid-syntax: "<red>Invalid syntax! Usage: {usage}</red>"
+
+pin-pad:
+  title: "Enter PIN: <gold>{stars}</gold>"
+  setup-title: "Set new PIN: <gold>{stars}</gold>"
+  setup-confirm-title: "Confirm PIN: <gold>{stars}</gold>"
+  mismatch: "<red>The PINs do not match! Please try again.</red>"
+  invalid-length: "<red>PIN must be exactly {length} digits long!</red>"

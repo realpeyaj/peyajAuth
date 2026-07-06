@@ -1,0 +1,39 @@
+# Permissions definition file for peyajAuth
+
+permissions:
+  peyajauth.login:
+    description: Allows the player to log in.
+    default: true
+  peyajauth.register:
+    description: Allows the player to register.
+    default: true
+  peyajauth.logout:
+    description: Allows the player to log out.
+    default: true
+  peyajauth.changepassword:
+    description: Allows the player to change their password.
+    default: true
+  peyajauth.admin:
+    description: Gives access to all administrative commands.
+    default: op
+    children:
+      peyajauth.reload: true
+      peyajauth.force: true
+      peyajauth.unregister: true
+      peyajauth.info: true
+      peyajauth.migrate: true
+  peyajauth.reload:
+    description: Allows reloading the configuration files.
+    default: op
+  peyajauth.force:
+    description: Allows force logging in/out players.
+    default: op
+  peyajauth.unregister:
+    description: Allows unregistering player accounts.
+    default: op
+  peyajauth.info:
+    description: Allows viewing account information.
+    default: op
+  peyajauth.migrate:
+    description: Allows database migrations.
+    default: op

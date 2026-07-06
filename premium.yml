@@ -1,0 +1,23 @@
+# Premium (Online Mode) auto-login configuration
+
+# Premium detection mode:
+# 'proxy' - Automatically detects premium players using BungeeCord or Velocity UUID forwarding.
+# 'standalone' - Automatically detects premium players by performing an encryption handshake (requires ProtocolLib).
+# 'auto' - Attempts to auto-detect if proxy UUID forwarding is active; otherwise falls back to standalone (if ProtocolLib is present).
+mode: auto
+
+# Cache settings for Mojang API UUID lookups
+cache:
+  # Duration to cache premium/cracked lookups (e.g. 24h, 7d)
+  expiration: 24h
+
+# Fallback behavior when Mojang API is offline
+mojang-outage:
+  # Options:
+  # 'crack' - Treat premium players as cracked and force them to register/login with a password. (Safe, default)
+  # 'kick' - Kick premium players when Mojang API is down.
+  fallback: crack
+  kick-message: "<red>Mojang authentication servers are currently down. Please try again later."
+
+# Bedrock/Geyser Floodgate auto-login settings
+floodgate-auto-bypass: true

@@ -1,0 +1,76 @@
+name: peyajAuth
+version: '1.0'
+main: me.peyaj.peyajauth.PeyajAuth
+api-version: '1.21'
+author: Peyaj
+description: A high-performance, secure hybrid authentication plugin.
+softdepend: [ProtocolLib, PlaceholderAPI, floodgate]
+
+commands:
+  register:
+    description: Register a new account
+    usage: /register <password> <confirmPassword>
+    permission: peyajauth.register
+    aliases: [reg]
+  login:
+    description: Log into your account
+    usage: /login <password>
+    permission: peyajauth.login
+    aliases: [l]
+  logout:
+    description: Log out of your account
+    usage: /logout
+    permission: peyajauth.logout
+  changepassword:
+    description: Change your password
+    usage: /changepassword <oldPassword> <newPassword>
+    permission: peyajauth.changepassword
+  unregister:
+    description: Delete your account
+    usage: /unregister <password>
+    permission: peyajauth.register
+  captcha:
+    description: Solve a captcha challenge
+    usage: /captcha <code>
+  auth:
+    description: Admin authentication management
+    usage: /auth <subcommand>
+    permission: peyajauth.admin
+
+permissions:
+  peyajauth.login:
+    description: Allows the player to log in.
+    default: true
+  peyajauth.register:
+    description: Allows the player to register.
+    default: true
+  peyajauth.logout:
+    description: Allows the player to log out.
+    default: true
+  peyajauth.changepassword:
+    description: Allows the player to change their password.
+    default: true
+  peyajauth.admin:
+    description: Gives access to all administrative commands.
+    default: op
+    children:
+      peyajauth.reload: true
+      peyajauth.force: true
+      peyajauth.unregister: true
+      peyajauth.info: true
+      peyajauth.migrate: true
+  peyajauth.reload:
+    description: Allows reloading the configuration files.
+    default: op
+  peyajauth.force:
+    description: Allows force logging in/out players.
+    default: op
+  peyajauth.unregister:
+    description: Allows unregistering player accounts.
+    default: op
+  peyajauth.info:
+    description: Allows viewing account information.
+    default: op
+  peyajauth.migrate:
+    description: Allows database migrations.
+    default: op

@@ -1,0 +1,98 @@
+# peyajAuth Configuration File
+
+# Restrict players who are not authenticated yet
+freeze-player-before-login: true
+
+# Restrictions during authentication phase
+restrictions:
+  disable-damage: true
+  disable-hunger: true
+  allowed-commands:
+    - "/help"
+    - "/report"
+
+# Timeout in seconds to complete login/registration before being kicked
+login-timeout: 60
+
+# Password rules configuration
+password:
+  minimum-length: 8
+  maximum-length: 64
+  require-number: true
+  require-uppercase: true
+  require-lowercase: true
+  require-symbol: false
+
+# Brute force protection settings
+brute-force:
+  enabled: true
+  max-attempts: 5
+  cooldown-minutes: 10
+  ip-lock-enabled: true
+  admin-notifications: true
+
+# Session settings
+session:
+  enabled: true
+  # Supported suffixes: m (minutes), h (hours), d (days)
+  timeout: 30m
+
+# Remember login settings (IP and token based)
+remember-login:
+  enabled: true
+  duration: 7d
+
+# Captcha verification
+captcha:
+  enabled: false
+  # Modes: 'chat' or 'gui'
+  mode: chat
+
+# Sound effects for authentication events
+# Set to 'none' or leave empty to disable a sound.
+# Use standard Bukkit Sound names (e.g. ENTITY_EXPERIENCE_ORB_PICKUP, ENTITY_PLAYER_LEVELUP)
+sounds:
+  enabled: true
+  premium-autologin: "ENTITY_PLAYER_LEVELUP"
+  session-autologin: "ENTITY_EXPERIENCE_ORB_PICKUP"
+  login-success: "ENTITY_EXPERIENCE_ORB_PICKUP"
+  register-success: "ENTITY_PLAYER_LEVELUP"
+  login-failure: "ENTITY_VILLAGER_NO"
+  captcha-prompt: "BLOCK_NOTE_BLOCK_BELL"
+  captcha-success: "ENTITY_EXPERIENCE_ORB_PICKUP"
+  captcha-failure: "ENTITY_VILLAGER_NO"
+  brute-force-lock: "BLOCK_ANVIL_LAND"
+  auth-reminder: "BLOCK_NOTE_BLOCK_PLING"
+
+# GUI PIN Pad Login settings
+pin-pad:
+  enabled: true
+  required-length: 4
+
+# Debug and logging level
+debug: false
+verbose: false
+
+# Hashing security configurations
+security:
+  # Hashing algorithm: 'argon2' or 'bcrypt'
+  algorithm: argon2
+
+  # Max registration accounts allowed per IP address (set to 0 to disable limit)
+  max-accounts-per-ip: 2
+  
+  # Argon2 specific parameters
+  argon2:
+    # Options: 'id' (default, recommended), 'i', 'd'
+    type: id
+    # Memory usage in KiB (default: 65536 = 64MB)
+    memory: 65536
+    # CPU iterations/passes (default: 2)
+    iterations: 2
+    # Degree of parallelism/threads (default: 2)
+    parallelism: 2
+
+  # BCrypt specific parameters
+  bcrypt:
+    # Logarithmic cost factor (default: 10)
+    rounds: 10
