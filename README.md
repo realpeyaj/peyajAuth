@@ -13,6 +13,17 @@ A high-performance, secure, and modern authentication solution for Spigot & Pape
 
 ---
 
+## Dependencies & Requirements
+
+*   **Java Version**: **Java 21** or higher.
+*   **Server Platform**: Spigot, Paper, Purpur, or Folia (Minecraft 1.16 - 1.21.x supported).
+*   **Soft Dependencies**:
+    *   **ProtocolLib**: Required only if you want to enable the **Premium Auto-Login** feature. Without ProtocolLib, standard registration, PIN pads, and general authentication still work fully.
+    *   **Floodgate**: Required only if you want automatic login bypasses for Bedrock Edition players.
+    *   **PlaceholderAPI**: Optional, for exposing player auth placeholders to other plugins.
+
+---
+
 ## Features
 
 *   **Premium Auto-Login**: Automatically checks if a player owns a genuine Mojang account and logs them in instantly—no password required.
