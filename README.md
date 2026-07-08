@@ -61,7 +61,10 @@ A high-performance, secure, and modern authentication solution for Spigot & Pape
 | `/auth reload` | | Reload all configuration files | `peyajauth.reload` | OP |
 | `/auth force <player>` | | Force log a player in/out | `peyajauth.force` | OP |
 | `/auth unregister <player>` | | Unregister a player's account | `peyajauth.unregister` | OP |
+| `/auth premium <player>` | | Set player auth mode to premium | `peyajauth.force` | OP |
+| `/auth cracked <player>` | | Set player auth mode to cracked | `peyajauth.force` | OP |
 | `/auth info <player>` | | View registered player details | `peyajauth.info` | OP |
+| `/auth gui` | | Open the interactive Admin chest GUI | `peyajauth.admin` | OP |
 
 ---
 
