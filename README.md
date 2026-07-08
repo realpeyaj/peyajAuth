@@ -9,7 +9,7 @@ A high-performance, secure, and modern authentication solution for Spigot & Pape
 
 ---
 
-**peyajAuth** is a lightweight, robust, and secure hybrid authentication plugin built for modern Minecraft servers. It provides automatic premium login validation, interactive GUI PIN pads, brute-force protections, and native Geyser/Floodgate Bedrock support.
+**peyajAuth** is a lightweight, robust, and secure hybrid authentication plugin built for modern Minecraft servers. It provides automatic premium login validation, secure password authentication, brute-force protections, and native Geyser/Floodgate Bedrock support.
 
 ---
 
@@ -18,7 +18,7 @@ A high-performance, secure, and modern authentication solution for Spigot & Pape
 *   **Java Version**: **Java 21** or higher.
 *   **Server Platform**: Spigot, Paper, Purpur, or Folia (Minecraft 1.16 - 1.21.x supported).
 *   **Soft Dependencies**:
-    *   **ProtocolLib**: Required only if you want to enable the **Premium Auto-Login** feature. Without ProtocolLib, standard registration, PIN pads, and general authentication still work fully.
+    *   **ProtocolLib**: Required only if you want to enable the **Premium Auto-Login** feature. Without ProtocolLib, standard registration, passwords, and general authentication still work fully.
     *   **Floodgate**: Required only if you want automatic login bypasses for Bedrock Edition players.
     *   **PlaceholderAPI**: Optional, for exposing player auth placeholders to other plugins.
 
@@ -28,7 +28,6 @@ A high-performance, secure, and modern authentication solution for Spigot & Pape
 
 *   **Premium Auto-Login**: Automatically checks if a player owns a genuine Mojang account and logs them in instantly—no password required.
 *   **Bedrock/Floodgate Bypass**: Auto-login support for Bedrock players connecting through Geyser & Floodgate (verified via Xbox Live).
-*   **GUI PIN Pad**: Optional chest-inventory virtual PIN pad. Secure registration and login without typing passwords in public or private chat.
 *   **Captcha Gateway**: Stop bot joins on your server with customizable Chat or GUI chest-click captchas.
 *   **Brute-Force Protection**: Temporarily lock accounts or ban IPs automatically after repeated failed login attempts.
 *   **IP Registration Limits**: Restrict the number of accounts that can be registered under a single IP to prevent alt-spam.
@@ -43,7 +42,7 @@ A high-performance, secure, and modern authentication solution for Spigot & Pape
 2.  Drop the jar file into your server's `plugins/` directory.
 3.  Restart your server to generate the default configuration files.
 4.  Tune settings and messages inside `/plugins/peyajAuth/` files:
-    *   `config.yml` - Configure settings, PIN lengths, and sound toggles.
+    *   `config.yml` - Configure settings, password rules, and sound toggles.
     *   `messages.yml` - Translate messages and customize prefix gradients.
     *   `database.yml` - Connect to MySQL or MariaDB database pools.
 
@@ -53,10 +52,10 @@ A high-performance, secure, and modern authentication solution for Spigot & Pape
 
 | Command | Aliases | Description | Permission | Default |
 | :--- | :--- | :--- | :--- | :--- |
-| `/register <password> <confirm>` | `/reg` | Register a new account PIN | `peyajauth.register` | Everyone |
+| `/register <password> <confirm>` | `/reg` | Register a new account password | `peyajauth.register` | Everyone |
 | `/login <password>` | `/l` | Authenticate your active session | `peyajauth.login` | Everyone |
 | `/logout` | | Log out of your account | `peyajauth.logout` | Everyone |
-| `/changepassword <old> <new>` | | Change your current account PIN | `peyajauth.changepassword` | Everyone |
+| `/changepassword <old> <new>` | | Change your current account password | `peyajauth.changepassword` | Everyone |
 | `/captcha <code>` | | Solve chat captcha verification | *none* | Everyone |
 | `/auth reload` | | Reload all configuration files | `peyajauth.reload` | OP |
 | `/auth force <player>` | | Force log a player in/out | `peyajauth.force` | OP |
