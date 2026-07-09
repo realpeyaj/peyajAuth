@@ -2,8 +2,8 @@
 
 # Premium detection mode:
 # 'proxy' - Automatically detects premium players using BungeeCord or Velocity UUID forwarding.
-# 'standalone' - Automatically detects premium players by performing an encryption handshake (requires ProtocolLib).
-# 'auto' - Attempts to auto-detect if proxy UUID forwarding is active; otherwise falls back to standalone (if ProtocolLib is present).
+# 'standalone' - Automatically detects premium players by performing an encryption handshake.
+# 'auto' - Attempts to auto-detect if proxy UUID forwarding is active; otherwise falls back to standalone.
 mode: auto
 
 # Cache settings for Mojang API UUID lookups
