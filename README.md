@@ -4,7 +4,7 @@ A high-performance, secure, and modern authentication solution for Spigot & Pape
 
 ![Java](https://img.shields.io/badge/Java-21-orange.svg)
 ![Platform](https://img.shields.io/badge/Platform-Spigot%20%7C%20Paper-blue.svg)
-![Version](https://img.shields.io/badge/Version-1.3-green.svg)
+![Version](https://img.shields.io/badge/Version-1.5-green.svg)
 ![License](https://img.shields.io/badge/License-Proprietary-red.svg)
 
 ---
@@ -13,12 +13,22 @@ A high-performance, secure, and modern authentication solution for Spigot & Pape
 
 ---
 
+## Why Choose peyajAuth?
+
+*   **State-of-the-Art Security**: Features industry-standard **Argon2id** (with customizable memory, iteration, and thread factors) and **BCrypt** password hashing, protecting player credentials from advanced brute-force attacks.
+*   **True Hybrid Auto-Login**: Automatically detects premium vs. cracked players using modern client-side UUID checks. Auto-logs in premium players while safely allowing cracked players using premium usernames to join and register/login with a password (completely avoiding the dreaded "Invalid Session" kicks).
+*   **Offline Skin Retention**: Automatically fetches and applies genuine Mojang skins for offline/cracked players connecting with premium names, keeping your server looking authentic.
+*   **Zero Main-Thread Lag**: Built completely with asynchronous non-blocking queries and fast **HikariCP** database connection pools to ensure bulk concurrent connections do not drop server TPS.
+*   **Folia & Proxy Ready**: Features fully abstracted scheduling for native compatibility with multi-threaded server software (like **Folia**) and auto-detects BungeeCord/Velocity forwarding.
+*   **Advanced Bot Protection**: Keeps bot networks out using custom interactive chest-click GUI and chat-based Captcha challenges.
+
+---
+
 ## Dependencies & Requirements
 
 *   **Java Version**: **Java 21** or higher.
 *   **Server Platform**: Spigot, Paper, Purpur, or Folia (Minecraft 1.16 - 1.21.x supported).
 *   **Soft Dependencies**:
-    *   **ProtocolLib**: Required only if you want to enable the **Premium Auto-Login** feature. Without ProtocolLib, standard registration, passwords, and general authentication still work fully.
     *   **Floodgate**: Required only if you want automatic login bypasses for Bedrock Edition players.
     *   **PlaceholderAPI**: Optional, for exposing player auth placeholders to other plugins.
 
@@ -78,7 +88,10 @@ import me.peyaj.peyajauth.api.PeyajAuthAPI;
 boolean loggedIn = PeyajAuthAPI.getInstance().isAuthenticated(player);
 
 // Check if a player is premium
-boolean isPremium = PeyajAuthAPI.getInstance().isPremium(player.getUniqueId());
+boolean isPremium = PeyajAuthAPI.getInstance().isPremium(player);
+
+// Check if a player is connecting from Bedrock Edition (via Floodgate/Geyser)
+boolean isBedrock = PeyajAuthAPI.getInstance().isBedrockPlayer(player);
 ```
 
 ---
