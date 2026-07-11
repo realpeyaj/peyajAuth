@@ -10,8 +10,24 @@ restrictions:
   allowed-commands:
     - "/help"
     - "/report"
+  # Apply blindness potion effect while unauthenticated
+  blindness: true
 
-# Timeout in seconds to complete login/registration before being kicked
+# Visual screen titles displayed during authentication
+titles:
+  enabled: true
+  # Timings in ticks (20 ticks = 1 second)
+  fadeIn: 10
+  stay: 60
+  fadeOut: 10
+  register:
+    title: "<gradient:gold:yellow>peyajAuth</gradient>"
+    subtitle: "<yellow>Please register using <gold>/register <password></gold></yellow>"
+  login:
+    title: "<gradient:gold:yellow>peyajAuth</gradient>"
+    subtitle: "<yellow>Please login using <gold>/login <password></gold></yellow>"
+
+# Timeout in seconds to complete login/registration before being kicked (set to 0 or -1 to disable)
 login-timeout: 60
 
 # Password rules configuration
