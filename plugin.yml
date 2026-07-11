@@ -1,5 +1,5 @@
 name: peyajAuth
-version: '1.5'
+version: '1.5.1'
 main: me.peyaj.peyajauth.PeyajAuth
 api-version: '1.21'
 author: Peyaj
