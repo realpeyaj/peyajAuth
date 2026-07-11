@@ -8,8 +8,7 @@ A high-performance, secure, and modern authentication solution for Spigot & Pape
 ![License](https://img.shields.io/badge/License-Proprietary-red.svg)
 [![bStats](https://img.shields.io/bstats/servers/32544?color=blue)](https://bstats.org/plugin/bukkit/peyajAuth/32544)
 
-> [!IMPORTANT]
-> **Server Configuration Requirement**: Your server must be running in offline mode (`online-mode=false` in your `server.properties` file) for the authentication system and premium auto-login handler to function correctly.
+> **Important Requirement**: Your server must be running in offline mode (`online-mode=false` in your `server.properties` file) for the authentication system and premium auto-login handler to function correctly.
 
 ---
 
