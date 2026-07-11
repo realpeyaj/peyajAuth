@@ -6,6 +6,7 @@ A high-performance, secure, and modern authentication solution for Spigot & Pape
 ![Platform](https://img.shields.io/badge/Platform-Spigot%20%7C%20Paper-blue.svg)
 ![Version](https://img.shields.io/badge/Version-1.5-green.svg)
 ![License](https://img.shields.io/badge/License-Proprietary-red.svg)
+[![bStats](https://img.shields.io/bstats/servers/22650?color=blue)](https://bstats.org/plugin/bukkit/peyajAuth/22650)
 
 ---
 

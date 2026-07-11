@@ -16,7 +16,7 @@ mojang-outage:
   # Options:
   # 'crack' - Treat premium players as cracked and force them to register/login with a password. (Safe, default)
   # 'kick' - Kick premium players when Mojang API is down.
-  fallback: crack
+  fallback: kick
   kick-message: "<red>Mojang authentication servers are currently down. Please try again later."
 
 # Bedrock/Geyser Floodgate auto-login settings
