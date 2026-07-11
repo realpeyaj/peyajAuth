@@ -99,7 +99,7 @@ boolean isBedrock = PeyajAuthAPI.getInstance().isBedrockPlayer(player);
 
 ## Server Metrics
 
-[![bStats Metrics](https://bstats.org/signatures/bukkit/32544.svg)](https://bstats.org/plugin/bukkit/peyajAuth/32544)
+[![bStats Metrics](https://bstats.org/signatures/bukkit/peyajAuth.svg)](https://bstats.org/plugin/bukkit/peyajAuth/32544)
 
 ---
 
