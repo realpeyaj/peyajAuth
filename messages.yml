@@ -18,6 +18,8 @@ auth:
   password-mismatch: "<red>The passwords do not match!</red>"
   login-timeout: "<red>Login timeout exceeded!</red>"
   premium-autologin: "<green>You are using a unique (premium) account! You have been auto-logged in.</green>"
+  bedrock-autologin: "<green>Bedrock account detected! You have been logged in.</green>"
+  session-resume: "<green>your playing session has been resumed!</green>"
 
 captcha:
   gui-title: "Click the target item: <green>{target}</green>"
