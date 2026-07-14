@@ -121,12 +121,12 @@ security:
   argon2:
     # Options: 'id' (default, recommended), 'i', 'd'
     type: id
-    # Memory usage in KiB (default: 65536 = 64MB)
-    memory: 65536
+    # Memory usage in KiB (default: 16384 = 16MB)
+    memory: 16384
     # CPU iterations/passes (default: 2)
     iterations: 2
-    # Degree of parallelism/threads (default: 2)
-    parallelism: 2
+    # Degree of parallelism/threads (default: 1)
+    parallelism: 1
 
   # BCrypt specific parameters
   bcrypt:
