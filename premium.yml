@@ -36,4 +36,4 @@ cracked-players:
   # WARNING: Enabling this may cause a temporary connection lag spike when players join because
   # the server has to query Mojang's API to fetch the skin properties.
   # (For better performance, you can set this to false and use an external plugin like SkinsRestorer instead).
-  fetch-premium-skins: true
+  fetch-premium-skins: false
