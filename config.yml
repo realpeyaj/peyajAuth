@@ -108,8 +108,8 @@ verbose: false
 
 # Hashing security configurations
 security:
-  # Hashing algorithm: 'argon2' or 'bcrypt'
-  algorithm: argon2
+  # Hashing algorithm: 'sha256' (default, highly recommended for zero-lag logins), 'argon2', or 'bcrypt'
+  algorithm: sha256
 
   # Cooldown in seconds preventing players from executing /logout during PvP combat (set to 0 to disable)
   combat-logout-cooldown: 10
