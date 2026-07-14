@@ -61,12 +61,17 @@ brute-force:
 
 # Session settings
 session:
+  # If true, players who briefly disconnect (e.g. game crash) can rejoin without re-typing their password
+  # as long as they rejoin within the timeout window from the same IP address.
   enabled: true
   # Supported suffixes: m (minutes), h (hours), d (days)
   timeout: 5m
 
 # Remember login settings (IP and token based)
 remember-login:
+  # If true, keeps players logged in over multiple days so they don't have to authenticate every time.
+  # WARNING: Enabling this will OVERRIDE/OVERLAP the shorter session timeout configuration above,
+  # extending the token expiration to the duration defined below (default: 7 days).
   enabled: false
   duration: 7d
 
