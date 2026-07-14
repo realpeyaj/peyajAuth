@@ -63,11 +63,11 @@ brute-force:
 session:
   enabled: true
   # Supported suffixes: m (minutes), h (hours), d (days)
-  timeout: 30m
+  timeout: 5m
 
 # Remember login settings (IP and token based)
 remember-login:
-  enabled: true
+  enabled: false
   duration: 7d
 
 # Captcha verification
