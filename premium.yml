@@ -21,3 +21,19 @@ mojang-outage:
 
 # Bedrock/Geyser Floodgate auto-login settings
 floodgate-auto-bypass: true
+
+# Settings for cracked/offline players connecting with premium usernames
+cracked-players:
+  # Allow cracked players to connect using premium usernames.
+  # If true, the server detects if the client UUID matches the premium UUID.
+  # Real premium players will bypass login automatically, while cracked players will bypass encryption
+  # and be prompted to register/login (preventing "Invalid Session" kicks).
+  # If false, the server enforces encryption for all premium usernames (cracked connections will fail to join).
+  allow-premium-usernames: true
+
+  # Fetch and apply the real premium player's skin textures to the cracked player's profile on join.
+  # (Requires 'allow-premium-usernames' to be true).
+  # WARNING: Enabling this may cause a temporary connection lag spike when players join because
+  # the server has to query Mojang's API to fetch the skin properties.
+  # (For better performance, you can set this to false and use an external plugin like SkinsRestorer instead).
+  fetch-premium-skins: true
