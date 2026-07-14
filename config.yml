@@ -27,6 +27,16 @@ titles:
     title: "<gradient:gold:yellow>peyajAuth</gradient>"
     subtitle: "<yellow>Please login using <gold>/login <password></gold></yellow>"
 
+# Authentication spawn lobby teleportation
+spawn:
+  enabled: false
+  world: "world"
+  x: 0.0
+  y: 64.0
+  z: 0.0
+  yaw: 0.0
+  pitch: 0.0
+
 # Timeout in seconds to complete login/registration before being kicked (set to 0 or -1 to disable)
 login-timeout: 60
 
@@ -93,6 +103,9 @@ verbose: false
 security:
   # Hashing algorithm: 'argon2' or 'bcrypt'
   algorithm: argon2
+
+  # Cooldown in seconds preventing players from executing /logout during PvP combat (set to 0 to disable)
+  combat-logout-cooldown: 10
 
   # Max registration accounts allowed per IP address (set to 0 to disable limit)
   max-accounts-per-ip: 2
