@@ -39,7 +39,7 @@ A high-performance, secure, and modern authentication solution for Spigot & Pape
 
 ## Features
 
-*   **Premium Auto-Login**: Automatically checks if a player owns a genuine Mojang account and logs them in instantly—no password required.
+*   **Premium Auto-Login**: Automatically checks if a player owns a genuine Mojang account and logs them in instantly—no password required. (Requires zero manual setup or player commands like `/premium` to activate, as premium detection is completely automatic).
 *   **Bedrock/Floodgate Bypass**: Auto-login support for Bedrock players connecting through Geyser & Floodgate (verified via Xbox Live).
 *   **Captcha Gateway**: Stop bot joins on your server with customizable Chat or GUI chest-click captchas.
 *   **Brute-Force Protection**: Temporarily lock accounts or ban IPs automatically after repeated failed login attempts.
