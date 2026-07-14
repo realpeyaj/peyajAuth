@@ -30,6 +30,8 @@ titles:
 # Authentication spawn lobby teleportation
 spawn:
   enabled: false
+  # If true, all players (including premium/auto-logged in ones) are forced to spawn on join and stay there (no teleport back to quit location)
+  force-spawn: false
   world: "world"
   x: 0.0
   y: 64.0
