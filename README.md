@@ -77,6 +77,8 @@ A high-performance, secure, and modern authentication solution for Spigot & Pape
 | `/auth cracked <player>` | | Set player auth mode to cracked | `peyajauth.force` | OP |
 | `/auth info <player>` | | View registered player details | `peyajauth.info` | OP |
 | `/auth gui` | | Open the interactive Admin chest GUI | `peyajauth.admin` | OP |
+| `/auth migrate` | | Verify and apply future database schema migrations/upgrades | `peyajauth.migrate` | OP |
+| `/auth import` | | Import database records from legacy auth plugins (future expansion) | `peyajauth.migrate` | OP |
 
 ---
 
