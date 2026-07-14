@@ -132,3 +132,12 @@ security:
   bcrypt:
     # Logarithmic cost factor (default: 10)
     rounds: 10
+
+# Automated SQLite database backup settings
+# (Backups are compressed in GZIP format to save disk space)
+database-backups:
+  enabled: true
+  # Interval in hours between backups (default: 24 hours)
+  interval-hours: 24
+  # Maximum number of backup files to keep (oldest are deleted automatically)
+  retention-limit: 7
