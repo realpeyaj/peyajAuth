@@ -49,8 +49,6 @@ A high-performance, secure, and modern authentication solution for Spigot & Pape
 *   **Authentication Spawn Lobby**: Teleports unauthenticated players to a safe, configurable spawn lobby (supporting customizable bypasses for premium/session-resumed players, and options for force-spawning all connections on join), returning them back to their quit location upon logging in.
 *   **PvP Combat Logout Blocker**: Automatically blocks player logout execution if they are tagged in active PvP combat, preventing combat-logging exploits.
 *   **NPC Compatibility**: Native compatibility that bypasses Citizens NPC entities from all password checks and connection restrictions.
-*   **Modrinth Update Checker**: Features a built-in, async Modrinth update checker that keeps server owners notified of new updates on startup (in console) and alerts Operators/Admins in-game on join.
-*   **Instant Config Reloads**: All configurations (including session and restriction settings) are reloaded and applied instantly using `/auth reload` without requiring a server reboot.
 
 ---
 
