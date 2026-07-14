@@ -46,6 +46,9 @@ A high-performance, secure, and modern authentication solution for Spigot & Pape
 *   **IP Registration Limits**: Restrict the number of accounts that can be registered under a single IP to prevent alt-spam.
 *   **Custom Sounds**: Queue distinct sound chimes on join reminders, captcha checks, correct entry, and lockouts.
 *   **SQL Database Support**: SQLite enabled out of the box, with high-performance MySQL and MariaDB connection pools using HikariCP.
+*   **Authentication Spawn Lobby**: Teleports unauthenticated players to a safe, configurable spawn lobby to protect them from in-game hazards, returning them back to their quit location upon logging in.
+*   **PvP Combat Logout Blocker**: Automatically blocks player logout execution if they are tagged in active PvP combat, preventing combat-logging exploits.
+*   **NPC Compatibility**: Native compatibility that bypasses Citizens NPC entities from all password checks and connection restrictions.
 
 ---
 
@@ -77,6 +80,9 @@ A high-performance, secure, and modern authentication solution for Spigot & Pape
 | `/auth cracked <player>` | | Set player auth mode to cracked | `peyajauth.force` | OP |
 | `/auth info <player>` | | View registered player details | `peyajauth.info` | OP |
 | `/auth gui` | | Open the interactive Admin chest GUI | `peyajauth.admin` | OP |
+| `/auth setspawn` | | Set the lobby spawn location to your current position | `peyajauth.admin` | OP |
+| `/auth spawn` | | Teleport directly to the authentication lobby spawn | `peyajauth.admin` | OP |
+| `/auth help` | | Display the administrative commands help menu | `peyajauth.admin` | OP |
 | `/auth migrate` | | Verify and apply future database schema migrations/upgrades | `peyajauth.migrate` | OP |
 | `/auth import` | | Import database records from legacy auth plugins (future expansion) | `peyajauth.migrate` | OP |
 
