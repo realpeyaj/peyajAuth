@@ -1,10 +1,10 @@
 # peyajAuth
 
-A high-performance, secure, and modern authentication solution for Spigot & Paper (1.21+).
+A high-performance, secure, and modern authentication solution for Spigot & Paper (1.21+ & 26.2+).
 
 ![Java](https://img.shields.io/badge/Java-21-orange.svg)
 ![Platform](https://img.shields.io/badge/Platform-Spigot%20%7C%20Paper-blue.svg)
-![Version](https://img.shields.io/badge/Version-1.5.3-green.svg)
+![Version](https://img.shields.io/badge/Version-1.6.0-green.svg)
 ![License](https://img.shields.io/badge/License-Proprietary-red.svg)
 [![bStats](https://img.shields.io/bstats/servers/32544?color=blue)](https://bstats.org/plugin/bukkit/peyajAuth/32544)
 
@@ -30,7 +30,7 @@ A high-performance, secure, and modern authentication solution for Spigot & Pape
 ## Dependencies & Requirements
 
 *   **Java Version**: **Java 21** or higher.
-*   **Server Platform**: Spigot, Paper, Purpur, or Folia (Minecraft 1.16 - 1.21.x supported).
+*   **Server Platform**: Spigot, Paper, Purpur, or Folia (Minecraft 1.16 - 26.2 supported).
 *   **Soft Dependencies**:
     *   **Floodgate**: Required only if you want automatic login bypasses for Bedrock Edition players.
     *   **PlaceholderAPI**: Optional, for exposing player auth placeholders to other plugins.
@@ -44,6 +44,10 @@ A high-performance, secure, and modern authentication solution for Spigot & Pape
 *   **Captcha Gateway**: Stop bot joins on your server with customizable Chat or GUI chest-click captchas.
 *   **Brute-Force Protection**: Temporarily lock accounts or ban IPs automatically after repeated failed login attempts.
 *   **IP Registration Limits**: Restrict the number of accounts that can be registered under a single IP to prevent alt-spam.
+*   **Two-Factor Authentication (2FA)**: Strengthen player accounts with Google Authenticator (TOTP) codes. Restricts commands, chat, and movement for password-verified connections until they input their 2FA verify code.
+*   **Recovery Emails**: Link and verify recovery emails asynchronously via SMTP verification codes, falling back to local confirmations if SMTP is disabled.
+*   **Packet-Based Inventory Hiding**: Intercept and zero out inventory packet data to hide active items until authentication is complete.
+*   **Separate Login & Registration Timeouts**: Specify different timeout durations for registered players logging in vs new players registering.
 *   **Custom Sounds**: Queue distinct sound chimes on join reminders, captcha checks, correct entry, and lockouts.
 *   **SQL Database Support**: SQLite enabled out of the box, with high-performance MySQL and MariaDB connection pools using HikariCP.
 *   **Authentication Spawn Lobby**: Teleports unauthenticated players to a safe, configurable spawn lobby (supporting customizable bypasses for premium/session-resumed players, and options for force-spawning all connections on join), returning them back to their quit location upon logging in.
@@ -73,6 +77,8 @@ A high-performance, secure, and modern authentication solution for Spigot & Pape
 | `/logout` | | Log out of your account | `peyajauth.logout` | Everyone |
 | `/changepassword <old> <new>` | | Change your current account password | `peyajauth.changepassword` | Everyone |
 | `/captcha <code>` | | Solve chat captcha verification | *none* | Everyone |
+| `/email <add|change|remove|confirm|show>` | | Manage recovery email links | `peyajauth.login` | Everyone |
+| `/2fa <setup|confirm|disable|verify>` | | Manage Google Authenticator 2FA settings | `peyajauth.login` | Everyone |
 | `/auth reload` | | Reload all configuration files | `peyajauth.reload` | OP |
 | `/auth force <player>` | | Force log a player in/out | `peyajauth.force` | OP |
 | `/auth unregister <player>` | | Unregister a player's account | `peyajauth.unregister` | OP |
@@ -85,6 +91,7 @@ A high-performance, secure, and modern authentication solution for Spigot & Pape
 | `/auth help` | | Display the administrative commands help menu | `peyajauth.admin` | OP |
 | `/auth migrate` | | Verify and apply future database schema migrations/upgrades | `peyajauth.migrate` | OP |
 | `/auth import` | | Import database records from legacy auth plugins (future expansion) | `peyajauth.migrate` | OP |
+| `/auth 2fa disable <player>` | | Force disable 2FA for a player | `peyajauth.admin` | OP |
 
 ---
 

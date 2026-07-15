@@ -61,6 +61,40 @@ general:
   only-players: "<red>This command can only be executed by players!</red>"
   invalid-syntax: "<red>Invalid syntax! Usage: {usage}</red>"
 
+auth:
+  please-2fa: "<yellow>Please verify your 2FA security code from your Authenticator app: <gold>/2fa verify <code></gold></yellow>"
+  twofactor-timeout: "<red>2FA verification timeout exceeded!</red>"
+
+email:
+  no-email: "<red>You do not have a recovery email set!</red>"
+  current-email: "<yellow>Your recovery email is: <gold>{email}</gold></yellow>"
+  invalid-email: "<red>Invalid email format!</red>"
+  pending-add: "<yellow>Please confirm your new recovery email (<gold>{email}</gold>) by typing: <gold>/email confirm <code></gold> (Code sent to email)</yellow>"
+  pending-add-fallback: "<yellow>Please confirm your new recovery email (<gold>{email}</gold>) by typing: <gold>/email confirm</gold></yellow>"
+  pending-change: "<yellow>Please confirm your email change to <gold>{email}</gold> by typing: <gold>/email confirm <code></gold> (Code sent to email)</yellow>"
+  pending-change-fallback: "<yellow>Please confirm your email change to <gold>{email}</gold> by typing: <gold>/email confirm</gold></yellow>"
+  pending-remove: "<yellow>Please confirm deleting your recovery email by typing: <gold>/email confirm <code></gold> (Code sent to email)</yellow>"
+  pending-remove-fallback: "<yellow>Please confirm deleting your recovery email by typing: <gold>/email confirm</gold></yellow>"
+  no-pending: "<red>You do not have any pending email updates!</red>"
+  invalid-code: "<red>Incorrect verification code! Please try again.</red>"
+  success-linked: "<green>Successfully linked recovery email <gold>{email}</gold> to your account!</green>"
+  success-removed: "<green>Successfully removed recovery email from your account!</green>"
+  smtp-error: "<red>Failed to send verification email! Falling back to local confirmation.</red>"
+
+twofactor:
+  already-enabled: "<red>Two-Factor Authentication is already enabled on your account!</red>"
+  not-enabled: "<red>Two-Factor Authentication is not enabled on your account!</red>"
+  setup-intro: "<yellow>Setting up Google Authenticator (2FA):</yellow>"
+  setup-key: "<yellow>Your secret key: <gold>{key}</gold></yellow>"
+  setup-qr: "<yellow>Click here to scan QR code: <gold><click:open_url:'{url}'>[Scan QR Code]</click></gold></yellow>"
+  setup-confirm: "<yellow>Please scan the code and confirm by typing: <gold>/2fa confirm <code></gold></yellow>"
+  no-pending: "<red>You have not started 2FA setup! Type /2fa setup first.</red>"
+  incorrect-code: "<red>Incorrect security code! Please try again.</red>"
+  success-enabled: "<green>Two-Factor Authentication has been successfully enabled!</green>"
+  success-disabled: "<green>Two-Factor Authentication has been successfully disabled!</green>"
+  success-verified: "<green>2FA code verified! Access granted.</green>"
+  admin-disabled: "<green>Successfully disabled 2FA for player {player}.</green>"
+
 pin-pad:
   title: "Enter PIN: <gold>{stars}</gold>"
   setup-title: "Set new PIN: <gold>{stars}</gold>"

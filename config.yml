@@ -39,8 +39,16 @@ spawn:
   yaw: 0.0
   pitch: 0.0
 
-# Timeout in seconds to complete login/registration before being kicked (set to 0 or -1 to disable)
+# Timeout in seconds to complete authentication before being kicked (set to 0 or -1 to disable)
+# Timeout for registered players to log in
 login-timeout: 60
+# Timeout for new players to register
+register-timeout: 120
+
+# Authentication restrictions
+restrictions:
+  # If true, hides all inventory items on the player's screen until they are authenticated
+  hide-inventory: true
 
 # Password rules configuration
 password:
@@ -141,3 +149,13 @@ database-backups:
   interval-hours: 24
   # Maximum number of backup files to keep (oldest are deleted automatically)
   retention-limit: 7
+
+# SMTP configuration for recovery and verification emails
+email:
+  enabled: false
+  host: "smtp.gmail.com"
+  port: 587
+  username: "your-email@gmail.com"
+  password: "your-app-password"
+  ssl: false # Set to true if using port 465 (SSL), false for port 587 (STARTTLS)
+  from-name: "peyajAuth Verification"

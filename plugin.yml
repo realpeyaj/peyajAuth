@@ -1,5 +1,5 @@
 name: peyajAuth
-version: '1.5.3'
+version: '1.6.0'
 main: me.peyaj.peyajauth.PeyajAuth
 api-version: '1.21'
 author: Peyaj
@@ -32,6 +32,14 @@ commands:
   captcha:
     description: Solve a captcha challenge
     usage: /captcha <code>
+  email:
+    description: Manage recovery email address
+    usage: /email <subcommand>
+    permission: peyajauth.login
+  2fa:
+    description: Manage Two-Factor Authentication (Google Authenticator)
+    usage: /2fa <subcommand>
+    permission: peyajauth.login
   auth:
     description: Admin authentication management
     usage: /auth <subcommand>
