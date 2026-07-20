@@ -19,8 +19,8 @@ A high-performance, modular, and secure hybrid authentication solution for Spigo
 
 ## Key Features
 
-*   **Multi-Platform Integration**: Deploy as a standalone Spigot/Paper plugin or run as a unified Velocity proxy gateway. Both modules sync seamlessly using a shared SQLite, MySQL, or MariaDB backend.
-*   **Embedded Velocity Void Limbo**: Velocity installations bundle their own built-in, zero-dependency virtual void world limbo server. Unauthenticated players are trapped in a local loopback server (`127.0.0.1`) automatically without requiring the external Elytrium `LimboAPI` plugin.
+*   **Multi-Platform Integration**: Deploy as a standalone Spigot/Paper plugin or run as a unified Velocity proxy gateway. Both modules sync seamlessly using an SQLite, a shared MySQL, or MariaDB backend.
+*   **Embedded Velocity Void Limbo**: Velocity installations bundle their own built-in, zero-dependency virtual void world limbo server. Unauthenticated players are trapped in a local loopback server (`127.0.0.1`) automatically without requiring the external plugin.
 *   **True Hybrid Auto-Login**: Automatically distinguishes premium vs. cracked players. Instantly logs in premium players without passwords, while cracked players are prompted to register or login securely.
 *   **Cryptography**: Supports industry-standard **Argon2id** and **BCrypt** hashing with customizable iteration, memory, and thread factors.
 *   **Zero-Thread Lag**: Built entirely on asynchronous, non-blocking queries and fast **HikariCP** database connection pools to prevent main-thread TPS drops.
