@@ -20,6 +20,8 @@ auth:
   premium-autologin: "<green>You are using a unique (premium) account! You have been auto-logged in.</green>"
   bedrock-autologin: "<green>Bedrock account detected! You have been logged in.</green>"
   session-resume: "<green>Your playing session has been resumed</green>"
+  please-2fa: "<yellow>Please verify your 2FA security code from your Authenticator app: <gold>/2fa verify <code></gold></yellow>"
+  twofactor-timeout: "<red>2FA verification timeout exceeded!</red>"
 
 captcha:
   gui-title: "Click the target item: <green>{target}</green>"
@@ -60,11 +62,6 @@ general:
   no-permission: "<red>You do not have permission to execute this command!</red>"
   only-players: "<red>This command can only be executed by players!</red>"
   invalid-syntax: "<red>Invalid syntax! Usage: {usage}</red>"
-
-auth:
-  please-2fa: "<yellow>Please verify your 2FA security code from your Authenticator app: <gold>/2fa verify <code></gold></yellow>"
-  twofactor-timeout: "<red>2FA verification timeout exceeded!</red>"
-
 email:
   no-email: "<red>You do not have a recovery email set!</red>"
   current-email: "<yellow>Your recovery email is: <gold>{email}</gold></yellow>"

@@ -12,6 +12,8 @@ restrictions:
     - "/report"
   # Apply blindness potion effect while unauthenticated
   blindness: true
+  # If true, hides all inventory items on the player's screen until they are authenticated
+  hide-inventory: true
 
 # Visual screen titles displayed during authentication
 titles:
@@ -44,11 +46,6 @@ spawn:
 login-timeout: 60
 # Timeout for new players to register
 register-timeout: 120
-
-# Authentication restrictions
-restrictions:
-  # If true, hides all inventory items on the player's screen until they are authenticated
-  hide-inventory: true
 
 # Password rules configuration
 password:
