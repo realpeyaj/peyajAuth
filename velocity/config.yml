@@ -1,0 +1,29 @@
+# peyajAuth Velocity Configuration File
+
+# Timeout in seconds to complete authentication before being kicked
+login-timeout: 60
+
+# Captcha verification settings for cracked players joining the proxy
+captcha:
+  enabled: false
+
+# Session system settings
+session:
+  enabled: true
+  # Session expiration duration for IP-lock auto-login (e.g. 30m, 1h)
+  timeout: "30m"
+
+# Remember Login settings (IP-based auto-login duration)
+remember-login:
+  enabled: true
+  duration: "7d"
+
+# Password rules settings
+password:
+  minimum-length: 8
+  maximum-length: 64
+
+# Network/Proxy specific settings
+proxy:
+  # The backend server to send players to once they authenticate successfully in the virtual limbo
+  success-target-server: "lobby"

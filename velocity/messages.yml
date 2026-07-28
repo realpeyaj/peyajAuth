@@ -62,6 +62,8 @@ general:
   no-permission: "<red>You do not have permission to execute this command!</red>"
   only-players: "<red>This command can only be executed by players!</red>"
   invalid-syntax: "<red>Invalid syntax! Usage: {usage}</red>"
+
+
 email:
   no-email: "<red>You do not have a recovery email set!</red>"
   current-email: "<yellow>Your recovery email is: <gold>{email}</gold></yellow>"
@@ -92,9 +94,4 @@ twofactor:
   success-verified: "<green>2FA code verified! Access granted.</green>"
   admin-disabled: "<green>Successfully disabled 2FA for player {player}.</green>"
 
-pin-pad:
-  title: "Enter PIN: <gold>{stars}</gold>"
-  setup-title: "Set new PIN: <gold>{stars}</gold>"
-  setup-confirm-title: "Confirm PIN: <gold>{stars}</gold>"
-  mismatch: "<red>The PINs do not match! Please try again.</red>"
-  invalid-length: "<red>PIN must be exactly {length} digits long!</red>"
+

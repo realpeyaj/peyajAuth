@@ -15,6 +15,10 @@ restrictions:
   # If true, hides all inventory items on the player's screen until they are authenticated
   hide-inventory: true
 
+# Screen-based Anvil GUI for login and registration (type password into Anvil screen instead of chat)
+anvil-gui:
+  enabled: true
+
 # Visual screen titles displayed during authentication
 titles:
   enabled: true
@@ -102,13 +106,10 @@ sounds:
   brute-force-lock: "BLOCK_ANVIL_LAND"
   auth-reminder: "BLOCK_NOTE_BLOCK_PLING"
 
-# GUI PIN Pad Login settings
-pin-pad:
-  enabled: true
-  required-length: 4
 
 # Debug and logging level
 debug: false
+# Verbose mode
 verbose: false
 
 # Hashing security configurations

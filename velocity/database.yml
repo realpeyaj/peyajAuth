@@ -1,0 +1,25 @@
+# Database configuration for peyajAuth
+
+# Available storage types: 'sqlite', 'mysql', 'mariadb'
+type: sqlite
+
+# HikariCP pool configurations (used for all database types)
+pool:
+  max-size: 10
+  min-idle: 2
+  idle-timeout-ms: 600000
+  max-lifetime-ms: 1800000
+  connection-timeout-ms: 30000
+
+# Connection details for MySQL and MariaDB
+mysql:
+  host: localhost
+  port: 3306
+  database: peyajauth
+  username: root
+  password: ""
+  use-ssl: false
+
+# SQLite configuration
+sqlite:
+  file: "auth.db"

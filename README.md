@@ -4,7 +4,7 @@ A high-performance, modular, and secure hybrid authentication solution for Spigo
 
 ![Java](https://img.shields.io/badge/Java-21-orange.svg)
 ![Platform](https://img.shields.io/badge/Platform-Paper%20%7C%20Velocity-blue.svg)
-![Version](https://img.shields.io/badge/Version-1.6.1-green.svg)
+![Version](https://img.shields.io/badge/Version-1.6.2-green.svg)
 ![License](https://img.shields.io/badge/License-Proprietary-red.svg)
 [![bStats](https://img.shields.io/bstats/servers/32544?color=blue)](https://bstats.org/plugin/bukkit/peyajAuth/32544)
 
@@ -33,13 +33,13 @@ A high-performance, modular, and secure hybrid authentication solution for Spigo
 ## Installation & Setup
 
 ### For Standalone Paper Servers
-1.  Download the latest compiled `peyajAuth-Paper-1.6.1.jar` from the release section.
+1.  Download the latest compiled `peyajAuth-Paper-1.6.2.jar` from the release section.
 2.  Drop the JAR into your server's `plugins/` directory.
 3.  Restart to generate default configs inside `plugins/peyajAuth/` (`config.yml`, `messages.yml`, `database.yml`, `premium.yml`).
 
 ### For Velocity Proxy Networks
-1.  Place `peyajAuth-Velocity-1.6.1.jar` in your Velocity `plugins/` folder.
-2.  Drop `peyajAuth-Paper-1.6.1.jar` into the `plugins/` folder of all backend servers (Lobbies, Gamemodes).
+1.  Place `peyajAuth-Velocity-1.6.2.jar` in your Velocity `plugins/` folder.
+2.  Drop `peyajAuth-Paper-1.6.2.jar` into the `plugins/` folder of all backend servers (Lobbies, Gamemodes).
 3.  Configure all modules to point to the same MySQL or MariaDB database in `database.yml` to sync player sessions across the entire proxy network.
 4.  On startup, the Velocity plugin will automatically extract and launch its embedded Limbo server inside `plugins/peyajauth/peyajlimboapi/` on a dynamic port for secure lobby redirection.
     *   **Custom Spawn Map**: The plugin extracts a default void platform. You can replace it with any custom map by dropping your own `.schem` file into `plugins/peyajauth/peyajlimboapi/` and naming it `spawn.schem`. The plugin automatically detects and normalizes WorldEdit nested structures on startup to prevent load crashes.

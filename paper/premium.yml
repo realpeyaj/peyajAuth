@@ -14,8 +14,8 @@ cache:
 # Fallback behavior when Mojang API is offline
 mojang-outage:
   # Options:
-  # 'crack' - Treat premium players as cracked and force them to register/login with a password. (Safe, default)
-  # 'kick' - Kick premium players when Mojang API is down.
+  # 'crack' - Treat premium players as cracked and force them to register/login with a password. (Safe)
+  # 'kick' - Kick premium players when Mojang API is down. (Default)
   fallback: kick
   kick-message: "<red>Mojang authentication servers are currently down. Please try again later."
 
