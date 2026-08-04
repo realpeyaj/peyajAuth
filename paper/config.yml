@@ -15,10 +15,6 @@ restrictions:
   # If true, hides all inventory items on the player's screen until they are authenticated
   hide-inventory: true
 
-# Screen-based Anvil GUI for login and registration (type password into Anvil screen instead of chat)
-anvil-gui:
-  enabled: true
-
 # Visual screen titles displayed during authentication
 titles:
   enabled: true
@@ -28,7 +24,7 @@ titles:
   fadeOut: 10
   register:
     title: "<gradient:gold:yellow>peyajAuth</gradient>"
-    subtitle: "<yellow>Please register using <gold>/register <password></gold></yellow>"
+    subtitle: "<yellow>Please register using <gold>/register <password> <password></gold></yellow>"
   login:
     title: "<gradient:gold:yellow>peyajAuth</gradient>"
     subtitle: "<yellow>Please login using <gold>/login <password></gold></yellow>"
