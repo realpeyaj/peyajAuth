@@ -15,6 +15,13 @@ restrictions:
   # If true, hides all inventory items on the player's screen until they are authenticated
   hide-inventory: true
 
+# Data-driven Graphical Dialog UI screen for Minecraft 1.21.6+ clients
+dialog:
+  # Disabled by default
+  enabled: false
+  # Include disconnect button in the dialog window
+  show-disconnect-button: true
+
 # Visual screen titles displayed during authentication
 titles:
   enabled: true

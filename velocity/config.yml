@@ -22,6 +22,33 @@ remember-login:
 password:
   minimum-length: 8
   maximum-length: 64
+  # Blacklisted weak passwords that players cannot use for registration
+  unsafe-passwords:
+    - "123456"
+    - "password"
+    - "qwerty"
+    - "admin123"
+    - "12345678"
+    - "123456789"
+    - "help"
+
+# Security & Restriction configurations
+security:
+  # Unrestricted player/bot/NPC names that bypass authentication checks (wildcards supported)
+  # Example:
+  # unrestricted-names:
+  #   - "BuildCraft"
+  #   - "[Citizens]*"
+  #   - "ServerBot_*"
+  unrestricted-names: []
+
+  # Account IP lock: Binds specific account names to allowed IP addresses or subnets.
+  # Wildcards (*) and subnets are supported (format: "Username;AllowedIP_or_Pattern").
+  # Example:
+  # account-ip-locks:
+  #   - "Peyaj;192.168.1.*"
+  #   - "AdminUser;10.0.0.50"
+  account-ip-locks: []
 
 # Network/Proxy specific settings
 proxy:
