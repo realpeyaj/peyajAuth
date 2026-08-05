@@ -55,6 +55,15 @@ password:
   require-uppercase: true
   require-lowercase: true
   require-symbol: false
+  # Blacklisted weak passwords that players cannot use for registration
+  unsafe-passwords:
+    - "123456"
+    - "password"
+    - "qwerty"
+    - "admin123"
+    - "12345678"
+    - "123456789"
+    - "help"
 
 # Brute force protection settings
 brute-force:
@@ -110,6 +119,23 @@ verbose: false
 
 # Hashing security configurations
 security:
+  # Unrestricted player/bot/NPC names that bypass authentication checks (wildcards supported)
+  # Example:
+  # unrestricted-names:
+  #   - "BuildCraft"
+  #   - "[Citizens]*"
+  #   - "ServerBot_*"
+  unrestricted-names: []
+
+  # Account IP lock: Binds specific account names to allowed IP addresses or subnets.
+  # If a player connects with a restricted username from an IP that does not match, they are kicked.
+  # Wildcards (*) and subnets are supported (format: "Username;AllowedIP_or_Pattern").
+  # Example:
+  # account-ip-locks:
+  #   - "Peyaj;192.168.1.*"
+  #   - "AdminUser;10.0.0.50"
+  account-ip-locks: []
+
   # Hashing algorithm: 'sha256' (default, highly recommended for zero-lag logins), 'argon2', or 'bcrypt'
   algorithm: sha256
 

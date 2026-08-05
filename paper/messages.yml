@@ -32,6 +32,7 @@ captcha:
 validation:
   password-too-short: "<red>Password must be at least {min} characters long!</red>"
   password-too-long: "<red>Password cannot be longer than {max} characters!</red>"
+  password-unsafe: "<red>This password is too common or unsafe! Please choose a stronger password.</red>"
   password-require-number: "<red>Password must contain at least one number!</red>"
   password-require-uppercase: "<red>Password must contain at least one uppercase letter!</red>"
   password-require-lowercase: "<red>Password must contain at least one lowercase letter!</red>"
