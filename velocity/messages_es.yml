@@ -1,0 +1,81 @@
+# Configuración de localización para peyajAuth Velocity (Español)
+# Formato MiniMessage con soporte para colores HEX y gradientes.
+
+prefix: "<gradient:gold:yellow>[peyajAuth]</gradient> "
+
+auth:
+  not-logged-in: "<red>¡Debes autenticarte para jugar en este servidor!</red>"
+  please-register: "<yellow>Por favor regístrate usando: <gold>/register <contraseña> <confirmarContraseña></gold></yellow>"
+  please-login: "<yellow>Por favor inicia sesión usando: <gold>/login <contraseña></gold></yellow>"
+  already-authenticated: "<red>¡Ya estás autenticado!</red>"
+  already-registered: "<red>¡Esta cuenta ya está registrada! Por favor inicia sesión.</red>"
+  success-register: "<green>¡Te has registrado e iniciado sesión exitosamente!</green>"
+  success-login: "<green>¡Has iniciado sesión exitosamente!</green>"
+  success-logout: "<green>Has cerrado sesión. Vuelve a autenticarte para jugar.</green>"
+  success-change-password: "<green>¡Tu contraseña ha sido cambiada exitosamente!</green>"
+  not-registered: "<red>¡Tu cuenta aún no está registrada!</red>"
+  incorrect-password: "<red>¡Contraseña incorrecta! Inténtalo de nuevo.</red>"
+  password-mismatch: "<red>¡Las contraseñas no coinciden!</red>"
+  login-timeout: "<red>¡Tiempo de espera para iniciar sesión agotado!</red>"
+  premium-autologin: "<green>¡Cuenta premium detectada! Has iniciado sesión automáticamente.</green>"
+  bedrock-autologin: "<green>¡Cuenta Bedrock detectada! Has iniciado sesión.</green>"
+  session-resume: "<green>Tu sesión de juego ha sido reanudada.</green>"
+  access-denied-ip: "<red>Acceso denegado: No estás autorizado a iniciar sesión desde esta IP.</red>"
+  premium-prompt-title: "{prefix}"
+  premium-prompt-subtitle: "<yellow>¿Eres premium? Elige <green>SÍ</green> o <red>NO</red> en el chat</yellow>"
+  auth-timeout: "<red>Tiempo de autenticación agotado.</red>"
+  server-change-denied: "<red>¡Debes autenticarte antes de cambiar de servidor!</red>"
+  mojang-authenticated: "<green>¡Bienvenido de nuevo! Autenticado vía Mojang.</green>"
+  gateway-disconnect: "<red>Desconectado del portal de autenticación: {reason}</red>"
+  chat-disabled: "<red>¡El chat está deshabilitado hasta que te autentiques!</red>"
+  command-disabled: "<red>Debes autenticarte antes de ejecutar comandos.</red>"
+  title-auth-required: "<gold><bold>Autenticación Requerida</bold></gold>"
+  title-please-login: "<gray>Por favor escribe <yellow>/login <contraseña></yellow></gray>"
+  title-please-register: "<gray>Por favor escribe <yellow>/register <contraseña> <confirmar></yellow></gray>"
+  captcha-required: "<red>Debes resolver el captcha primero usando /captcha <código>.</red>"
+  register-usage: "<red>Uso: /register <contraseña> <confirmarContraseña></red>"
+  registering: "<yellow>Registrando cuenta...</yellow>"
+  register-failed-username: "<red>Error en el registro. El nombre de usuario ya está registrado.</red>"
+  has-account-use-login: "<red>Ya tienes una cuenta. Por favor usa /login <contraseña>.</red>"
+  premium-no-logout: "<red>Los jugadores premium no pueden cerrar sesión.</red>"
+
+captcha:
+  gui-title: "Haz clic en el objeto: <green>{target}</green>"
+  prompt: "<yellow>¡Resuelve el captcha para continuar! Código: <gold>{code}</gold> (Escribe: <gold>/captcha <code></gold>)</yellow>"
+  failed: "<red>¡Captcha incorrecto! Inténtalo de nuevo.</red>"
+  success: "<green>¡Captcha resuelto exitosamente! Ahora puedes autenticarte.</green>"
+
+validation:
+  password-too-short: "<red>¡La contraseña debe tener al menos {min} caracteres!</red>"
+  password-too-long: "<red>¡La contraseña no puede tener más de {max} caracteres!</red>"
+  password-unsafe: "<red>¡Esta contraseña es demasiado común o insegura! Elige una más fuerte.</red>"
+  password-require-number: "<red>¡La contraseña debe contener al menos un número!</red>"
+  password-require-uppercase: "<red>¡La contraseña debe contener al menos una letra mayúscula!</red>"
+  password-require-lowercase: "<red>¡La contraseña debe contener al menos una letra minúscula!</red>"
+  max-accounts-exceeded: "<red>¡Has alcanzado el límite máximo de cuentas permitidas para tu IP ({max})!</red>"
+
+bruteforce:
+  account-locked: "<red>¡Tu cuenta ha sido bloqueada por demasiados intentos fallidos! Inténtalo en {minutes} minutos.</red>"
+  ip-locked: "<red>¡Tu IP ha sido bloqueada por demasiados intentos fallidos! Inténtalo en {minutes} minutos.</red>"
+  admin-alert: "{prefix}<gold>ALERTA: ¡El jugador {player} (IP: {ip}) ha fallado {attempts} intentos de inicio de sesión!</gold>"
+
+admin:
+  reload: "{prefix}<green>¡Configuraciones recargadas exitosamente!</green>"
+  player-not-found: "<red>El jugador {player} no fue encontrado.</red>"
+  force-login-success: "<green>Se forzó el inicio de sesión del jugador {player}.</green>"
+  force-logout-success: "<green>Se forzó el cierre de sesión del jugador {player}.</green>"
+  unregister-success: "<green>Se eliminó el registro del jugador {player}.</green>"
+  set-premium-success: "<green>Se estableció el modo de autenticación de {player} a PREMIUM.</green>"
+  set-cracked-success: "<green>Se estableció el modo de autenticación de {player} a CRACKED.</green>"
+  info-title: "<yellow>---</yellow> {prefix}<yellow>Información de cuenta: <gold>{player}</gold> ---</yellow>"
+  info-uuid-offline: "<yellow>UUID Offline: <gold>{uuid}</gold></yellow>"
+  info-uuid-premium: "<yellow>UUID Premium: <gold>{uuid}</gold></yellow>"
+  info-premium-status: "<yellow>Es Premium: <gold>{status}</gold></yellow>"
+  info-last-ip: "<yellow>Última IP: <gold>{ip}</gold></yellow>"
+  info-last-login: "<yellow>Último inicio: <gold>{time}</gold></yellow>"
+  info-first-join: "<yellow>Primer ingreso: <gold>{time}</gold></yellow>"
+
+general:
+  no-permission: "<red>¡No tienes permiso para ejecutar este comando!</red>"
+  only-players: "<red>¡Este comando solo puede ser ejecutado por jugadores!</red>"
+  invalid-syntax: "<red>¡Sintaxis inválida! Uso: {usage}</red>"

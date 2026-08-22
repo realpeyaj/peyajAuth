@@ -14,13 +14,26 @@ restrictions:
   blindness: true
   # If true, hides all inventory items on the player's screen until they are authenticated
   hide-inventory: true
+  # Ghost mode: Hides unauthenticated players from authenticated players and vice versa (prevents spawn clutter)
+  ghost-mode: false
 
-# Data-driven Graphical Dialog UI screen for Minecraft 1.21.6+ clients
+# Language configuration: 'auto' (detects client language: 'en', 'es', 'ru', 'zh', 'pt', 'id'), or specific code
+language: "auto"
+
+# Data-driven Graphical Dialog UI screen for Minecraft 1.21.6+ clients (Paper 26.2+)
 dialog:
-  # Disabled by default
+  # Enable native graphical Dialog screens for login and registration
   enabled: false
-  # Include disconnect button in the dialog window
+  # Allow closing the dialog window with Escape key
+  can-close-with-escape: false
+  # Include cancel button in the dialog window (executes /logout)
+  show-cancel-button: false
+  # Include disconnect button in the dialog window (executes /disconnect)
   show-disconnect-button: true
+  # Suppress periodic chat and title reminders while Dialog UI is open
+  suppress-chat-reminders: true
+  # Password input field width in pixels
+  input-width: 200
 
 # Visual screen titles displayed during authentication
 titles:
@@ -39,7 +52,9 @@ titles:
 # Authentication spawn lobby teleportation
 spawn:
   enabled: false
-  # If true, all players (including premium/auto-logged in ones) are forced to spawn on join and stay there (no teleport back to quit location)
+  # If true, teleports players back to their previous position upon successful login
+  teleport-back-on-login: true
+  # If true, all players (including premium/auto-logged in ones) are forced to spawn on join and stay there
   force-spawn: false
   world: "world"
   x: 0.0

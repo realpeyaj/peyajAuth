@@ -54,3 +54,10 @@ security:
 proxy:
   # The backend server to send players to once they authenticate successfully in the virtual limbo
   success-target-server: "lobby"
+
+# Embedded Limbo virtual void world settings
+limbo:
+  # Dimension type: 'minecraft:the_end', 'minecraft:overworld', or 'minecraft:the_nether'
+  # Note: 'minecraft:the_end' provides the dark purple End sky void aesthetic for 1.21.6+ (26.2) clients.
+  # If older 1.21.5 (26.1.2) clients experience Network Protocol Errors, change this to 'minecraft:overworld'.
+  dimension: "minecraft:the_end"

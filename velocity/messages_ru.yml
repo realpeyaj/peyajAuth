@@ -1,0 +1,81 @@
+# Конфигурация локализации для peyajAuth Velocity (Русский)
+# Поддерживается формат MiniMessage, HEX-цвета и градиенты.
+
+prefix: "<gradient:gold:yellow>[peyajAuth]</gradient> "
+
+auth:
+  not-logged-in: "<red>Вы должны авторизоваться, чтобы играть на этом сервере!</red>"
+  please-register: "<yellow>Пожалуйста, зарегистрируйтесь: <gold>/register <пароль> <повторПароля></gold></yellow>"
+  please-login: "<yellow>Пожалуйста, войдите: <gold>/login <пароль></gold></yellow>"
+  already-authenticated: "<red>Вы уже авторизованы!</red>"
+  already-registered: "<red>Этот аккаунт уже зарегистрирован! Пожалуйста, войдите.</red>"
+  success-register: "<green>Вы успешно зарегистрировались и вошли в игру!</green>"
+  success-login: "<green>Вы успешно вошли в игру!</green>"
+  success-logout: "<green>Вы вышли из системы. Авторизуйтесь снова для игры.</green>"
+  success-change-password: "<green>Ваш пароль был успешно изменен!</green>"
+  not-registered: "<red>Ваш аккаунт еще не зарегистрирован!</red>"
+  incorrect-password: "<red>Неверный пароль! Попробуйте снова.</red>"
+  password-mismatch: "<red>Пароли не совпадают!</red>"
+  login-timeout: "<red>Время ожидания входа истекло!</red>"
+  premium-autologin: "<green>Обнаружен лицензионный аккаунт! Автоматический вход выполнен.</green>"
+  bedrock-autologin: "<green>Обнаружен аккаунт Bedrock! Автоматический вход выполнен.</green>"
+  session-resume: "<green>Ваша игровая сессия восстановлена.</green>"
+  access-denied-ip: "<red>Доступ запрещен: авторизация с данного IP запрещена.</red>"
+  premium-prompt-title: "{prefix}"
+  premium-prompt-subtitle: "<yellow>У вас лицензия? Выберите <green>ДА</green> или <red>НЕТ</red> в чате</yellow>"
+  auth-timeout: "<red>Время авторизации истекло.</red>"
+  server-change-denied: "<red>Авторизуйтесь перед сменой сервера!</red>"
+  mojang-authenticated: "<green>С возвращением! Авторизовано через Mojang.</green>"
+  gateway-disconnect: "<red>Отключен от шлюза авторизации: {reason}</red>"
+  chat-disabled: "<red>Чат заблокирован до авторизации!</red>"
+  command-disabled: "<red>Команды заблокированы до авторизации.</red>"
+  title-auth-required: "<gold><bold>Требуется авторизация</bold></gold>"
+  title-please-login: "<gray>Введите <yellow>/login <пароль></yellow></gray>"
+  title-please-register: "<gray>Введите <yellow>/register <пароль> <повтор></yellow></gray>"
+  captcha-required: "<red>Сначала решите капчу: /captcha <код>.</red>"
+  register-usage: "<red>Используйте: /register <пароль> <повторПароля></red>"
+  registering: "<yellow>Регистрация аккаунта...</yellow>"
+  register-failed-username: "<red>Ошибка регистрации. Данный никнейм уже занят.</red>"
+  has-account-use-login: "<red>Аккаунт уже существует. Используйте /login <пароль>.</red>"
+  premium-no-logout: "<red>Лицензионные игроки не могут выйти из аккаунта.</red>"
+
+captcha:
+  gui-title: "Нажмите на предмет: <green>{target}</green>"
+  prompt: "<yellow>Пройдите капчу: <gold>{code}</gold> (Введите: <gold>/captcha <code></gold>)</yellow>"
+  failed: "<red>Неверная капча! Попробуйте снова.</red>"
+  success: "<green>Капча пройдена! Теперь вы можете авторизоваться.</green>"
+
+validation:
+  password-too-short: "<red>Пароль должен содержать минимум {min} символов!</red>"
+  password-too-long: "<red>Пароль не может быть длиннее {max} символов!</red>"
+  password-unsafe: "<red>Этот пароль слишком простой или ненадежный! Выберите другой.</red>"
+  password-require-number: "<red>Пароль должен содержать хотя бы одну цифру!</red>"
+  password-require-uppercase: "<red>Пароль должен содержать хотя бы одну заглавную букву!</red>"
+  password-require-lowercase: "<red>Пароль должен содержать хотя бы одну строчную букву!</red>"
+  max-accounts-exceeded: "<red>Превышен лимит аккаунтов для вашего IP-адреса ({max})!</red>"
+
+bruteforce:
+  account-locked: "<red>Аккаунт временно заблокирован из-за множества неверных попыток входа! Попробуйте через {minutes} мин.</red>"
+  ip-locked: "<red>Ваш IP заблокирован из-за множества неверных попыток входа! Попробуйте через {minutes} мин.</red>"
+  admin-alert: "{prefix}<gold>ВНИМАНИЕ: Игрок {player} (IP: {ip}) провалил {attempts} попыток входа!</gold>"
+
+admin:
+  reload: "{prefix}<green>Конфигурация успешно перезагружена!</green>"
+  player-not-found: "<red>Игрок {player} не найден.</red>"
+  force-login-success: "<green>Игрок {player} успешно принудительно авторизован.</green>"
+  force-logout-success: "<green>Игрок {player} успешно принудительно отключен от авторизации.</green>"
+  unregister-success: "<green>Аккаунт игрока {player} успешно удален.</green>"
+  set-premium-success: "<green>Режим авторизации для {player} изменен на PREMIUM.</green>"
+  set-cracked-success: "<green>Режим авторизации для {player} изменен на CRACKED.</green>"
+  info-title: "<yellow>---</yellow> {prefix}<yellow>Информация об аккаунте: <gold>{player}</gold> ---</yellow>"
+  info-uuid-offline: "<yellow>Offline UUID: <gold>{uuid}</gold></yellow>"
+  info-uuid-premium: "<yellow>Premium UUID: <gold>{uuid}</gold></yellow>"
+  info-premium-status: "<yellow>Лицензия: <gold>{status}</gold></yellow>"
+  info-last-ip: "<yellow>Последний IP: <gold>{ip}</gold></yellow>"
+  info-last-login: "<yellow>Последний вход: <gold>{time}</gold></yellow>"
+  info-first-join: "<yellow>Первый вход: <gold>{time}</gold></yellow>"
+
+general:
+  no-permission: "<red>У вас нет прав для выполнения этой команды!</red>"
+  only-players: "<red>Эта команда доступна только игрокам!</red>"
+  invalid-syntax: "<red>Неверный синтаксис! Используйте: {usage}</red>"

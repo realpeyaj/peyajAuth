@@ -1,0 +1,96 @@
+# peyajAuth 语言配置文件 (中文 - 简体)
+# 支持 MiniMessage 格式、HEX 颜色及渐变色。
+
+prefix: "<gradient:gold:yellow>[peyajAuth]</gradient> "
+
+auth:
+  not-logged-in: "<red>您必须登录后才能在本服务器进行游戏！</red>"
+  please-register: "<yellow>请使用指令注册：<gold>/register <密码> <确认密码></gold></yellow>"
+  please-login: "<yellow>请使用指令登录：<gold>/login <密码></gold></yellow>"
+  already-authenticated: "<red>您已经登录了！</red>"
+  already-registered: "<red>该账号已被注册！请直接登录。</red>"
+  success-register: "<green>注册并登录成功！祝您游戏愉快！</green>"
+  success-login: "<green>登录成功！欢迎回来！</green>"
+  success-logout: "<green>您已成功登出。请重新认证以继续游戏。</green>"
+  success-change-password: "<green>密码修改成功！</green>"
+  not-registered: "<red>您的账号尚未注册！</red>"
+  incorrect-password: "<red>密码错误！请重试。</red>"
+  password-mismatch: "<red>两次输入的密码不一致！</red>"
+  login-timeout: "<red>登录超时！</red>"
+  premium-autologin: "<green>检测到正版账号！已为您自动登录。</green>"
+  bedrock-autologin: "<green>检测到基岩版账号！已为您自动登录。</green>"
+  session-resume: "<green>已为您恢复游戏会话。</green>"
+  please-2fa: "<yellow>请输入您的两步验证码 (2FA)：<gold>/2fa verify <验证码></gold></yellow>"
+  twofactor-timeout: "<red>两步验证超时！</red>"
+  disconnect-message: "<red>已从服务器断开连接。</red>"
+
+captcha:
+  gui-title: "请点击目标物品：<green>{target}</green>"
+  prompt: "<yellow>请完成验证码：<gold>{code}</gold> (输入：<gold>/captcha <code></gold>)</yellow>"
+  failed: "<red>验证码错误！请重试。</red>"
+  success: "<green>验证码通过！您现在可以登录了。</green>"
+
+validation:
+  password-too-short: "<red>密码长度不能少于 {min} 个字符！</red>"
+  password-too-long: "<red>密码长度不能超过 {max} 个字符！</red>"
+  password-unsafe: "<red>该密码过于简单或不安全！请更换更复杂的密码。</red>"
+  password-require-number: "<red>密码必须包含至少一个数字！</red>"
+  password-require-uppercase: "<red>密码必须包含至少一个大写字母！</red>"
+  password-require-lowercase: "<red>密码必须包含至少一个小写字母！</red>"
+  max-accounts-exceeded: "<red>您的 IP 地址已达到最大注册账号上限 ({max})！</red>"
+
+bruteforce:
+  account-locked: "<red>由于连续登录失败次数过多，您的账号已被锁定！请在 {minutes} 分钟后再试。</red>"
+  ip-locked: "<red>由于连续登录失败次数过多，您的 IP 已被锁定！请在 {minutes} 分钟后再试。</red>"
+  admin-alert: "{prefix}<gold>警告：玩家 {player} (IP: {ip}) 连续登录失败 {attempts} 次！</gold>"
+
+admin:
+  reload: "<green>配置文件重载成功！</green>"
+  player-not-found: "<red>未找到玩家 {player}。</red>"
+  force-login-success: "<green>已强制玩家 {player} 登录。</green>"
+  force-logout-success: "<green>已强制玩家 {player} 登出。</green>"
+  unregister-success: "<green>已成功注销玩家 {player} 的账号。</green>"
+  set-premium-success: "<green>已将 {player} 的认证模式设置为正版 (PREMIUM)。</green>"
+  set-cracked-success: "<green>已将 {player} 的认证模式设置为离线 (CRACKED)。</green>"
+  info-title: "<yellow>---</yellow> {prefix}<yellow>玩家账号信息：<gold>{player}</gold> ---</yellow>"
+  info-uuid-offline: "<yellow>离线 UUID: <gold>{uuid}</gold></yellow>"
+  info-uuid-premium: "<yellow>正版 UUID: <gold>{uuid}</gold></yellow>"
+  info-premium-status: "<yellow>是否正版: <gold>{status}</gold></yellow>"
+  info-last-ip: "<yellow>最后登录 IP: <gold>{ip}</gold></yellow>"
+  info-last-login: "<yellow>最后登录时间: <gold>{time}</gold></yellow>"
+  info-first-join: "<yellow>首次加入时间: <gold>{time}</gold></yellow>"
+
+general:
+  no-permission: "<red>您没有权限执行此命令！</red>"
+  only-players: "<red>该命令仅允许玩家在游戏内执行！</red>"
+  invalid-syntax: "<red>命令语法错误！用法：{usage}</red>"
+
+email:
+  no-email: "<red>您尚未绑定安全邮箱！</red>"
+  current-email: "<yellow>您绑定的安全邮箱为：<gold>{email}</gold></yellow>"
+  invalid-email: "<red>邮箱格式不正确！</red>"
+  pending-add: "<yellow>请确认绑定新邮箱 (<gold>{email}</gold>)：<gold>/email confirm <验证码></gold></yellow>"
+  pending-add-fallback: "<yellow>请确认绑定新邮箱 (<gold>{email}</gold>)：<gold>/email confirm</gold></yellow>"
+  pending-change: "<yellow>请确认更换邮箱为 <gold>{email}</gold>：<gold>/email confirm <验证码></gold></yellow>"
+  pending-change-fallback: "<yellow>请确认更换邮箱为 <gold>{email}</gold>：<gold>/email confirm</gold></yellow>"
+  pending-remove: "<yellow>请确认解绑邮箱：<gold>/email confirm <验证码></gold></yellow>"
+  pending-remove-fallback: "<yellow>请确认解绑邮箱：<gold>/email confirm</gold></yellow>"
+  no-pending: "<red>没有待确认的邮箱操作！</red>"
+  invalid-code: "<red>验证码错误！请重试。</red>"
+  success-linked: "<green>安全邮箱 <gold>{email}</gold> 绑定成功！</green>"
+  success-removed: "<green>安全邮箱解绑成功！</green>"
+  smtp-error: "<red>邮件发送失败！已启用本地验证模式。</red>"
+
+twofactor:
+  already-enabled: "<red>您的账号已启用了两步验证！</red>"
+  not-enabled: "<red>您的账号尚未启用两步验证！</red>"
+  setup-intro: "<yellow>正在设置 Google Authenticator (2FA)：</yellow>"
+  setup-key: "<yellow>您的密钥：<gold>{key}</gold></yellow>"
+  setup-qr: "<yellow>点击此处扫描二维码：<gold><click:open_url:'{url}'>[打开二维码]</click></gold></yellow>"
+  setup-confirm: "<yellow>扫描完成后请输入验证码确认：<gold>/2fa confirm <验证码></gold></yellow>"
+  no-pending: "<red>您尚未开始 2FA 设置！请先输入 /2fa setup。</red>"
+  incorrect-code: "<red>安全验证码错误！请重试。</red>"
+  success-enabled: "<green>两步验证 (2FA) 已成功启用！</green>"
+  success-disabled: "<green>两步验证 (2FA) 已成功关闭！</green>"
+  success-verified: "<green>2FA 验证成功！已授权访问。</green>"
+  admin-disabled: "<green>已成功为玩家 {player} 关闭 2FA。</green>"

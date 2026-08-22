@@ -4,16 +4,15 @@ A high-performance, modular, and secure hybrid authentication solution for Spigo
 
 ![Java](https://img.shields.io/badge/Java-21-orange.svg)
 ![Platform](https://img.shields.io/badge/Platform-Paper%20%7C%20Velocity-blue.svg)
-![Version](https://img.shields.io/badge/Version-1.6.3-green.svg)
+![Version](https://img.shields.io/badge/Version-1.6.4-green.svg)
 ![License](https://img.shields.io/badge/License-Proprietary-red.svg)
 [![bStats](https://img.shields.io/bstats/servers/32544?color=blue)](https://bstats.org/plugin/bukkit/peyajAuth/32544)
 
+Are you a filipino and want to host your Minecraft server in the Philippines? Visit https://mcziehost.fun
+
+![web banner](https://i.imgur.com/D5vYv0R.jpeg)
 > [!IMPORTANT]
 > **Offline Mode Requirement**: Both the Velocity proxy (in `velocity.toml`) and your backend Spigot/Paper servers (in `server.properties`) must be configured in offline mode (`online-mode=false`). The plugin dynamically triggers online-mode authentication handshakes for verified premium players at the proxy gateway, while allowing cracked players to connect securely.
-
----
-
-**peyajAuth** is a lightweight, robust, and secure hybrid authentication plugin built for modern Minecraft networks and standalone servers.
 
 ---
 
@@ -33,14 +32,16 @@ A high-performance, modular, and secure hybrid authentication solution for Spigo
 ## Installation & Setup
 
 ### For Standalone Paper Servers
-1.  Download the latest compiled `peyajAuth-Paper-1.6.2.jar` from the release section.
+1.  Download the latest compiled `peyajAuth-Paper-<version>.jar` from the release section.
 2.  Drop the JAR into your server's `plugins/` directory.
 3.  Restart to generate default configs inside `plugins/peyajAuth/` (`config.yml`, `messages.yml`, `database.yml`, `premium.yml`).
 
 ### For Velocity Proxy Networks
-1.  Place `peyajAuth-Velocity-1.6.2.jar` in your Velocity `plugins/` folder.
-2.  Drop `peyajAuth-Paper-1.6.2.jar` into the `plugins/` folder of all backend servers (Lobbies, Gamemodes).
-3.  Configure all modules to point to the same MySQL or MariaDB database in `database.yml` to sync player sessions across the entire proxy network.
+1.  Place `peyajAuth-Velocity-<version>.jar` in your Velocity `plugins/` folder.
+2.  > [!NOTE]
+    > **Backend Paper Plugin Optional**: You do **NOT** need to install `peyajAuth-Paper` on your backend Spigot/Paper servers if `peyajAuth` is already running on Velocity. Velocity handles authentication, embedded Limbo trapping, and proxy session management.
+    > You only need to install `peyajAuth-Paper` on backend servers if you use a shared database (MySQL/MariaDB) for playerdata/sessions and want to sync them across your network, or if you want backend-specific Paper features (like native Dialog UI screens or Paper API).
+3.  Configure `database.yml` if using a shared MySQL/MariaDB database to sync player sessions across the proxy network.
 4.  On startup, the Velocity plugin will automatically extract and launch its embedded Limbo server inside `plugins/peyajauth/peyajlimboapi/` on a dynamic port for secure lobby redirection.
     *   **Custom Spawn Map**: The plugin extracts a default void platform. You can replace it with any custom map by dropping your own `.schem` file into `plugins/peyajauth/peyajlimboapi/` and naming it `spawn.schem`. The plugin automatically detects and normalizes WorldEdit nested structures on startup to prevent load crashes.
 

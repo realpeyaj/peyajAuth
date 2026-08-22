@@ -1,0 +1,96 @@
+# Конфигурация локализации для peyajAuth (Русский)
+# Поддерживается формат MiniMessage, HEX-цвета и градиенты.
+
+prefix: "<gradient:gold:yellow>[peyajAuth]</gradient> "
+
+auth:
+  not-logged-in: "<red>Вы должны авторизоваться, чтобы играть на этом сервере!</red>"
+  please-register: "<yellow>Пожалуйста, зарегистрируйтесь: <gold>/register <пароль> <повторПароля></gold></yellow>"
+  please-login: "<yellow>Пожалуйста, войдите: <gold>/login <пароль></gold></yellow>"
+  already-authenticated: "<red>Вы уже авторизованы!</red>"
+  already-registered: "<red>Этот аккаунт уже зарегистрирован! Пожалуйста, войдите.</red>"
+  success-register: "<green>Вы успешно зарегистрировались и вошли в игру!</green>"
+  success-login: "<green>Вы успешно вошли в игру!</green>"
+  success-logout: "<green>Вы вышли из системы. Авторизуйтесь снова для игры.</green>"
+  success-change-password: "<green>Ваш пароль был успешно изменен!</green>"
+  not-registered: "<red>Ваш аккаунт еще не зарегистрирован!</red>"
+  incorrect-password: "<red>Неверный пароль! Попробуйте снова.</red>"
+  password-mismatch: "<red>Пароли не совпадают!</red>"
+  login-timeout: "<red>Время ожидания входа истекло!</red>"
+  premium-autologin: "<green>Обнаружен лицензионный аккаунт! Автоматический вход выполнен.</green>"
+  bedrock-autologin: "<green>Обнаружен аккаунт Bedrock! Автоматический вход выполнен.</green>"
+  session-resume: "<green>Ваша игровая сессия восстановлена.</green>"
+  please-2fa: "<yellow>Введите код 2FA из вашего приложения Authenticator: <gold>/2fa verify <код></gold></yellow>"
+  twofactor-timeout: "<red>Время ожидания 2FA истекло!</red>"
+  disconnect-message: "<red>Отключен от сервера.</red>"
+
+captcha:
+  gui-title: "Нажмите на предмет: <green>{target}</green>"
+  prompt: "<yellow>Пройдите капчу: <gold>{code}</gold> (Введите: <gold>/captcha <code></gold>)</yellow>"
+  failed: "<red>Неверная капча! Попробуйте снова.</red>"
+  success: "<green>Капча пройдена! Теперь вы можете авторизоваться.</green>"
+
+validation:
+  password-too-short: "<red>Пароль должен содержать минимум {min} символов!</red>"
+  password-too-long: "<red>Пароль не может быть длиннее {max} символов!</red>"
+  password-unsafe: "<red>Этот пароль слишком простой или ненадежный! Выберите другой.</red>"
+  password-require-number: "<red>Пароль должен содержать хотя бы одну цифру!</red>"
+  password-require-uppercase: "<red>Пароль должен содержать хотя бы одну заглавную букву!</red>"
+  password-require-lowercase: "<red>Пароль должен содержать хотя бы одну строчную букву!</red>"
+  max-accounts-exceeded: "<red>Превышен лимит аккаунтов для вашего IP-адреса ({max})!</red>"
+
+bruteforce:
+  account-locked: "<red>Аккаунт временно заблокирован из-за множества неверных попыток входа! Попробуйте через {minutes} мин.</red>"
+  ip-locked: "<red>Ваш IP заблокирован из-за множества неверных попыток входа! Попробуйте через {minutes} мин.</red>"
+  admin-alert: "{prefix}<gold>ВНИМАНИЕ: Игрок {player} (IP: {ip}) провалил {attempts} попыток входа!</gold>"
+
+admin:
+  reload: "<green>Конфигурация успешно перезагружена!</green>"
+  player-not-found: "<red>Игрок {player} не найден.</red>"
+  force-login-success: "<green>Игрок {player} успешно принудительно авторизован.</green>"
+  force-logout-success: "<green>Игрок {player} успешно принудительно отключен от авторизации.</green>"
+  unregister-success: "<green>Аккаунт игрока {player} успешно удален.</green>"
+  set-premium-success: "<green>Режим авторизации для {player} изменен на PREMIUM.</green>"
+  set-cracked-success: "<green>Режим авторизации для {player} изменен на CRACKED.</green>"
+  info-title: "<yellow>---</yellow> {prefix}<yellow>Информация об аккаунте: <gold>{player}</gold> ---</yellow>"
+  info-uuid-offline: "<yellow>Offline UUID: <gold>{uuid}</gold></yellow>"
+  info-uuid-premium: "<yellow>Premium UUID: <gold>{uuid}</gold></yellow>"
+  info-premium-status: "<yellow>Лицензия: <gold>{status}</gold></yellow>"
+  info-last-ip: "<yellow>Последний IP: <gold>{ip}</gold></yellow>"
+  info-last-login: "<yellow>Последний вход: <gold>{time}</gold></yellow>"
+  info-first-join: "<yellow>Первый вход: <gold>{time}</gold></yellow>"
+
+general:
+  no-permission: "<red>У вас нет прав для выполнения этой команды!</red>"
+  only-players: "<red>Эта команда доступна только игрокам!</red>"
+  invalid-syntax: "<red>Неверный синтаксис! Используйте: {usage}</red>"
+
+email:
+  no-email: "<red>У вас не привязана резервная почта!</red>"
+  current-email: "<yellow>Ваша почта: <gold>{email}</gold></yellow>"
+  invalid-email: "<red>Некорректный формат почты!</red>"
+  pending-add: "<yellow>Подтвердите почту (<gold>{email}</gold>): <gold>/email confirm <код></gold></yellow>"
+  pending-add-fallback: "<yellow>Подтвердите почту (<gold>{email}</gold>): <gold>/email confirm</gold></yellow>"
+  pending-change: "<yellow>Подтвердите смену почты на <gold>{email}</gold>: <gold>/email confirm <код></gold></yellow>"
+  pending-change-fallback: "<yellow>Подтвердите смену почты на <gold>{email}</gold>: <gold>/email confirm</gold></yellow>"
+  pending-remove: "<yellow>Подтвердите удаление почты: <gold>/email confirm <код></gold></yellow>"
+  pending-remove-fallback: "<yellow>Подтвердите удаление почты: <gold>/email confirm</gold></yellow>"
+  no-pending: "<red>Нет ожидающих подтверждения операций с почтой!</red>"
+  invalid-code: "<red>Неверный код подтверждения! Попробуйте снова.</red>"
+  success-linked: "<green>Почта <gold>{email}</gold> успешно привязана к аккаунту!</green>"
+  success-removed: "<green>Почта успешно отвязана от аккаунта!</green>"
+  smtp-error: "<red>Ошибка отправки письма! Используется локальное подтверждение.</red>"
+
+twofactor:
+  already-enabled: "<red>Двухфакторная аутентификация уже включена!</red>"
+  not-enabled: "<red>Двухфакторная аутентификация не включена!</red>"
+  setup-intro: "<yellow>Настройка Google Authenticator (2FA):</yellow>"
+  setup-key: "<yellow>Ваш секретный ключ: <gold>{key}</gold></yellow>"
+  setup-qr: "<yellow>Нажмите здесь для сканирования QR: <gold><click:open_url:'{url}'>[Открыть QR-код]</click></gold></yellow>"
+  setup-confirm: "<yellow>Отсканируйте код и подтвердите: <gold>/2fa confirm <код></gold></yellow>"
+  no-pending: "<red>Вы еще не начали настройку 2FA! Введите /2fa setup.</red>"
+  incorrect-code: "<red>Неверный код безопасности! Попробуйте снова.</red>"
+  success-enabled: "<green>Двухфакторная аутентификация успешно включена!</green>"
+  success-disabled: "<green>Двухфакторная аутентификация отключена!</green>"
+  success-verified: "<green>Код 2FA подтвержден! Доступ разрешен.</green>"
+  admin-disabled: "<green>2FA успешно отключена для игрока {player}.</green>"

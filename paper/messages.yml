@@ -22,6 +22,7 @@ auth:
   session-resume: "<green>Your playing session has been resumed</green>"
   please-2fa: "<yellow>Please verify your 2FA security code from your Authenticator app: <gold>/2fa verify <code></gold></yellow>"
   twofactor-timeout: "<red>2FA verification timeout exceeded!</red>"
+  disconnect-message: "<red>Disconnected from server.</red>"
 
 captcha:
   gui-title: "Click the target item: <green>{target}</green>"
@@ -41,17 +42,17 @@ validation:
 bruteforce:
   account-locked: "<red>Your account has been locked due to too many failed login attempts! Try again in {minutes} minutes.</red>"
   ip-locked: "<red>Your IP address has been locked due to too many failed login attempts! Try again in {minutes} minutes.</red>"
-  admin-alert: "<gold>[peyajAuth ALERT] Player {player} (IP: {ip}) has failed {attempts} login attempts!</gold>"
+  admin-alert: "{prefix}<gold>ALERT: Player {player} (IP: {ip}) has failed {attempts} login attempts!</gold>"
 
 admin:
-  reload: "<green>peyajAuth configurations reloaded successfully!</green>"
+  reload: "<green>Configurations reloaded successfully!</green>"
   player-not-found: "<red>Player {player} was not found.</red>"
   force-login-success: "<green>Successfully forced player {player} to log in.</green>"
   force-logout-success: "<green>Successfully forced player {player} to log out.</green>"
   unregister-success: "<green>Successfully unregistered player {player}.</green>"
   set-premium-success: "<green>Successfully set {player} auth mode to PREMIUM.</green>"
   set-cracked-success: "<green>Successfully set {player} auth mode to CRACKED.</green>"
-  info-title: "<yellow>--- peyajAuth Account Info: <gold>{player}</gold> ---</yellow>"
+  info-title: "<yellow>---</yellow> {prefix}<yellow>Account Info: <gold>{player}</gold> ---</yellow>"
   info-uuid-offline: "<yellow>Offline UUID: <gold>{uuid}</gold></yellow>"
   info-uuid-premium: "<yellow>Premium UUID: <gold>{uuid}</gold></yellow>"
   info-premium-status: "<yellow>Is Premium: <gold>{status}</gold></yellow>"

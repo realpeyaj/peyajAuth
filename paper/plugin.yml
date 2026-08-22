@@ -1,5 +1,5 @@
 name: peyajAuth
-version: '1.6.2'
+version: '1.6.4'
 main: me.peyaj.peyajauth.PeyajAuth
 api-version: '1.21'
 author: Peyaj
@@ -21,6 +21,10 @@ commands:
     description: Log out of your account
     usage: /logout
     permission: peyajauth.logout
+  disconnect:
+    description: Disconnect from the server
+    usage: /disconnect
+    permission: peyajauth.login
   changepassword:
     description: Change your password
     usage: /changepassword <oldPassword> <newPassword>
