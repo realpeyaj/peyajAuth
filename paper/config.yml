@@ -17,7 +17,7 @@ restrictions:
   # Ghost mode: Hides unauthenticated players from authenticated players and vice versa (prevents spawn clutter)
   ghost-mode: false
 
-# Language configuration: 'auto' (detects client language: 'en', 'es', 'ru', 'zh', 'pt', 'id'), or specific code
+# Language configuration: 'auto' (detects client language: 'en', 'es', 'ru', 'uk', 'zh', 'pt', 'id'), or specific code
 language: "auto"
 
 # Data-driven Graphical Dialog UI screen for Minecraft 1.21.6+ clients (Paper 26.2+)

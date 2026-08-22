@@ -1,0 +1,96 @@
+# Конфігурація локалізації для peyajAuth із використанням формату MiniMessage (Українська)
+# Підтримуються всі стандартні RGB, градієнти та стилі.
+
+prefix: "<gradient:gold:yellow>[peyajAuth]</gradient> "
+
+auth:
+  not-logged-in: "<red>Щоб грати на цьому сервері, необхідно зареєструватися!</red>"
+  please-register: "<yellow>Будь ласка, зареєструйтеся за допомогою команди: <gold>/register <пароль> <підтвердження_паролю></gold></yellow>"
+  please-login: "<yellow>Будь ласка, увійдіть за допомогою команди: <gold>/login <пароль></gold></yellow>"
+  already-authenticated: "<red>Ви вже увійшли!</red>"
+  already-registered: "<red>Гравець вже зареєстрований! Будь ласка, увійдіть.</red>"
+  success-register: "<green>Ви успішно зареєструвалися та увійшли!</green>"
+  success-login: "<green>Ви успішно увійшли!</green>"
+  success-logout: "<green>Ви вийшли. Перезайдіть, щоб продовжити гру.</green>"
+  success-change-password: "<green>Ваш пароль успішно змінено!</green>"
+  not-registered: "<red>Гравець ще не зареєстрований!</red>"
+  incorrect-password: "<red>Неправильний пароль! Спробуйте ще раз.</red>"
+  password-mismatch: "<red>Паролі не збігаються!</red>"
+  login-timeout: "<red>Ви занадто довго входили!</red>"
+  premium-autologin: "<green>Ви користуєтеся унікальним (premium) обліковим записом! Ви автоматично увійшли.</green>"
+  bedrock-autologin: "<green>Виявлено обліковий запис Bedrock! Ви автоматично увійшли.</green>"
+  session-resume: "<green>Ваша ігрова сесія відновлена</green>"
+  please-2fa: "<yellow>Будь ласка, підтвердьте код двофакторної автентифікації (2FA) у вашому authenticator-застосунку: <gold>/2fa verify <код></gold></yellow>"
+  twofactor-timeout: "<red>Ви занадто довго вводили код двофакторної автентифікації!</red>"
+  disconnect-message: "<red>Відключено від сервера.</red>"
+
+captcha:
+  gui-title: "Натисніть на потрібний предмет: <green>{target}</green>"
+  prompt: "<yellow>Пройдіть CAPTCHA для авторизації/входу! Код: <gold>{code}</gold> (Введіть: <gold>/captcha <код></gold>)</yellow>"
+  failed: "<red>Неправильна CAPTCHA! Спробуйте ще раз.</red>"
+  success: "<green>CAPTCHA успішно пройдена! Тепер ви можете пройти автентифікацію.</green>"
+
+validation:
+  password-too-short: "<red>Пароль повинен містити щонайменше {min} символи!</red>"
+  password-too-long: "<red>Довжина пароля не може перевищувати {max} символи!</red>"
+  password-unsafe: "<red>Цей пароль занадто поширений! Будь ласка, оберіть надійніший пароль.</red>"
+  password-require-number: "<red>Пароль повинен містити принаймні одну цифру!</red>"
+  password-require-uppercase: "<red>Пароль повинен містити принаймні одну велику літеру!</red>"
+  password-require-lowercase: "<red>Пароль повинен містити принаймні одну малу літеру!</red>"
+  max-accounts-exceeded: "<red>Ви досягли максимальної кількості облікових записів, дозволених для вашої IP-адреси ({max})!</red>"
+
+bruteforce:
+  account-locked: "<red>Ваш обліковий запис було заблоковано через надто велику кількість невдалих спроб входу! пробуйте ще раз через {minutes} хвилин.</red>"
+  ip-locked: "<red>Ваша IP-адреса була заблокована через надто велику кількість невдалих спроб входу! Спробуйте ще раз через {minutes} хвилин.</red>"
+  admin-alert: "{prefix}<gold>ПОПЕРЕДЖЕННЯ: Гравець {player} (IP: {ip}) здійснив {attempts} невдалих спроб входу!</gold>"
+
+admin:
+  reload: "<green>Успішно перезавантажено конфігурацію!</green>"
+  player-not-found: "<red>Гравця {player} не знайдено.</red>"
+  force-login-success: "<green>Гравця {player} успішно змушено увійти.</green>"
+  force-logout-success: "<green>Гравця {player} успішно змушено вийти.</green>"
+  unregister-success: "<green>Гравця {player} успішно видалено.</green>"
+  set-premium-success: "<green>Режим входу {player} успішно встановлений на PREMIUM.</green>"
+  set-cracked-success: "<green>Режим входу {player} успішно встановлений на CRACKED.</green>"
+  info-title: "<yellow>---</yellow> {prefix}<yellow>Інформація про обліковий запис: <gold>{player}</gold> ---</yellow>"
+  info-uuid-offline: "<yellow>Offline UUID: <gold>{uuid}</gold></yellow>"
+  info-uuid-premium: "<yellow>Premium UUID: <gold>{uuid}</gold></yellow>"
+  info-premium-status: "<yellow>Premium: <gold>{status}</gold></yellow>"
+  info-last-ip: "<yellow>IP-адреса останнього входу: <gold>{ip}</gold></yellow>"
+  info-last-login: "<yellow>Останній вхід: <gold>{time}</gold></yellow>"
+  info-first-join: "<yellow>Перший вхід: <gold>{time}</gold></yellow>"
+
+general:
+  no-permission: "<red>У вас немає дозволу на виконання цієї команди!</red>"
+  only-players: "<red>Цю команду можуть виконувати лише гравці!</red>"
+  invalid-syntax: "<red>Неправильний синтаксис! Правильне використання: {usage}</red>"
+
+email:
+  no-email: "<red>У вас не вказано адресу електронної пошти для відновлення!</red>"
+  current-email: "<yellow>Ваша електронна пошта для відновлення - <gold>{email}</gold></yellow>"
+  invalid-email: "<red>Неправильний формат адреси електронної пошти!</red>"
+  pending-add: "<yellow>Будь ласка, підтвердьте свою нову адресу електронної пошти для відновлення (<gold>{email}</gold>), ввівши: <gold>/email confirm <код></gold> (Код надіслано на електронну пошту)</yellow>"
+  pending-add-fallback: "<yellow>Будь ласка, підтвердьте свою нову адресу електронної пошти для відновлення (<gold>{email}</gold>), ввівши: <gold>/email confirm</gold></yellow>"
+  pending-change: "<yellow>Будь ласка, підтвердьте зміну адреси електронної пошти на <gold>{email}</gold>, ввівши: <gold>/email confirm <код></gold> (Код надіслано на електронну пошту)</yellow>"
+  pending-change-fallback: "<yellow>Будь ласка, підтвердьте зміну адреси електронної пошти на <gold>{email}</gold>, ввівши: <gold>/email confirm</gold></yellow>"
+  pending-remove: "<yellow>Будь ласка, підтвердьте видалення вашої електронної адреси для відновлення, ввівши: <gold>/email confirm <код></gold> (Код надіслано на електронну пошту)</yellow>"
+  pending-remove-fallback: "<yellow>Будь ласка, підтвердьте видалення вашої електронної адреси для відновлення, ввівши: <gold>/email confirm</gold></yellow>"
+  no-pending: "<red>У вас немає нових повідомлень електронної пошти!</red>"
+  invalid-code: "<red>Неправильний код підтвердження! Спробуйте ще раз.</red>"
+  success-linked: "<green>Адреса електронної пошти для відновлення <gold>{email}</gold> успішно прив’язана до вашого облікового запису!</green>"
+  success-removed: "<green>Адреса електронної пошти для відновлення доступу успішно видалена з вашого облікового запису!</green>"
+  smtp-error: "<red>Не вдалося надіслати електронний лист із підтвердженням! Використовується локальне підтвердження.</red>"
+
+twofactor:
+  already-enabled: "<red>У вашому обліковому записі вже увімкнено двофакторну автентифікацію!</red>"
+  not-enabled: "<red>У вашому обліковому записі не увімкнено двофакторну автентифікацію!</red>"
+  setup-intro: "<yellow>Налаштування authenticator-застосунку (2FA):</yellow>"
+  setup-key: "<yellow>Ваш приватний ключ: <gold>{key}</gold></yellow>"
+  setup-qr: "<yellow>Натисніть тут, щоб відсканувати QR-код: <gold><click:open_url:'{url}'>[Сканувати QR-код]</click></gold></yellow>"
+  setup-confirm: "<yellow>Будь ласка, відскануйте код і підтвердьте, ввівши: <gold>/2fa confirm <код></gold></yellow>"
+  no-pending: "<red>Ви ще не налаштували двофакторну автентифікацію! Спочатку введіть команду /2fa setup.</red>"
+  incorrect-code: "<red>Неправильний код! Спробуйте ще раз.</red>"
+  success-enabled: "<green>Двофакторна автентифікація успішно увімкнена!</green>"
+  success-disabled: "<green>Двофакторна автентифікація успішно вимкнена!</green>"
+  success-verified: "<green>Двофакторна автентифікація підтверджена! Доступ надано.</green>"
+  admin-disabled: "<green>Двофакторна автентифікація успішно вимкнена для гравця {player}.</green>"
