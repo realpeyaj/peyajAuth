@@ -1,0 +1,83 @@
+# Конфігурація локалізації для peyajAuth із використанням формату MiniMessage (Українська)
+# Підтримуються всі стандартні RGB, градієнти та стилі.
+
+prefix: "<gradient:gold:yellow>[peyajAuth]</gradient> "
+
+auth:
+  not-logged-in: "<red>Щоб грати на цьому сервері, необхідно зареєструватися!</red>"
+  please-register: "<yellow>Будь ласка, зареєструйтеся за допомогою команди: <gold>/register <пароль> <підтвердження_паролю></gold></yellow>"
+  please-login: "<yellow>Будь ласка, увійдіть за допомогою команди: <gold>/login <пароль></gold></yellow>"
+  already-authenticated: "<red>Ви вже увійшли!</red>"
+  already-registered: "<red>Гравець вже зареєстрований! Будь ласка, увійдіть.</red>"
+  success-register: "<green>Ви успішно зареєструвалися та увійшли!</green>"
+  success-login: "<green>Ви успішно увійшли!</green>"
+  success-logout: "<green>Ви вийшли. Перезайдіть, щоб продовжити гру.</green>"
+  success-change-password: "<green>Ваш пароль успішно змінено!</green>"
+  not-registered: "<red>Гравець ще не зареєстрований!</red>"
+  incorrect-password: "<red>Неправильний пароль! Спробуйте ще раз.</red>"
+  password-mismatch: "<red>Паролі не збігаються!</red>"
+  login-timeout: "<red>Ви занадто довго входили!</red>"
+  premium-autologin: "<green>Ви користуєтеся унікальним (premium) обліковим записом! Ви автоматично увійшли.</green>"
+  bedrock-autologin: "<green>Виявлено обліковий запис Bedrock! Ви автоматично увійшли.</green>"
+  session-resume: "<green>Ваша ігрова сесія відновлена</green>"
+  please-2fa: "<yellow>Будь ласка, підтвердьте код двофакторної автентифікації (2FA) у вашому authenticator-застосунку: <gold>/2fa verify <код></gold></yellow>"
+  twofactor-timeout: "<red>Ви занадто довго вводили код двофакторної автентифікації!</red>"
+  access-denied-ip: "<red>Доступ заборонено: Ви не маєте дозволу на вхід у цей обліковий запис із вашої IP-адреси.</red>"
+  premium-prompt-title: "{prefix}"
+  premium-prompt-subtitle: "<yellow>Ви premium? Оберіть <green>YES (ТАК)</green> або <red>NO (НІ)</red> в чаті</yellow>"
+  auth-timeout: "<red>Ви занадто довго входили!</red>"
+  server-change-denied: "<red>Перед зміною сервера необхідно пройти автентифікацію!</red>"
+  mojang-authenticated: "<green>З поверненням! Автентифікація здійснена через Mojang.</green>"
+  gateway-disconnect: "<red>Відключено від шлюзу автентифікації: {reason}</red>"
+  chat-disabled: "<red>Чат недоступний, доки ви не пройдете автентифікацію!</red>"
+  command-disabled: "<red>Перед виконанням команд необхідно пройти автентифікацію.</red>"
+  title-auth-required: "<gold><bold>Необхідна автентифікація</bold></gold>"
+  title-please-login: "<gray>Будь ласка, введіть <yellow>/login <пароль></yellow></gray>"
+  title-please-register: "<gray>Будь ласка, введіть <yellow>/register <пароль> <підтвердження_паролю></yellow></gray>"
+  captcha-required: "<red>Спочатку вам потрібно пройти CAPTCHA за допомогою команди /captcha <код>.</red>"
+  register-usage: "<red>Правильне використання: /register <пароль> <підтвердження_паролю></red>"
+  registering: "<yellow>Реєстрація облікового запису...</yellow>"
+  register-failed-username: "<red>Реєстрація не вдалася. Цей нікнейм уже зареєстровано.</red>"
+  has-account-use-login: "<red>У вас уже є обліковий запис. Будь ласка, скористайтеся /login <пароль>.</red>"
+  premium-no-logout: "<red>Premium-гравці не можуть вийти.</red>"
+
+captcha:
+  gui-title: "Натисніть на потрібний предмет: <green>{target}</green>"
+  prompt: "<yellow>Пройдіть CAPTCHA для авторизації/входу! Код: <gold>{code}</gold> (Введіть: <gold>/captcha <код></gold>)</yellow>"
+  failed: "<red>Неправильна CAPTCHA! Спробуйте ще раз.</red>"
+  success: "<green>CAPTCHA успішно пройдена! Тепер ви можете пройти автентифікацію.</green>"
+
+validation:
+  password-too-short: "<red>Пароль повинен містити щонайменше {min} символи!</red>"
+  password-too-long: "<red>Довжина пароля не може перевищувати {max} символи!</red>"
+  password-unsafe: "<red>Цей пароль занадто поширений! Будь ласка, оберіть надійніший пароль.</red>"
+  password-require-number: "<red>Пароль повинен містити принаймні одну цифру!</red>"
+  password-require-uppercase: "<red>Пароль повинен містити принаймні одну велику літеру!</red>"
+  password-require-lowercase: "<red>Пароль повинен містити принаймні одну малу літеру!</red>"
+  max-accounts-exceeded: "<red>Ви досягли максимальної кількості облікових записів, дозволених для вашої IP-адреси ({max})!</red>"
+
+bruteforce:
+  account-locked: "<red>Ваш обліковий запис було заблоковано через надто велику кількість невдалих спроб входу! Спробуйте ще раз через {minutes} хвилин.</red>"
+  ip-locked: "<red>Ваша IP-адреса була заблокована через надто велику кількість невдалих спроб входу! Спробуйте ще раз через {minutes} хвилин.</red>"
+  admin-alert: "{prefix}<gold>ПОПЕРЕДЖЕННЯ: Гравець {player} (IP: {ip}) здійснив {attempts} невдалих спроб входу!</gold>"
+
+admin:
+  reload: "{prefix}<green>Успішно перезавантажено конфігурацію!</green>"
+  player-not-found: "<red>Гравця {player} не знайдено.</red>"
+  force-login-success: "<green>Гравця {player} успішно змушено увійти.</green>"
+  force-logout-success: "<green>Гравця {player} успішно змушено вийти.</green>"
+  unregister-success: "<green>Гравця {player} успішно видалено.</green>"
+  set-premium-success: "<green>Режим входу {player} успішно встановлений на PREMIUM.</green>"
+  set-cracked-success: "<green>Режим входу {player} успішно встановлений на CRACKED.</green>"
+  info-title: "<yellow>---</yellow> {prefix}<yellow>Інформація про обліковий запис: <gold>{player}</gold> ---</yellow>"
+  info-uuid-offline: "<yellow>Offline UUID: <gold>{uuid}</gold></yellow>"
+  info-uuid-premium: "<yellow>Premium UUID: <gold>{uuid}</gold></yellow>"
+  info-premium-status: "<yellow>Premium: <gold>{status}</gold></yellow>"
+  info-last-ip: "<yellow>IP-адреса останнього входу: <gold>{ip}</gold></yellow>"
+  info-last-login: "<yellow>Останній вхід: <gold>{time}</gold></yellow>"
+  info-first-join: "<yellow>Перший вхід: <gold>{time}</gold></yellow>"
+
+general:
+  no-permission: "<red>У вас немає дозволу на виконання цієї команди!</red>"
+  only-players: "<red>Цю команду можуть виконувати лише гравці!</red>"
+  invalid-syntax: "<red>Неправильний синтаксис! Правильне використання: {usage}</red>"

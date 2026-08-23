@@ -4,7 +4,7 @@ A high-performance, modular, and secure hybrid authentication solution for Spigo
 
 ![Java](https://img.shields.io/badge/Java-21-orange.svg)
 ![Platform](https://img.shields.io/badge/Platform-Paper%20%7C%20Velocity-blue.svg)
-![Version](https://img.shields.io/badge/Version-1.6.4-green.svg)
+![Version](https://img.shields.io/badge/Version-1.6.5--HOTFIX-green.svg)
 ![License](https://img.shields.io/badge/License-Proprietary-red.svg)
 [![bStats](https://img.shields.io/bstats/servers/32544?color=blue)](https://bstats.org/plugin/bukkit/peyajAuth/32544)
 

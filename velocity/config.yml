@@ -57,6 +57,10 @@ proxy:
 
 # Embedded Limbo virtual void world settings
 limbo:
+  # Set to false to use your own backend auth lobby server instead of the embedded Limbo void
+  enabled: true
+  # The initial backend server where unauthenticated players join when limbo.enabled is false:
+  auth-server: "auth"
   # Dimension type: 'minecraft:the_end', 'minecraft:overworld', or 'minecraft:the_nether'
   # Note: 'minecraft:the_end' provides the dark purple End sky void aesthetic for 1.21.6+ (26.2) clients.
   # If older 1.21.5 (26.1.2) clients experience Network Protocol Errors, change this to 'minecraft:overworld'.
