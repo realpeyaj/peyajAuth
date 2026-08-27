@@ -4,7 +4,7 @@ A high-performance, modular, and secure hybrid authentication solution for Spigo
 
 ![Java](https://img.shields.io/badge/Java-21-orange.svg)
 ![Platform](https://img.shields.io/badge/Platform-Paper%20%7C%20Velocity-blue.svg)
-![Version](https://img.shields.io/badge/Version-1.6.5--HOTFIX-green.svg)
+![Version](https://img.shields.io/badge/Version-1.6.6-green.svg)
 ![License](https://img.shields.io/badge/License-Proprietary-red.svg)
 [![bStats](https://img.shields.io/bstats/servers/32544?color=blue)](https://bstats.org/plugin/bukkit/peyajAuth/32544)
 
@@ -21,7 +21,7 @@ Are you a filipino and want to host your Minecraft server in the Philippines? Vi
 *   **Multi-Platform Integration**: Deploy as a standalone Spigot/Paper plugin or run as a unified Velocity proxy gateway. Both modules sync seamlessly using an SQLite, a shared MySQL, or MariaDB backend.
 *   **Embedded Velocity Void Limbo**: Velocity installations bundle their own built-in, zero-dependency virtual void world limbo server. Unauthenticated players are trapped in a local loopback server (`127.0.0.1`) automatically without requiring the external plugin.
 *   **True Hybrid Auto-Login**: Automatically distinguishes premium vs. cracked players. Instantly logs in premium players without passwords, while cracked players are prompted to register or login securely.
-*   **Cryptography**: Supports industry-standard **Argon2id** and **BCrypt** hashing with customizable iteration, memory, and thread factors.
+*   **Cryptography & Multi-Hash Auto-Migration**: Supports **Argon2id**, **BCrypt**, and **Salted SHA-256**. Features seamless zero-downtime auto-upgrade for legacy databases (AuthMe `$SHA$`, Plain Hex SHA-256, Double SHA-256, MD5, and SHA-512) directly upon player login.
 *   **Zero-Thread Lag**: Built entirely on asynchronous, non-blocking queries and fast **HikariCP** database connection pools to prevent main-thread TPS drops.
 *   **Advanced Bot & Alt Protections**: Features GUI chest-click or chat-based Captcha gates, brute-force IP/account locks, and configurable registration limits per IP.
 *   **Two-Factor Authentication (2FA)**: Restricts movement, commands, and chat for password-verified connections until they supply their Google Authenticator (TOTP) code.
@@ -44,6 +44,7 @@ Are you a filipino and want to host your Minecraft server in the Philippines? Vi
 3.  Configure `database.yml` if using a shared MySQL/MariaDB database to sync player sessions across the proxy network.
 4.  On startup, the Velocity plugin will automatically extract and launch its embedded Limbo server inside `plugins/peyajauth/peyajlimboapi/` on a dynamic port for secure lobby redirection.
     *   **Custom Spawn Map**: The plugin extracts a default void platform. You can replace it with any custom map by dropping your own `.schem` file into `plugins/peyajauth/peyajlimboapi/` and naming it `spawn.schem`. The plugin automatically detects and normalizes WorldEdit nested structures on startup to prevent load crashes.
+5.  **Velocity Forced Hosts Support**: The plugin natively respects Velocity's `[forced-hosts]` in `velocity.toml`. If a player joins via `survival.example.com`, they authenticate in Limbo and are automatically sent straight to `survival` upon login (enabled by default via `proxy.follow-forced-hosts: true` in `config.yml`).
 
 ---
 
@@ -67,6 +68,7 @@ Are you a filipino and want to host your Minecraft server in the Philippines? Vi
 | `/auth gui` | | Open the interactive Admin chest GUI | `peyajauth.admin` | OP |
 | `/auth setspawn` | | Set the lobby spawn location (Paper) | `peyajauth.admin` | OP |
 | `/auth spawn` | | Teleport to the lobby spawn (Paper) | `peyajauth.admin` | OP |
+| `/auth import <file.db>` | `/auth migrate <file.db>` | Import accounts from legacy SQLite auth databases (AuthMe, etc.) | `peyajauth.admin` | OP |
 | `/auth help` | | Display the administrative commands help menu | `peyajauth.admin` | OP |
 
 ---

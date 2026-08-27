@@ -52,7 +52,10 @@ security:
 
 # Network/Proxy specific settings
 proxy:
-  # The backend server to send players to once they authenticate successfully in the virtual limbo
+  # If true, players will automatically be redirected to the server determined by Velocity's [forced-hosts]
+  # in velocity.toml upon authenticating. If false, or if no forced host matched, they are sent to success-target-server.
+  follow-forced-hosts: true
+  # The backend server to send players to once they authenticate successfully (or fallback if no forced host matched)
   success-target-server: "lobby"
 
 # Embedded Limbo virtual void world settings
