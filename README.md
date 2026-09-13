@@ -4,7 +4,7 @@ A high-performance, modular, and secure hybrid authentication solution for Spigo
 
 ![Java](https://img.shields.io/badge/Java-21-orange.svg)
 ![Platform](https://img.shields.io/badge/Platform-Paper%20%7C%20Velocity-blue.svg)
-![Version](https://img.shields.io/badge/Version-1.6.6-green.svg)
+![Version](https://img.shields.io/badge/Version-1.6.8-green.svg)
 ![License](https://img.shields.io/badge/License-Proprietary-red.svg)
 [![bStats](https://img.shields.io/bstats/servers/32544?color=blue)](https://bstats.org/plugin/bukkit/peyajAuth/32544)
 
@@ -55,7 +55,9 @@ Are you a filipino and want to host your Minecraft server in the Philippines? Vi
 | `/register <password> <confirm>` | `/reg` | Register a new account password | `peyajauth.register` | Everyone |
 | `/login <password>` | `/l` | Authenticate your active session | `peyajauth.login` | Everyone |
 | `/logout` | | Log out of your account | `peyajauth.logout` | Everyone |
-| `/changepassword <old> <new>` | | Change your current account password | `peyajauth.changepassword` | Everyone |
+| `/disconnect` | | Disconnect cleanly from the server/lobby | `peyajauth.login` | Everyone |
+| `/changepassword <old> <new>` | `/cp`, `/passwd` | Change your current account password | `peyajauth.changepassword` | Everyone |
+| `/unregister <password>` | | Unregister your own account | `peyajauth.register` | Everyone |
 | `/captcha <code>` | | Solve chat captcha verification | *none* | Everyone |
 | `/email <add\|change\|remove\|confirm\|show>` | | Manage recovery email links | `peyajauth.login` | Everyone |
 | `/2fa <setup\|confirm\|disable\|verify>` | | Manage Google Authenticator 2FA settings | `peyajauth.login` | Everyone |

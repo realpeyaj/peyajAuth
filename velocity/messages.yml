@@ -40,6 +40,9 @@ auth:
   register-failed-username: "<red>Registration failed. The username is already registered.</red>"
   has-account-use-login: "<red>You already have an account. Please use /login <password> instead.</red>"
   premium-no-logout: "<red>Premium players cannot log out.</red>"
+  unregistered: "<red>Your account has been unregistered.</red>"
+  unregistered-admin: "<red>Your account has been unregistered by an administrator.</red>"
+  premium-no-unregister: "<red>Premium accounts cannot be unregistered.</red>"
 captcha:
   gui-title: "Click the target item: <green>{target}</green>"
   prompt: "<yellow>Solve the captcha to register/login! Code: <gold>{code}</gold> (Type: <gold>/captcha <code></gold>)</yellow>"
