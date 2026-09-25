@@ -97,7 +97,18 @@ peyajAuth makes managing player logins easy and stress-free. Players who purchas
 
 ## Developer API
 
-peyajAuth provides a dedicated, lightweight public API library (**`peyajAuth-API-1.6.9.jar`**, ~8 KB) containing all interfaces and event classes without any server logic. You can compile against it on Paper or Velocity:
+peyajAuth provides a lightweight public API library with interfaces and event classes for Paper and Velocity plugins.
+
+### Adding with Gradle:
+```kotlin
+repositories {
+    maven("https://jitpack.io")
+}
+
+dependencies {
+    compileOnly("com.github.realpeyaj:peyajauth-api:1.6.9")
+}
+```
 
 ### On Paper:
 ```java
