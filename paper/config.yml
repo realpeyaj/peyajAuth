@@ -201,3 +201,9 @@ email:
   password: "your-app-password"
   ssl: false # Set to true if using port 465 (SSL), false for port 587 (STARTTLS)
   from-name: "peyajAuth Verification"
+
+# Proxy-to-backend authentication bridge security settings
+bridge:
+  # Secret key to verify sync packets received from Velocity.
+  # If configured, incoming packets without a matching HMAC signature are dropped.
+  secret: ""

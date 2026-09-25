@@ -68,3 +68,9 @@ limbo:
   # Note: 'minecraft:the_end' provides the dark purple End sky void aesthetic for 1.21.6+ (26.2) clients.
   # If older 1.21.5 (26.1.2) clients experience Network Protocol Errors, change this to 'minecraft:overworld'.
   dimension: "minecraft:the_end"
+
+# Proxy-to-backend authentication bridge security settings
+bridge:
+  # Secret key to sign sync packets sent from Velocity to backend Paper servers.
+  # If configured, this must match bridge.secret in your backend Paper config.yml.
+  secret: ""

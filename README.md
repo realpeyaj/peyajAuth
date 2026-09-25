@@ -1,120 +1,129 @@
 # peyajAuth
 
-A high-performance, modular, and secure hybrid authentication solution for Spigot/Paper (1.21+ & 26.2+) and Velocity Proxy (3.0.0 - 4.x+).
+A simple, fast, and secure login plugin for Minecraft servers (Paper 1.21.X - 26.X) and Velocity networks.
 
 ![Java](https://img.shields.io/badge/Java-21-orange.svg)
 ![Platform](https://img.shields.io/badge/Platform-Paper%20%7C%20Velocity-blue.svg)
-![Version](https://img.shields.io/badge/Version-1.6.8-green.svg)
+![Version](https://img.shields.io/badge/Version-1.6.9-green.svg)
 ![License](https://img.shields.io/badge/License-Proprietary-red.svg)
-[![bStats](https://img.shields.io/bstats/servers/32544?color=blue)](https://bstats.org/plugin/bukkit/peyajAuth/32544)
+[![bStats Paper](https://img.shields.io/bstats/servers/32544?color=blue&label=Paper%20Servers)](https://bstats.org/plugin/bukkit/peyajAuth/32544)
+[![bStats Velocity](https://img.shields.io/bstats/servers/34033?color=blue&label=Velocity%20Servers)](https://bstats.org/plugin/velocity/peyajAuth/34033)
 
-Are you a filipino and want to host your Minecraft server in the Philippines? Visit https://mcziehost.fun
+Are you a Filipino and want to host your Minecraft server in the Philippines? Visit https://mcziehost.fun
 
 ![web banner](https://i.imgur.com/D5vYv0R.jpeg)
+
 > [!IMPORTANT]
-> **Offline Mode Requirement**: Both the Velocity proxy (in `velocity.toml`) and your backend Spigot/Paper servers (in `server.properties`) must be configured in offline mode (`online-mode=false`). The plugin dynamically triggers online-mode authentication handshakes for verified premium players at the proxy gateway, while allowing cracked players to connect securely.
+> **Server Setup Tip**: Make sure your server (or Velocity proxy) is set to `online-mode=false`. The plugin will automatically check paid accounts and log them in safely, while letting non-paid players register with a password.
+
+---
+
+## What is peyajAuth?
+
+peyajAuth makes managing player logins easy and stress-free. Players who purchased the official game can hop in without typing anything, while players without an official account are safely asked to create a password.
 
 ---
 
 ## Key Features
 
-*   **Multi-Platform Integration**: Deploy as a standalone Spigot/Paper plugin or run as a unified Velocity proxy gateway. Both modules sync seamlessly using an SQLite, a shared MySQL, or MariaDB backend.
-*   **Embedded Velocity Void Limbo**: Velocity installations bundle their own built-in, zero-dependency virtual void world limbo server. Unauthenticated players are trapped in a local loopback server (`127.0.0.1`) automatically without requiring the external plugin.
-*   **True Hybrid Auto-Login**: Automatically distinguishes premium vs. cracked players. Instantly logs in premium players without passwords, while cracked players are prompted to register or login securely.
-*   **Cryptography & Multi-Hash Auto-Migration**: Supports **Argon2id**, **BCrypt**, and **Salted SHA-256**. Features seamless zero-downtime auto-upgrade for legacy databases (AuthMe `$SHA$`, Plain Hex SHA-256, Double SHA-256, MD5, and SHA-512) directly upon player login.
-*   **Zero-Thread Lag**: Built entirely on asynchronous, non-blocking queries and fast **HikariCP** database connection pools to prevent main-thread TPS drops.
-*   **Advanced Bot & Alt Protections**: Features GUI chest-click or chat-based Captcha gates, brute-force IP/account locks, and configurable registration limits per IP.
-*   **Two-Factor Authentication (2FA)**: Restricts movement, commands, and chat for password-verified connections until they supply their Google Authenticator (TOTP) code.
-*   **Offline Skin Retention**: Fetches and restores genuine Mojang skins for offline/cracked players using premium names.
+*   **Automatic Login for Paid Accounts**: Official Minecraft players join instantly without needing to remember or type a password.
+*   **Password Protection for Free Accounts**: Players who use offline or cracked launchers can safely protect their account with `/register` and `/login`.
+*   **Built-in Waiting Room for Velocity**: If you run a Velocity proxy network, players wait in a clean, built-in waiting room while logging in. You do not need to create an extra lobby server just for authentication.
+*   **Bedrock Friendly**: Seamless support for Bedrock and mobile players connecting through Geyser or Floodgate.
+*   **Smooth and Lag-Free**: Built to run quietly in the background without causing lag spikes or freezing your server.
+*   **Two-Factor Authentication (2FA)**: Staff and players can link Google Authenticator to their account for extra security.
+*   **Email Account Recovery**: Players who forget their passwords can easily reset them using their email address.
+*   **Bot & Spammer Protection**: Comes with simple picture/chat captchas and limits how many accounts can join from the same internet connection.
+*   **Real Skins for Everyone**: Restores official skins for players so nobody looks like a default Steve or Alex.
+*   **Easy AuthMe Switch**: Upgrading from AuthMe? Move all your existing player accounts over with one simple command.
 
 ---
 
-## Installation & Setup
+## Easy Setup Guide
 
-### For Standalone Paper Servers
-1.  Download the latest compiled `peyajAuth-Paper-<version>.jar` from the release section.
-2.  Drop the JAR into your server's `plugins/` directory.
-3.  Restart to generate default configs inside `plugins/peyajAuth/` (`config.yml`, `messages.yml`, `database.yml`, `premium.yml`).
+### For a Single Server (Paper / Spigot)
+1. Download `peyajAuth-Paper-1.6.9.jar`.
+2. Place the file inside your server's `plugins/` folder.
+3. Restart your server to generate the configuration files.
+4. Open `plugins/peyajAuth/config.yml` to customize messages or settings if desired.
 
-### For Velocity Proxy Networks
-1.  Place `peyajAuth-Velocity-<version>.jar` in your Velocity `plugins/` folder.
-2.  > [!NOTE]
-    > **Backend Paper Plugin Optional**: You do **NOT** need to install `peyajAuth-Paper` on your backend Spigot/Paper servers if `peyajAuth` is already running on Velocity. Velocity handles authentication, embedded Limbo trapping, and proxy session management.
-    > You only need to install `peyajAuth-Paper` on backend servers if you use a shared database (MySQL/MariaDB) for playerdata/sessions and want to sync them across your network, or if you want backend-specific Paper features (like native Dialog UI screens or Paper API).
-3.  Configure `database.yml` if using a shared MySQL/MariaDB database to sync player sessions across the proxy network.
-4.  On startup, the Velocity plugin will automatically extract and launch its embedded Limbo server inside `plugins/peyajauth/peyajlimboapi/` on a dynamic port for secure lobby redirection.
-    *   **Custom Spawn Map**: The plugin extracts a default void platform. You can replace it with any custom map by dropping your own `.schem` file into `plugins/peyajauth/peyajlimboapi/` and naming it `spawn.schem`. The plugin automatically detects and normalizes WorldEdit nested structures on startup to prevent load crashes.
-5.  **Velocity Forced Hosts Support**: The plugin natively respects Velocity's `[forced-hosts]` in `velocity.toml`. If a player joins via `survival.example.com`, they authenticate in Limbo and are automatically sent straight to `survival` upon login (enabled by default via `proxy.follow-forced-hosts: true` in `config.yml`).
+### For a Proxy Network (Velocity)
+1. Place `peyajAuth-Velocity-1.6.9.jar` inside your Velocity proxy `plugins/` folder.
+2. That's it! Velocity will handle logins and provide the built-in waiting room automatically.
+3. If you want to use a shared database (like MySQL) to connect multiple servers, you can configure `database.yml`.
+4. (Optional) You can customize the waiting room by dropping your own `spawn.schem` build file into the plugin folder.
 
 ---
 
 ## Commands & Permissions
 
-| Command | Aliases | Description | Permission | Default |
-| :--- | :--- | :--- | :--- | :--- |
-| `/register <password> <confirm>` | `/reg` | Register a new account password | `peyajauth.register` | Everyone |
-| `/login <password>` | `/l` | Authenticate your active session | `peyajauth.login` | Everyone |
-| `/logout` | | Log out of your account | `peyajauth.logout` | Everyone |
-| `/disconnect` | | Disconnect cleanly from the server/lobby | `peyajauth.login` | Everyone |
-| `/changepassword <old> <new>` | `/cp`, `/passwd` | Change your current account password | `peyajauth.changepassword` | Everyone |
-| `/unregister <password>` | | Unregister your own account | `peyajauth.register` | Everyone |
-| `/captcha <code>` | | Solve chat captcha verification | *none* | Everyone |
-| `/email <add\|change\|remove\|confirm\|show>` | | Manage recovery email links | `peyajauth.login` | Everyone |
-| `/2fa <setup\|confirm\|disable\|verify>` | | Manage Google Authenticator 2FA settings | `peyajauth.login` | Everyone |
-| `/auth reload` | | Reload all configuration files | `peyajauth.reload` | OP |
-| `/auth force <player>` | | Force log a player in/out | `peyajauth.force` | OP |
-| `/auth unregister <player>` | | Unregister a player's account | `peyajauth.unregister` | OP |
-| `/auth premium <player>` | | Set player auth mode to premium | `peyajauth.force` | OP |
-| `/auth cracked <player>` | | Set player auth mode to cracked | `peyajauth.force` | OP |
-| `/auth info <player>` | | View registered player details | `peyajauth.info` | OP |
-| `/auth gui` | | Open the interactive Admin chest GUI | `peyajauth.admin` | OP |
-| `/auth setspawn` | | Set the lobby spawn location (Paper) | `peyajauth.admin` | OP |
-| `/auth spawn` | | Teleport to the lobby spawn (Paper) | `peyajauth.admin` | OP |
-| `/auth import <file.db>` | `/auth migrate <file.db>` | Import accounts from legacy SQLite auth databases (AuthMe, etc.) | `peyajauth.admin` | OP |
-| `/auth help` | | Display the administrative commands help menu | `peyajauth.admin` | OP |
+### Player Commands
+
+| Command | Shortcut | What it does | Who can use it |
+| :--- | :--- | :--- | :--- |
+| `/register <password> <confirm>` | `/reg` | Create a password for your account | Everyone |
+| `/login <password>` | `/l` | Log into your account | Everyone |
+| `/logout` | | Log out of your current session | Everyone |
+| `/changepassword <old> <new>` | `/cp` | Change your password | Everyone |
+| `/unregister <password>` | | Delete your account password | Everyone |
+| `/disconnect` | | Leave the waiting room / server | Everyone |
+| `/captcha <code>` | | Complete the anti-bot test | Everyone |
+| `/email <add\|change\|remove\|confirm>` | | Set up a recovery email address | Everyone |
+| `/2fa <setup\|confirm\|disable>` | | Turn on Google Authenticator | Everyone |
+
+### Admin Commands
+
+| Command | What it does | Permission |
+| :--- | :--- | :--- |
+| `/auth reload` | Reload all configuration files | OP |
+| `/auth force <player>` | Manually log in or log out a player | OP |
+| `/auth unregister <player>` | Remove a player's account password | OP |
+| `/auth premium <player>` | Set a player to automatic paid login | OP |
+| `/auth cracked <player>` | Set a player to password login | OP |
+| `/auth info <player>` | View information about a registered account | OP |
+| `/auth gui` | Open the in-game admin menu | OP |
+| `/auth setspawn` | Set the login spawn point (Paper) | OP |
+| `/auth spawn` | Teleport to the login spawn point (Paper) | OP |
+| `/auth import <file.db>` | Import player accounts from an AuthMe database | OP |
+
+---
+
+## Planned Features (Roadmap)
+
+*   **Discord Webhook Alerts**: Send alerts directly to your staff Discord channel when players register, fail logins, or when staff update accounts.
+*   **In-Game Map QR Codes for 2FA**: Show a scannable QR code on a Minecraft map item for effortless Google Authenticator setup.
 
 ---
 
 ## Developer API
 
-You can programmatically query authentication states across both Spigot/Paper and Velocity modules.
+For plugin developers who want to check if a player is logged in:
 
-### Querying on Velocity Proxy:
+### On Velocity Proxy:
 ```java
 import me.peyaj.peyajauth.api.PeyajAuthVelocityAPI;
 
-// Access registration service
 PeyajAuthVelocityAPI api = server.getServicesManager().query(PeyajAuthVelocityAPI.class).get().getProvider();
 
-// Check if player has authenticated
+// Check if a player is logged in
 boolean isLoggedIn = api.isAuthenticated(player.getUniqueId());
-
-// Verify if username is already registered in database
-api.isRegistered(player.getUsername()).thenAccept(registered -> {
-    if (registered) {
-        // ...
-    }
-});
 ```
 
-### Querying on Paper Backend:
+### On Paper:
 ```java
 import me.peyaj.peyajauth.api.PeyajAuthAPI;
 
-// Check if player is logged in
-boolean loggedIn = PeyajAuthAPI.getInstance().isAuthenticated(player);
-
-// Check if player owns a premium account
-boolean isPremium = PeyajAuthAPI.getInstance().isPremium(player);
+// Check if a player is logged in
+boolean isLoggedIn = PeyajAuthAPI.getInstance().isAuthenticated(player);
 ```
 
 ---
 
-## bStats Server Metrics
-[![bStats Metrics](https://bstats.org/signatures/bukkit/peyajAuth.svg)](https://bstats.org/plugin/bukkit/peyajAuth/32544)
+## Server Statistics
+[![bStats Paper](https://bstats.org/signatures/bukkit/peyajAuth.svg)](https://bstats.org/plugin/bukkit/peyajAuth/32544)
+[![bStats Velocity](https://bstats.org/signatures/velocity/peyajAuth.svg)](https://bstats.org/plugin/velocity/peyajAuth/34033)
 
 ---
 
 ## License
-Copyright © 2026. All rights reserved. 
-Decompilation, reverse engineering, unauthorized redistribution, and editing of this compiled software are strictly prohibited.
+Copyright © 2026. All rights reserved.
