@@ -97,25 +97,35 @@ peyajAuth makes managing player logins easy and stress-free. Players who purchas
 
 ## Developer API
 
-For plugin developers who want to check if a player is logged in:
-
-### On Velocity Proxy:
-```java
-import me.peyaj.peyajauth.api.PeyajAuthVelocityAPI;
-
-PeyajAuthVelocityAPI api = server.getServicesManager().query(PeyajAuthVelocityAPI.class).get().getProvider();
-
-// Check if a player is logged in
-boolean isLoggedIn = api.isAuthenticated(player.getUniqueId());
-```
+peyajAuth provides a dedicated, lightweight public API library (**`peyajAuth-API-1.6.9.jar`**, ~8 KB) containing all interfaces and event classes without any server logic. You can compile against it on Paper or Velocity:
 
 ### On Paper:
 ```java
 import me.peyaj.peyajauth.api.PeyajAuthAPI;
 
+PeyajAuthAPI api = PeyajAuthAPI.getInstance();
+
 // Check if a player is logged in
-boolean isLoggedIn = PeyajAuthAPI.getInstance().isAuthenticated(player);
+boolean isLoggedIn = api.isAuthenticated(player);
+
+// Check if a player joined with verified Java Premium
+boolean isPremium = api.isPremium(player);
 ```
+
+### On Velocity Proxy:
+```java
+import me.peyaj.peyajauth.api.PeyajAuthVelocityAPI;
+
+PeyajAuthVelocityAPI api = server.getServicesManager()
+    .query(PeyajAuthVelocityAPI.class)
+    .get()
+    .getProvider();
+
+// Check if a player is logged in on the proxy
+boolean isLoggedIn = api.isAuthenticated(player.getUniqueId());
+```
+
+For full setup guides, custom Bukkit events, and Velocity proxy events, visit the [Developer API Documentation](https://github.com/realpeyaj/peyajAuth/wiki/Developer-API).
 
 ---
 
