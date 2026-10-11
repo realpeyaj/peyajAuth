@@ -23,6 +23,12 @@ auth:
   access-denied-ip: "<red>访问受限：您当前 IP 不被允许登录该账号。</red>"
   premium-prompt-title: "{prefix}"
   premium-prompt-subtitle: "<yellow>您是正版账号吗？请在聊天框中选择 <green>YES</green> 或 <red>NO</red></yellow>"
+  premium-prompt-question: "您是否拥有 <gold><b>正版</b></gold> (Mojang/Microsoft) 账号？"
+  premium-prompt-yes: "<green><b> ▶ 是 (YES) </b></green>"
+  premium-prompt-yes-hover: "<green>点击验证您的正版账号。\n您将被踢出一次并需要重新连接。</green>"
+  premium-prompt-no: "<red><b> ▶ 否 (NO) </b></red>"
+  premium-prompt-no-hover: "<red>点击注册为离线/非正版账号。\n系统将提示您设置密码。</red>"
+  premium-prompt-note: "<gray><i>如为正版，将踢出一次以进行在线验证。</i></gray>"
   auth-timeout: "<red>认证超时。</red>"
   server-change-denied: "<red>您必须在登录后才能切换服务器！</red>"
   mojang-authenticated: "<green>欢迎回来！已通过 Mojang 正版验证。</green>"
@@ -60,7 +66,7 @@ bruteforce:
   admin-alert: "{prefix}<gold>警告：玩家 {player} (IP: {ip}) 连续登录失败 {attempts} 次！</gold>"
 
 admin:
-  reload: "{prefix}<green>配置文件重载成功！</green>"
+  reload: "<green>配置文件重载成功！</green>"
   player-not-found: "<red>未找到玩家 {player}。</red>"
   force-login-success: "<green>已强制玩家 {player} 登录。</green>"
   force-logout-success: "<green>已强制玩家 {player} 登出。</green>"

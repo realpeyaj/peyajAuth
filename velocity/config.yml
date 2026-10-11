@@ -74,3 +74,25 @@ bridge:
   # Secret key to sign sync packets sent from Velocity to backend Paper servers.
   # If configured, this must match bridge.secret in your backend Paper config.yml.
   secret: ""
+
+# Discord Webhook Integration
+# Send real-time security alerts and administrative audit logs to a Discord channel
+webhook:
+  enabled: false
+  # Discord webhook URL (e.g., https://discord.com/api/webhooks/...)
+  url: ""
+  # Custom bot name displayed on webhook messages
+  bot-name: "peyajAuth"
+  # Custom avatar image URL for the webhook bot
+  avatar-url: ""
+  # Mask the last part of IP addresses for privacy/GDPR (e.g., 192.168.1.***)
+  mask-ips: false
+  # Event toggles
+  events:
+    register: true
+    login-success: false
+    login-failed: true
+    lockout: true
+    password-change: true
+    two-factor: true
+    admin-actions: true

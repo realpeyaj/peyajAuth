@@ -23,6 +23,12 @@ auth:
   access-denied-ip: "<red>Acceso denegado: No estás autorizado a iniciar sesión desde esta IP.</red>"
   premium-prompt-title: "{prefix}"
   premium-prompt-subtitle: "<yellow>¿Eres premium? Elige <green>SÍ</green> o <red>NO</red> en el chat</yellow>"
+  premium-prompt-question: "¿Tienes una cuenta <gold><b>premium</b></gold> (Mojang/Microsoft)?"
+  premium-prompt-yes: "<green><b> ▶ SÍ </b></green>"
+  premium-prompt-yes-hover: "<green>Haz clic para verificar tu cuenta premium.\nSerás expulsado y deberás volver a entrar.</green>"
+  premium-prompt-no: "<red><b> ▶ NO </b></red>"
+  premium-prompt-no-hover: "<red>Haz clic para registrarte como jugador no-premium.\nSe te pedirá que elijas una contraseña.</red>"
+  premium-prompt-note: "<gray><i>Si eres premium, serás expulsado una vez para verificar.</i></gray>"
   auth-timeout: "<red>Tiempo de autenticación agotado.</red>"
   server-change-denied: "<red>¡Debes autenticarte antes de cambiar de servidor!</red>"
   mojang-authenticated: "<green>¡Bienvenido de nuevo! Autenticado vía Mojang.</green>"
@@ -60,7 +66,7 @@ bruteforce:
   admin-alert: "{prefix}<gold>ALERTA: ¡El jugador {player} (IP: {ip}) ha fallado {attempts} intentos de inicio de sesión!</gold>"
 
 admin:
-  reload: "{prefix}<green>¡Configuraciones recargadas exitosamente!</green>"
+  reload: "<green>¡Configuraciones recargadas exitosamente!</green>"
   player-not-found: "<red>El jugador {player} no fue encontrado.</red>"
   force-login-success: "<green>Se forzó el inicio de sesión del jugador {player}.</green>"
   force-logout-success: "<green>Se forzó el cierre de sesión del jugador {player}.</green>"

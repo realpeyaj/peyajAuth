@@ -23,6 +23,12 @@ auth:
   access-denied-ip: "<red>Доступ запрещен: авторизация с данного IP запрещена.</red>"
   premium-prompt-title: "{prefix}"
   premium-prompt-subtitle: "<yellow>У вас лицензия? Выберите <green>ДА</green> или <red>НЕТ</red> в чате</yellow>"
+  premium-prompt-question: "У вас <gold><b>лицензионный</b></gold> (Mojang/Microsoft) аккаунт?"
+  premium-prompt-yes: "<green><b> ▶ ДА </b></green>"
+  premium-prompt-yes-hover: "<green>Нажмите для проверки лицензии.\nВас отключит, после чего перезайтите на сервер.</green>"
+  premium-prompt-no: "<red><b> ▶ НЕТ </b></red>"
+  premium-prompt-no-hover: "<red>Нажмите для регистрации пиратского аккаунта.\nВам нужно будет задать пароль.</red>"
+  premium-prompt-note: "<gray><i>Лицензионный аккаунт будет отключен один раз для проверки.</i></gray>"
   auth-timeout: "<red>Время авторизации истекло.</red>"
   server-change-denied: "<red>Авторизуйтесь перед сменой сервера!</red>"
   mojang-authenticated: "<green>С возвращением! Авторизовано через Mojang.</green>"
@@ -60,7 +66,7 @@ bruteforce:
   admin-alert: "{prefix}<gold>ВНИМАНИЕ: Игрок {player} (IP: {ip}) провалил {attempts} попыток входа!</gold>"
 
 admin:
-  reload: "{prefix}<green>Конфигурация успешно перезагружена!</green>"
+  reload: "<green>Конфигурация успешно перезагружена!</green>"
   player-not-found: "<red>Игрок {player} не найден.</red>"
   force-login-success: "<green>Игрок {player} успешно принудительно авторизован.</green>"
   force-logout-success: "<green>Игрок {player} успешно принудительно отключен от авторизации.</green>"

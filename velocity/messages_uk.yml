@@ -25,6 +25,12 @@ auth:
   access-denied-ip: "<red>Доступ заборонено: Ви не маєте дозволу на вхід у цей обліковий запис із вашої IP-адреси.</red>"
   premium-prompt-title: "{prefix}"
   premium-prompt-subtitle: "<yellow>Ви premium? Оберіть <green>YES (ТАК)</green> або <red>NO (НІ)</red> в чаті</yellow>"
+  premium-prompt-question: "Чи володієте ви <gold><b>ліцензійним</b></gold> (Mojang/Microsoft) обліковим записом?"
+  premium-prompt-yes: "<green><b> ▶ ТАК </b></green>"
+  premium-prompt-yes-hover: "<green>Натисніть для підтвердження ліцензії.\nВас відключить, після чого перезайдiть.</green>"
+  premium-prompt-no: "<red><b> ▶ НІ </b></red>"
+  premium-prompt-no-hover: "<red>Натисніть для реєстрації без ліцензії.\nВам буде запропоновано встановити пароль.</red>"
+  premium-prompt-note: "<gray><i>Якщо у вас ліцензія, вас один раз відключить для перевірки.</i></gray>"
   auth-timeout: "<red>Ви занадто довго входили!</red>"
   server-change-denied: "<red>Перед зміною сервера необхідно пройти автентифікацію!</red>"
   mojang-authenticated: "<green>З поверненням! Автентифікація здійснена через Mojang.</green>"
@@ -62,7 +68,7 @@ bruteforce:
   admin-alert: "{prefix}<gold>ПОПЕРЕДЖЕННЯ: Гравець {player} (IP: {ip}) здійснив {attempts} невдалих спроб входу!</gold>"
 
 admin:
-  reload: "{prefix}<green>Успішно перезавантажено конфігурацію!</green>"
+  reload: "<green>Успішно перезавантажено конфігурацію!</green>"
   player-not-found: "<red>Гравця {player} не знайдено.</red>"
   force-login-success: "<green>Гравця {player} успішно змушено увійти.</green>"
   force-logout-success: "<green>Гравця {player} успішно змушено вийти.</green>"

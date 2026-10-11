@@ -16,6 +16,9 @@ restrictions:
   hide-inventory: true
   # Ghost mode: Hides unauthenticated players from authenticated players and vice versa (prevents spawn clutter)
   ghost-mode: false
+  # Spectator mode on join: Temporarily sets unauthenticated players to SPECTATOR mode upon joining,
+  # and restores their original game mode (Survival, Creative, Adventure) upon successful login.
+  spectator-on-join: false
 
 # Language configuration: 'auto' (detects client language: 'en', 'es', 'ru', 'uk', 'zh', 'pt', 'id'), or specific code
 language: "auto"
@@ -207,3 +210,25 @@ bridge:
   # Secret key to verify sync packets received from Velocity.
   # If configured, incoming packets without a matching HMAC signature are dropped.
   secret: ""
+
+# Discord Webhook Integration
+# Send real-time security alerts and administrative audit logs to a Discord channel
+webhook:
+  enabled: false
+  # Discord webhook URL (e.g., https://discord.com/api/webhooks/...)
+  url: ""
+  # Custom bot name displayed on webhook messages
+  bot-name: "peyajAuth"
+  # Custom avatar image URL for the webhook bot
+  avatar-url: ""
+  # Mask the last part of IP addresses for privacy/GDPR (e.g., 192.168.1.***)
+  mask-ips: false
+  # Event toggles
+  events:
+    register: true
+    login-success: false
+    login-failed: true
+    lockout: true
+    password-change: true
+    two-factor: true
+    admin-actions: true
