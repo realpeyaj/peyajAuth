@@ -37,3 +37,18 @@ cracked-players:
   # the server has to query Mojang's API to fetch the skin properties.
   # (For better performance, you can set this to false and use an external plugin like SkinsRestorer instead).
   fetch-premium-skins: false
+
+# UUID & Player Data Migration Settings
+# Automatically migrates offline playerdata, stats, advancements, EssentialsX balances/homes,
+# and LuckPerms permissions to the player's Mojang online UUID when they transition to premium.
+data-migration:
+  # Enable automatic data migration from offline UUID to online UUID
+  enabled: true
+  # Migrate EssentialsX userdata (balances, homes, mail, nicknames)
+  essentials: true
+  # Migrate LuckPerms permissions and parent groups from offline UUID to online UUID
+  luckperms: true
+  # Standalone mode only: Force all players to retain their offline UUID even when authenticated via Mojang.
+  # When true, premium players are still fully authenticated via Mojang encryption and receive their Mojang skin,
+  # but keep their offline UUID. This ensures 100% data compatibility with all plugins without any data migration.
+  force-offline-uuid: false

@@ -21,6 +21,8 @@ auth:
   bedrock-autologin: "<green>Виявлено обліковий запис Bedrock! Ви автоматично увійшли.</green>"
   session-resume: "<green>Ваша ігрова сесія відновлена</green>"
   please-2fa: "<yellow>Будь ласка, підтвердьте код двофакторної автентифікації (2FA) у вашому authenticator-застосунку: <gold>/2fa verify <код></gold></yellow>"
+  2fa-required-proxy: "<yellow>Цей акаунт використовує 2FA. Використовуйте: <gold>/login <пароль> <код></gold></yellow>"
+  too-many-attempts: "<red>Забагато невдалих спроб входу.</red>"
   twofactor-timeout: "<red>Ви занадто довго вводили код двофакторної автентифікації!</red>"
   access-denied-ip: "<red>Доступ заборонено: Ви не маєте дозволу на вхід у цей обліковий запис із вашої IP-адреси.</red>"
   premium-prompt-title: "{prefix}"
@@ -87,3 +89,4 @@ general:
   no-permission: "<red>У вас немає дозволу на виконання цієї команди!</red>"
   only-players: "<red>Цю команду можуть виконувати лише гравці!</red>"
   invalid-syntax: "<red>Неправильний синтаксис! Правильне використання: {usage}</red>"
+  database-error: "<red>Сталася помилка бази даних. Будь ласка, спробуйте пізніше.</red>"

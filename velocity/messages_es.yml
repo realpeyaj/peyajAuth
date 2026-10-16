@@ -20,6 +20,8 @@ auth:
   premium-autologin: "<green>¡Cuenta premium detectada! Has iniciado sesión automáticamente.</green>"
   bedrock-autologin: "<green>¡Cuenta Bedrock detectada! Has iniciado sesión.</green>"
   session-resume: "<green>Tu sesión de juego ha sido reanudada.</green>"
+  2fa-required-proxy: "<yellow>Esta cuenta usa 2FA. Usa: <gold>/login <contraseña> <código></gold></yellow>"
+  too-many-attempts: "<red>Demasiados intentos fallidos de inicio de sesión.</red>"
   access-denied-ip: "<red>Acceso denegado: No estás autorizado a iniciar sesión desde esta IP.</red>"
   premium-prompt-title: "{prefix}"
   premium-prompt-subtitle: "<yellow>¿Eres premium? Elige <green>SÍ</green> o <red>NO</red> en el chat</yellow>"
@@ -85,3 +87,4 @@ general:
   no-permission: "<red>¡No tienes permiso para ejecutar este comando!</red>"
   only-players: "<red>¡Este comando solo puede ser ejecutado por jugadores!</red>"
   invalid-syntax: "<red>¡Sintaxis inválida! Uso: {usage}</red>"
+  database-error: "<red>Ocurrió un error en la base de datos. Por favor, inténtalo más tarde.</red>"

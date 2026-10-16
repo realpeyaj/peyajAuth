@@ -4,7 +4,7 @@ A lightweight, secure, and modern authentication plugin for Minecraft servers (P
 
 ![Java](https://img.shields.io/badge/Java-21-orange.svg)
 ![Platform](https://img.shields.io/badge/Platform-Paper%20%7C%20Velocity-blue.svg)
-![Version](https://img.shields.io/badge/Version-1.7.0-green.svg)
+![Version](https://img.shields.io/badge/Version-1.7.1-green.svg)
 [![bStats Paper](https://img.shields.io/bstats/servers/32544?color=blue&label=Paper)](https://bstats.org/plugin/bukkit/peyajAuth/32544)
 [![bStats Velocity](https://img.shields.io/bstats/servers/34033?color=blue&label=Velocity)](https://bstats.org/plugin/velocity/peyajAuth/34033)
 

@@ -64,6 +64,7 @@ general:
   no-permission: "<red>您没有权限执行此命令！</red>"
   only-players: "<red>该命令仅允许玩家在游戏内执行！</red>"
   invalid-syntax: "<red>命令语法错误！用法：{usage}</red>"
+  database-error: "<red>数据库发生错误，请稍后重试。</red>"
 
 email:
   no-email: "<red>您尚未绑定安全邮箱！</red>"
@@ -86,7 +87,7 @@ twofactor:
   not-enabled: "<red>您的账号尚未启用两步验证！</red>"
   setup-intro: "<yellow>正在设置 Google Authenticator (2FA)：</yellow>"
   setup-key: "<yellow>您的密钥：<gold>{key}</gold></yellow>"
-  setup-qr: "<yellow>点击此处扫描二维码：<gold><click:open_url:'{url}'>[打开二维码]</click></gold></yellow>"
+  setup-qr: "<yellow>点击复制 Authenticator URI：<gold><click:copy_to_clipboard:'{url}'>[复制 URI]</click></gold></yellow>"
   setup-confirm: "<yellow>扫描完成后请输入验证码确认：<gold>/2fa confirm <验证码></gold></yellow>"
   no-pending: "<red>您尚未开始 2FA 设置！请先输入 /2fa setup。</red>"
   incorrect-code: "<red>安全验证码错误！请重试。</red>"

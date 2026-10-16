@@ -64,6 +64,7 @@ general:
   no-permission: "<red>¡No tienes permiso para ejecutar este comando!</red>"
   only-players: "<red>¡Este comando solo puede ser ejecutado por jugadores!</red>"
   invalid-syntax: "<red>¡Sintaxis inválida! Uso: {usage}</red>"
+  database-error: "<red>Ocurrió un error en la base de datos. Por favor, inténtalo más tarde.</red>"
 
 email:
   no-email: "<red>¡No tienes un correo de recuperación configurado!</red>"
@@ -86,7 +87,7 @@ twofactor:
   not-enabled: "<red>¡La autenticación de dos factores no está activada en tu cuenta!</red>"
   setup-intro: "<yellow>Configurando Google Authenticator (2FA):</yellow>"
   setup-key: "<yellow>Tu clave secreta: <gold>{key}</gold></yellow>"
-  setup-qr: "<yellow>Haz clic aquí para escanear el código QR: <gold><click:open_url:'{url}'>[Escanear QR]</click></gold></yellow>"
+  setup-qr: "<yellow>Haz clic para copiar el enlace URI: <gold><click:copy_to_clipboard:'{url}'>[Copiar URI]</click></gold></yellow>"
   setup-confirm: "<yellow>Escanea el código y confirma escribiendo: <gold>/2fa confirm <código></gold></yellow>"
   no-pending: "<red>¡No has iniciado la configuración 2FA! Escribe /2fa setup primero.</red>"
   incorrect-code: "<red>¡Código de seguridad incorrecto! Inténtalo de nuevo.</red>"

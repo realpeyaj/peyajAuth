@@ -21,6 +21,8 @@ auth:
   bedrock-autologin: "<green>Bedrock account detected! You have been logged in.</green>"
   session-resume: "<green>Your playing session has been resumed</green>"
   please-2fa: "<yellow>Please verify your 2FA security code from your Authenticator app: <gold>/2fa verify <code></gold></yellow>"
+  2fa-required-proxy: "<yellow>This account uses 2FA. Use: <gold>/login <password> <code></gold></yellow>"
+  too-many-attempts: "<red>Too many failed login attempts.</red>"
   twofactor-timeout: "<red>2FA verification timeout exceeded!</red>"
   access-denied-ip: "<red>Access denied: You are not authorized to log into this account from your IP location.</red>"
   premium-prompt-title: "{prefix}"
@@ -90,6 +92,7 @@ general:
   no-permission: "<red>You do not have permission to execute this command!</red>"
   only-players: "<red>This command can only be executed by players!</red>"
   invalid-syntax: "<red>Invalid syntax! Usage: {usage}</red>"
+  database-error: "<red>A database error occurred. Please try again later.</red>"
 
 
 email:
@@ -113,7 +116,7 @@ twofactor:
   not-enabled: "<red>Two-Factor Authentication is not enabled on your account!</red>"
   setup-intro: "<yellow>Setting up Google Authenticator (2FA):</yellow>"
   setup-key: "<yellow>Your secret key: <gold>{key}</gold></yellow>"
-  setup-qr: "<yellow>Click here to scan QR code: <gold><click:open_url:'{url}'>[Scan QR Code]</click></gold></yellow>"
+  setup-qr: "<yellow>Click to copy authenticator URI: <gold><click:copy_to_clipboard:'{url}'>[Copy URI]</click></gold></yellow>"
   setup-confirm: "<yellow>Please scan the code and confirm by typing: <gold>/2fa confirm <code></gold></yellow>"
   no-pending: "<red>You have not started 2FA setup! Type /2fa setup first.</red>"
   incorrect-code: "<red>Incorrect security code! Please try again.</red>"

@@ -20,6 +20,8 @@ auth:
   premium-autologin: "<green>检测到正版账号！已为您自动登录。</green>"
   bedrock-autologin: "<green>检测到基岩版账号！已为您自动登录。</green>"
   session-resume: "<green>已为您恢复游戏会话。</green>"
+  2fa-required-proxy: "<yellow>此账号已启用双重认证 (2FA)。请使用：<gold>/login <密码> <动态验证码></gold></yellow>"
+  too-many-attempts: "<red>登录失败次数过多，已被断开连接。</red>"
   access-denied-ip: "<red>访问受限：您当前 IP 不被允许登录该账号。</red>"
   premium-prompt-title: "{prefix}"
   premium-prompt-subtitle: "<yellow>您是正版账号吗？请在聊天框中选择 <green>YES</green> 或 <red>NO</red></yellow>"
@@ -85,3 +87,4 @@ general:
   no-permission: "<red>您没有权限执行此命令！</red>"
   only-players: "<red>该命令仅允许玩家在游戏内执行！</red>"
   invalid-syntax: "<red>命令语法错误！用法：{usage}</red>"
+  database-error: "<red>数据库发生错误，请稍后重试。</red>"

@@ -64,6 +64,7 @@ general:
   no-permission: "<red>У вас нет прав для выполнения этой команды!</red>"
   only-players: "<red>Эта команда доступна только игрокам!</red>"
   invalid-syntax: "<red>Неверный синтаксис! Используйте: {usage}</red>"
+  database-error: "<red>Произошла ошибка базы данных. Пожалуйста, попробуйте позже.</red>"
 
 email:
   no-email: "<red>У вас не привязана резервная почта!</red>"
@@ -86,7 +87,7 @@ twofactor:
   not-enabled: "<red>Двухфакторная аутентификация не включена!</red>"
   setup-intro: "<yellow>Настройка Google Authenticator (2FA):</yellow>"
   setup-key: "<yellow>Ваш секретный ключ: <gold>{key}</gold></yellow>"
-  setup-qr: "<yellow>Нажмите здесь для сканирования QR: <gold><click:open_url:'{url}'>[Открыть QR-код]</click></gold></yellow>"
+  setup-qr: "<yellow>Нажмите, чтобы скопировать URI: <gold><click:copy_to_clipboard:'{url}'>[Скопировать URI]</click></gold></yellow>"
   setup-confirm: "<yellow>Отсканируйте код и подтвердите: <gold>/2fa confirm <код></gold></yellow>"
   no-pending: "<red>Вы еще не начали настройку 2FA! Введите /2fa setup.</red>"
   incorrect-code: "<red>Неверный код безопасности! Попробуйте снова.</red>"

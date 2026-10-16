@@ -64,6 +64,7 @@ general:
   no-permission: "<red>У вас немає дозволу на виконання цієї команди!</red>"
   only-players: "<red>Цю команду можуть виконувати лише гравці!</red>"
   invalid-syntax: "<red>Неправильний синтаксис! Правильне використання: {usage}</red>"
+  database-error: "<red>Сталася помилка бази даних. Будь ласка, спробуйте пізніше.</red>"
 
 email:
   no-email: "<red>У вас не вказано адресу електронної пошти для відновлення!</red>"
@@ -86,7 +87,7 @@ twofactor:
   not-enabled: "<red>У вашому обліковому записі не увімкнено двофакторну автентифікацію!</red>"
   setup-intro: "<yellow>Налаштування authenticator-застосунку (2FA):</yellow>"
   setup-key: "<yellow>Ваш приватний ключ: <gold>{key}</gold></yellow>"
-  setup-qr: "<yellow>Натисніть тут, щоб відсканувати QR-код: <gold><click:open_url:'{url}'>[Сканувати QR-код]</click></gold></yellow>"
+  setup-qr: "<yellow>Натисніть, щоб скопіювати URI: <gold><click:copy_to_clipboard:'{url}'>[Скопіювати URI]</click></gold></yellow>"
   setup-confirm: "<yellow>Будь ласка, відскануйте код і підтвердьте, ввівши: <gold>/2fa confirm <код></gold></yellow>"
   no-pending: "<red>Ви ще не налаштували двофакторну автентифікацію! Спочатку введіть команду /2fa setup.</red>"
   incorrect-code: "<red>Неправильний код! Спробуйте ще раз.</red>"

@@ -20,6 +20,8 @@ auth:
   premium-autologin: "<green>Обнаружен лицензионный аккаунт! Автоматический вход выполнен.</green>"
   bedrock-autologin: "<green>Обнаружен аккаунт Bedrock! Автоматический вход выполнен.</green>"
   session-resume: "<green>Ваша игровая сессия восстановлена.</green>"
+  2fa-required-proxy: "<yellow>Этот аккаунт использует 2FA. Используйте: <gold>/login <пароль> <код></gold></yellow>"
+  too-many-attempts: "<red>Слишком много неудачных попыток входа.</red>"
   access-denied-ip: "<red>Доступ запрещен: авторизация с данного IP запрещена.</red>"
   premium-prompt-title: "{prefix}"
   premium-prompt-subtitle: "<yellow>У вас лицензия? Выберите <green>ДА</green> или <red>НЕТ</red> в чате</yellow>"
@@ -85,3 +87,4 @@ general:
   no-permission: "<red>У вас нет прав для выполнения этой команды!</red>"
   only-players: "<red>Эта команда доступна только игрокам!</red>"
   invalid-syntax: "<red>Неверный синтаксис! Используйте: {usage}</red>"
+  database-error: "<red>Произошла ошибка базы данных. Пожалуйста, попробуйте позже.</red>"
