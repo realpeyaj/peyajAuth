@@ -25,6 +25,8 @@ auth:
   too-many-attempts: "<red>Too many failed login attempts.</red>"
   twofactor-timeout: "<red>2FA verification timeout exceeded!</red>"
   access-denied-ip: "<red>Access denied: You are not authorized to log into this account from your IP location.</red>"
+  disallowed-username: "<red>Your username contains disallowed characters or banned patterns.</red>"
+  already-online: "<red>A player with this username is already playing on this server!</red>"
   premium-prompt-title: "{prefix}"
   premium-prompt-subtitle: "<yellow>Are you premium? Choose <green>YES</green> or <red>NO</red> in chat</yellow>"
   premium-prompt-question: "Do you own a <gold><b>premium</b></gold> (Mojang/Microsoft) account?"
@@ -50,6 +52,7 @@ auth:
   premium-no-logout: "<red>Premium players cannot log out.</red>"
   unregistered: "<red>Your account has been unregistered.</red>"
   unregistered-admin: "<red>Your account has been unregistered by an administrator.</red>"
+  password-changed-admin: "<yellow>Your password has been changed by an administrator.</yellow>"
   premium-no-unregister: "<red>Premium accounts cannot be unregistered.</red>"
 captcha:
   gui-title: "Click the target item: <green>{target}</green>"
@@ -65,6 +68,7 @@ validation:
   password-require-lowercase: "<red>Password must contain at least one lowercase letter!</red>"
   password-length: "<red>Password must be between {min} and {max} characters.</red>"
   password-unsafe: "<red>This password is too common or unsafe! Please choose a stronger password.</red>"
+  password-contains-username: "<red>Password cannot contain or match your username!</red>"
   max-accounts-exceeded: "<red>You have reached the maximum number of accounts allowed for your IP address ({max})!</red>"
 
 bruteforce:
@@ -78,6 +82,7 @@ admin:
   force-login-success: "<green>Successfully forced player {player} to log in.</green>"
   force-logout-success: "<green>Successfully forced player {player} to log out.</green>"
   unregister-success: "<green>Successfully unregistered player {player}.</green>"
+  change-password-success: "<green>Successfully changed password for player {player}.</green>"
   set-premium-success: "<green>Successfully set {player} auth mode to PREMIUM.</green>"
   set-cracked-success: "<green>Successfully set {player} auth mode to CRACKED.</green>"
   info-title: "<yellow>---</yellow> {prefix}<yellow>Account Info: <gold>{player}</gold> ---</yellow>"

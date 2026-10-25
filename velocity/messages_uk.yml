@@ -25,6 +25,8 @@ auth:
   too-many-attempts: "<red>Забагато невдалих спроб входу.</red>"
   twofactor-timeout: "<red>Ви занадто довго вводили код двофакторної автентифікації!</red>"
   access-denied-ip: "<red>Доступ заборонено: Ви не маєте дозволу на вхід у цей обліковий запис із вашої IP-адреси.</red>"
+  disallowed-username: "<red>Ваше ім'я користувача містить неприпустимі символи або заборонені шаблони.</red>"
+  already-online: "<red>Гравець із таким ім'ям уже грає на цьому сервері!</red>"
   premium-prompt-title: "{prefix}"
   premium-prompt-subtitle: "<yellow>Ви premium? Оберіть <green>YES (ТАК)</green> або <red>NO (НІ)</red> в чаті</yellow>"
   premium-prompt-question: "Чи володієте ви <gold><b>ліцензійним</b></gold> (Mojang/Microsoft) обліковим записом?"
@@ -48,6 +50,7 @@ auth:
   register-failed-username: "<red>Реєстрація не вдалася. Цей нікнейм уже зареєстровано.</red>"
   has-account-use-login: "<red>У вас уже є обліковий запис. Будь ласка, скористайтеся /login <пароль>.</red>"
   premium-no-logout: "<red>Premium-гравці не можуть вийти.</red>"
+  password-changed-admin: "<yellow>Ваш пароль було змінено адміністратором.</yellow>"
 
 captcha:
   gui-title: "Натисніть на потрібний предмет: <green>{target}</green>"
@@ -75,6 +78,7 @@ admin:
   force-login-success: "<green>Гравця {player} успішно змушено увійти.</green>"
   force-logout-success: "<green>Гравця {player} успішно змушено вийти.</green>"
   unregister-success: "<green>Гравця {player} успішно видалено.</green>"
+  change-password-success: "<green>Пароль для гравця {player} успішно змінено.</green>"
   set-premium-success: "<green>Режим входу {player} успішно встановлений на PREMIUM.</green>"
   set-cracked-success: "<green>Режим входу {player} успішно встановлений на CRACKED.</green>"
   info-title: "<yellow>---</yellow> {prefix}<yellow>Інформація про обліковий запис: <gold>{player}</gold> ---</yellow>"

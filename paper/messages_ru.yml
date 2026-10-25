@@ -23,6 +23,9 @@ auth:
   please-2fa: "<yellow>Введите код 2FA из вашего приложения Authenticator: <gold>/2fa verify <код></gold></yellow>"
   twofactor-timeout: "<red>Время ожидания 2FA истекло!</red>"
   disconnect-message: "<red>Отключен от сервера.</red>"
+  disallowed-username: "<red>Ваше имя пользователя содержит недопустимые символы или запрещённые шаблоны.</red>"
+  already-online: "<red>Игрок с таким именем уже играет на этом сервере!</red>"
+  password-changed-admin: "<yellow>Ваш пароль был изменен администратором.</yellow>"
 
 captcha:
   gui-title: "Нажмите на предмет: <green>{target}</green>"
@@ -50,6 +53,7 @@ admin:
   force-login-success: "<green>Игрок {player} успешно принудительно авторизован.</green>"
   force-logout-success: "<green>Игрок {player} успешно принудительно отключен от авторизации.</green>"
   unregister-success: "<green>Аккаунт игрока {player} успешно удален.</green>"
+  change-password-success: "<green>Пароль для игрока {player} успешно изменен.</green>"
   set-premium-success: "<green>Режим авторизации для {player} изменен на PREMIUM.</green>"
   set-cracked-success: "<green>Режим авторизации для {player} изменен на CRACKED.</green>"
   info-title: "<yellow>---</yellow> {prefix}<yellow>Информация об аккаунте: <gold>{player}</gold> ---</yellow>"

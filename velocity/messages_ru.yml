@@ -23,6 +23,8 @@ auth:
   2fa-required-proxy: "<yellow>Этот аккаунт использует 2FA. Используйте: <gold>/login <пароль> <код></gold></yellow>"
   too-many-attempts: "<red>Слишком много неудачных попыток входа.</red>"
   access-denied-ip: "<red>Доступ запрещен: авторизация с данного IP запрещена.</red>"
+  disallowed-username: "<red>Ваше имя пользователя содержит недопустимые символы или запрещённые шаблоны.</red>"
+  already-online: "<red>Игрок с таким именем уже играет на этом сервере!</red>"
   premium-prompt-title: "{prefix}"
   premium-prompt-subtitle: "<yellow>У вас лицензия? Выберите <green>ДА</green> или <red>НЕТ</red> в чате</yellow>"
   premium-prompt-question: "У вас <gold><b>лицензионный</b></gold> (Mojang/Microsoft) аккаунт?"
@@ -46,6 +48,7 @@ auth:
   register-failed-username: "<red>Ошибка регистрации. Данный никнейм уже занят.</red>"
   has-account-use-login: "<red>Аккаунт уже существует. Используйте /login <пароль>.</red>"
   premium-no-logout: "<red>Лицензионные игроки не могут выйти из аккаунта.</red>"
+  password-changed-admin: "<yellow>Ваш пароль был изменен администратором.</yellow>"
 
 captcha:
   gui-title: "Нажмите на предмет: <green>{target}</green>"
@@ -73,6 +76,7 @@ admin:
   force-login-success: "<green>Игрок {player} успешно принудительно авторизован.</green>"
   force-logout-success: "<green>Игрок {player} успешно принудительно отключен от авторизации.</green>"
   unregister-success: "<green>Аккаунт игрока {player} успешно удален.</green>"
+  change-password-success: "<green>Пароль для игрока {player} успешно изменен.</green>"
   set-premium-success: "<green>Режим авторизации для {player} изменен на PREMIUM.</green>"
   set-cracked-success: "<green>Режим авторизации для {player} изменен на CRACKED.</green>"
   info-title: "<yellow>---</yellow> {prefix}<yellow>Информация об аккаунте: <gold>{player}</gold> ---</yellow>"

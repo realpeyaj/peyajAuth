@@ -23,6 +23,9 @@ auth:
   please-2fa: "<yellow>Please verify your 2FA security code from your Authenticator app: <gold>/2fa verify <code></gold></yellow>"
   twofactor-timeout: "<red>2FA verification timeout exceeded!</red>"
   disconnect-message: "<red>Disconnected from server.</red>"
+  disallowed-username: "<red>Your username contains disallowed characters or banned patterns.</red>"
+  already-online: "<red>A player with this username is already playing on this server!</red>"
+  password-changed-admin: "<yellow>Your password has been changed by an administrator.</yellow>"
 
 captcha:
   gui-title: "Click the target item: <green>{target}</green>"
@@ -37,6 +40,7 @@ validation:
   password-require-number: "<red>Password must contain at least one number!</red>"
   password-require-uppercase: "<red>Password must contain at least one uppercase letter!</red>"
   password-require-lowercase: "<red>Password must contain at least one lowercase letter!</red>"
+  password-contains-username: "<red>Password cannot contain or match your username!</red>"
   max-accounts-exceeded: "<red>You have reached the maximum number of accounts allowed for your IP address ({max})!</red>"
 
 bruteforce:
@@ -50,6 +54,7 @@ admin:
   force-login-success: "<green>Successfully forced player {player} to log in.</green>"
   force-logout-success: "<green>Successfully forced player {player} to log out.</green>"
   unregister-success: "<green>Successfully unregistered player {player}.</green>"
+  change-password-success: "<green>Successfully changed password for player {player}.</green>"
   set-premium-success: "<green>Successfully set {player} auth mode to PREMIUM.</green>"
   set-cracked-success: "<green>Successfully set {player} auth mode to CRACKED.</green>"
   info-title: "<yellow>---</yellow> {prefix}<yellow>Account Info: <gold>{player}</gold> ---</yellow>"

@@ -1,0 +1,102 @@
+# peyajAuth için yerelleştirme yapılandırması (Türkçe)
+# MiniMessage formatı; HEX renkleri ve gradyanları destekler.
+
+prefix: "<gradient:gold:yellow>[peyajAuth]</gradient> "
+
+auth:
+  not-logged-in: "<red>Bu sunucuda oynamak için giriş yapmalısınız!</red>"
+  please-register: "<yellow>Lütfen şu komutla kayıt olun: <gold>/register <şifre> <şifreTekrar></gold></yellow>"
+  please-login: "<yellow>Lütfen şu komutla giriş yapın: <gold>/login <şifre></gold></yellow>"
+  already-authenticated: "<red>Zaten giriş yapmış durumdasınız!</red>"
+  already-registered: "<red>Bu hesap zaten kayıtlı! Lütfen giriş yapın.</red>"
+  success-register: "<green>Başarıyla kayıt oldunuz ve giriş yaptınız!</green>"
+  success-login: "<green>Başarıyla giriş yaptınız!</green>"
+  success-logout: "<green>Çıkış yaptınız. Oynamak için tekrar giriş yapın.</green>"
+  success-change-password: "<green>Şifreniz başarıyla değiştirildi!</green>"
+  not-registered: "<red>Hesabınız henüz kayıtlı değil!</red>"
+  incorrect-password: "<red>Hatalı şifre! Lütfen tekrar deneyin.</red>"
+  password-mismatch: "<red>Girdiğiniz şifreler eşleşmiyor!</red>"
+  login-timeout: "<red>Giriş yapma süresi aşıldı!</red>"
+  premium-autologin: "<green>Orijinal (premium) hesap tespit edildi! Otomatik giriş yapıldı.</green>"
+  bedrock-autologin: "<green>Bedrock hesabı tespit edildi! Giriş yapıldı.</green>"
+  session-resume: "<green>Oyun oturumunuz devam ettirildi.</green>"
+  please-2fa: "<yellow>Lütfen Authenticator uygulamanızdaki 2FA kodunu doğrulayın: <gold>/2fa verify <kod></gold></yellow>"
+  twofactor-timeout: "<red>2FA doğrulama süresi aşıldı!</red>"
+  disconnect-message: "<red>Sunucu bağlantısı kesildi.</red>"
+  disallowed-username: "<red>Kullanıcı adınız izin verilmeyen karakterler veya yasaklı desenler içeriyor.</red>"
+  already-online: "<red>Bu kullanıcı adına sahip bir oyuncu zaten bu sunucuda oynuyor!</red>"
+  password-changed-admin: "<yellow>Şifreniz bir yönetici tarafından değiştirildi.</yellow>"
+
+captcha:
+  gui-title: "Hedef eşyaya tıklayın: <green>{target}</green>"
+  prompt: "<yellow>Devam etmek için doğrulamayı tamamlayın! Kod: <gold>{code}</gold> (Yazın: <gold>/captcha <code></gold>)</yellow>"
+  failed: "<red>Hatalı doğrulama! Lütfen tekrar deneyin.</red>"
+  success: "<green>Doğrulama başarılı! Artık giriş yapabilirsiniz.</green>"
+
+validation:
+  password-too-short: "<red>Şifre en az {min} karakter uzunluğunda olmalıdır!</red>"
+  password-too-long: "<red>Şifre {max} karakterden uzun olamaz!</red>"
+  password-unsafe: "<red>Bu şifre çok yaygın veya güvensiz! Lütfen daha güçlü bir şifre seçin.</red>"
+  password-require-number: "<red>Şifre en az bir rakam içermelidir!</red>"
+  password-require-uppercase: "<red>Şifre en az bir büyük harf içermelidir!</red>"
+  password-require-lowercase: "<red>Şifre en az bir küçük harf içermelidir!</red>"
+  password-contains-username: "<red>Şifre kullanıcı adınızı içeremez!</red>"
+  max-accounts-exceeded: "<red>IP adresiniz için izin verilen maksimum hesap sınırına ulaştınız ({max})!</red>"
+
+bruteforce:
+  account-locked: "<red>Çok fazla başarısız deneme nedeniyle hesabınız kilitlendi! {minutes} dakika sonra tekrar deneyin.</red>"
+  ip-locked: "<red>Çok fazla başarısız deneme nedeniyle IP adresiniz engellendi! {minutes} dakika sonra tekrar deneyin.</red>"
+  admin-alert: "{prefix}<gold>UYARI: {player} adlı oyuncu ({ip}) {attempts} kez hatalı giriş denemesi yaptı!</gold>"
+
+admin:
+  reload: "<green>Yapılandırmalar başarıyla yeniden yüklendi!</green>"
+  player-not-found: "<red>{player} adlı oyuncu bulunamadı.</red>"
+  force-login-success: "<green>{player} adlı oyuncunun girişi başarıyla zorlandı.</green>"
+  force-logout-success: "<green>{player} adlı oyuncunun çıkışı başarıyla zorlandı.</green>"
+  unregister-success: "<green>{player} adlı oyuncunun kaydı başarıyla silindi.</green>"
+  change-password-success: "<green>{player} adlı oyuncunun şifresi başarıyla değiştirildi.</green>"
+  set-premium-success: "<green>{player} adlı oyuncunun hesap modu PREMIUM olarak ayarlandı.</green>"
+  set-cracked-success: "<green>{player} adlı oyuncunun hesap modu CRACKED olarak ayarlandı.</green>"
+  info-title: "<yellow>---</yellow> {prefix}<yellow>Hesap Bilgisi: <gold>{player}</gold> ---</yellow>"
+  info-uuid-offline: "<yellow>Offline UUID: <gold>{uuid}</gold></yellow>"
+  info-uuid-premium: "<yellow>Premium UUID: <gold>{uuid}</gold></yellow>"
+  info-premium-status: "<yellow>Premium mu: <gold>{status}</gold></yellow>"
+  info-last-ip: "<yellow>Son IP: <gold>{ip}</gold></yellow>"
+  info-last-login: "<yellow>Son Giriş: <gold>{time}</gold></yellow>"
+  info-first-join: "<yellow>İlk Katılım: <gold>{time}</gold></yellow>"
+
+general:
+  no-permission: "<red>Bu komutu çalıştırma yetkiniz yok!</red>"
+  only-players: "<red>Bu komut sadece oyuncular tarafından kullanılabilir!</red>"
+  invalid-syntax: "<red>Geçersiz komut kullanımı! Doğrusu: {usage}</red>"
+  database-error: "<red>Bir veritabanı hatası oluştu. Lütfen daha sonra tekrar deneyin.</red>"
+
+email:
+  no-email: "<red>Kayıtlı bir kurtarma e-postanız bulunmuyor!</red>"
+  current-email: "<yellow>Kurtarma e-postanız: <gold>{email}</gold></yellow>"
+  invalid-email: "<red>Geçersiz e-posta formatı!</red>"
+  pending-add: "<yellow>Yeni e-postanızı (<gold>{email}</gold>) doğrulamak için: <gold>/email confirm <kod></gold></yellow>"
+  pending-add-fallback: "<yellow>Yeni e-postanızı (<gold>{email}</gold>) doğrulamak için: <gold>/email confirm</gold></yellow>"
+  pending-change: "<yellow>E-posta değişikliğini (<gold>{email}</gold>) onaylamak için: <gold>/email confirm <kod></gold></yellow>"
+  pending-change-fallback: "<yellow>E-posta değişikliğini onaylamak için: <gold>/email confirm</gold></yellow>"
+  pending-remove: "<yellow>Kurtarma e-postasını kaldırmayı onaylamak için: <gold>/email confirm <kod></gold></yellow>"
+  pending-remove-fallback: "<yellow>Kurtarma e-postasını kaldırmayı onaylamak için: <gold>/email confirm</gold></yellow>"
+  no-pending: "<red>Bekleyen bir e-posta güncellemeniz yok!</red>"
+  invalid-code: "<red>Doğrulama kodu hatalı! Lütfen tekrar deneyin.</red>"
+  success-linked: "<green>Kurtarma e-postası <gold>{email}</gold> hesabınıza başarıyla bağlandı!</green>"
+  success-removed: "<green>Kurtarma e-postası hesabınızdan kaldırıldı!</green>"
+  smtp-error: "<red>E-posta gönderilemedi! Yerel onaylama moduna geçildi.</red>"
+
+twofactor:
+  already-enabled: "<red>İki faktörlü doğrulama (2FA) hesabınızda zaten aktif!</red>"
+  not-enabled: "<red>İki faktörlü doğrulama (2FA) hesabınızda aktif değil!</red>"
+  setup-intro: "<yellow>Google Authenticator (2FA) Kurulumu:</yellow>"
+  setup-key: "<yellow>Gizli anahtarınız: <gold>{key}</gold></yellow>"
+  setup-qr: "<yellow>URI bağlantısını kopyalamak için tıklayın: <gold><click:copy_to_clipboard:'{url}'>[URI'yi Kopyala]</click></gold></yellow>"
+  setup-confirm: "<yellow>Kodu tarayın ve onaylamak için şunu yazın: <gold>/2fa confirm <kod></gold></yellow>"
+  no-pending: "<red>2FA kurulumunu başlatmadınız! Önce /2fa setup yazın.</red>"
+  incorrect-code: "<red>Güvenlik kodu hatalı! Lütfen tekrar deneyin.</red>"
+  success-enabled: "<green>İki faktörlü doğrulama başarıyla aktifleştirildi!</green>"
+  success-disabled: "<green>İki faktörlü doğrulama başarıyla devre dışı bırakıldı!</green>"
+  success-verified: "<green>2FA kodu doğrulandı! Giriş onaylandı.</green>"
+  admin-disabled: "<green>{player} adlı oyuncunun 2FA koruması devre dışı bırakıldı.</green>"

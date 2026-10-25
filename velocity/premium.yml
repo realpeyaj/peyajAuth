@@ -37,3 +37,13 @@ cracked-players:
   # the server has to query Mojang's API to fetch the skin properties.
   # (For better performance, you can set this to false and use an external plugin like SkinsRestorer instead).
   fetch-premium-skins: false
+
+# UUID & Player Data Consistency Settings
+# Handles UUID consistency between cracked (offline) and premium (online) accounts.
+# When 'force-offline-uuid' is true, premium players still authenticate securely via Mojang encryption
+# and receive their official Mojang skin, but keep their consistent offline UUID when forwarded to backend servers.
+# This ensures 100% data consistency (inventories, stats, advancements, economy balances, permissions)
+# when players transition between cracked and premium launchers, without any data loss or reset.
+data-migration:
+  force-offline-uuid: false
+

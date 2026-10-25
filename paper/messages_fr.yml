@@ -1,0 +1,102 @@
+# Configuration de localisation pour peyajAuth (Français)
+# Format MiniMessage avec support des couleurs HEX et dégradés.
+
+prefix: "<gradient:gold:yellow>[peyajAuth]</gradient> "
+
+auth:
+  not-logged-in: "<red>Vous devez vous authentifier pour jouer sur ce serveur !</red>"
+  please-register: "<yellow>Veuillez vous inscrire avec : <gold>/register <motDePasse> <confirmerMotDePasse></gold></yellow>"
+  please-login: "<yellow>Veuillez vous connecter avec : <gold>/login <motDePasse></gold></yellow>"
+  already-authenticated: "<red>Vous êtes déjà authentifié !</red>"
+  already-registered: "<red>Ce compte est déjà enregistré ! Veuillez vous connecter.</red>"
+  success-register: "<green>Vous vous êtes inscrit et connecté avec succès !</green>"
+  success-login: "<green>Vous êtes connecté avec succès !</green>"
+  success-logout: "<green>Vous vous êtes déconnecté. Ré-authentifiez-vous pour jouer.</green>"
+  success-change-password: "<green>Votre mot de passe a été modifié avec succès !</green>"
+  not-registered: "<red>Votre compte n'est pas encore enregistré !</red>"
+  incorrect-password: "<red>Mot de passe incorrect ! Veuillez réessayer.</red>"
+  password-mismatch: "<red>Les mots de passe ne correspondent pas !</red>"
+  login-timeout: "<red>Délai d'attente d'authentification dépassé !</red>"
+  premium-autologin: "<green>Compte premium détecté ! Vous avez été connecté automatiquement.</green>"
+  bedrock-autologin: "<green>Compte Bedrock détecté ! Vous avez été connecté.</green>"
+  session-resume: "<green>Votre session de jeu a été reprise.</green>"
+  please-2fa: "<yellow>Veuillez vérifier votre code 2FA depuis votre application Authenticator : <gold>/2fa verify <code></gold></yellow>"
+  twofactor-timeout: "<red>Délai de vérification 2FA dépassé !</red>"
+  disconnect-message: "<red>Déconnecté du serveur.</red>"
+  disallowed-username: "<red>Votre nom d'utilisateur contient des caractères non autorisés ou des motifs interdits.</red>"
+  already-online: "<red>Un joueur avec ce nom d'utilisateur joue déjà sur ce serveur !</red>"
+  password-changed-admin: "<yellow>Votre mot de passe a été modifié par un administrateur.</yellow>"
+
+captcha:
+  gui-title: "Cliquez sur l'objet : <green>{target}</green>"
+  prompt: "<yellow>Résolvez le captcha pour continuer ! Code : <gold>{code}</gold> (Tapez : <gold>/captcha <code></gold>)</yellow>"
+  failed: "<red>Captcha incorrect ! Veuillez réessayer.</red>"
+  success: "<green>Captcha résolu avec succès ! Vous pouvez maintenant vous authentifier.</green>"
+
+validation:
+  password-too-short: "<red>Le mot de passe doit contenir au moins {min} caractères !</red>"
+  password-too-long: "<red>Le mot de passe ne peut pas dépasser {max} caractères !</red>"
+  password-unsafe: "<red>Ce mot de passe est trop commun ou non sécurisé ! Choisissez un mot de passe plus fort.</red>"
+  password-require-number: "<red>Le mot de passe doit contenir au moins un chiffre !</red>"
+  password-require-uppercase: "<red>Le mot de passe doit contenir au moins une lettre majuscule !</red>"
+  password-require-lowercase: "<red>Le mot de passe doit contenir au moins une lettre minuscule !</red>"
+  password-contains-username: "<red>Le mot de passe ne peut pas contenir votre nom d'utilisateur !</red>"
+  max-accounts-exceeded: "<red>Vous avez atteint le nombre maximal de comptes autorisés pour votre adresse IP ({max}) !</red>"
+
+bruteforce:
+  account-locked: "<red>Votre compte a été verrouillé suite à trop d'échecs ! Réessayez dans {minutes} minutes.</red>"
+  ip-locked: "<red>Votre adresse IP a été bloquée suite à trop d'échecs ! Réessayez dans {minutes} minutes.</red>"
+  admin-alert: "{prefix}<gold>ALERTE : Le joueur {player} (IP: {ip}) a échoué {attempts} tentatives de connexion !</gold>"
+
+admin:
+  reload: "<green>Configurations rechargées avec succès !</green>"
+  player-not-found: "<red>Le joueur {player} est introuvable.</red>"
+  force-login-success: "<green>Connexion forcée avec succès pour le joueur {player}.</green>"
+  force-logout-success: "<green>Déconnexion forcée avec succès pour le joueur {player}.</green>"
+  unregister-success: "<green>Le joueur {player} a été désinscrit avec succès.</green>"
+  change-password-success: "<green>Mot de passe modifié avec succès pour le joueur {player}.</green>"
+  set-premium-success: "<green>Le mode d'authentification de {player} a été défini sur PREMIUM.</green>"
+  set-cracked-success: "<green>Le mode d'authentification de {player} a été défini sur CRACKED.</green>"
+  info-title: "<yellow>---</yellow> {prefix}<yellow>Informations du compte : <gold>{player}</gold> ---</yellow>"
+  info-uuid-offline: "<yellow>UUID Hors-ligne : <gold>{uuid}</gold></yellow>"
+  info-uuid-premium: "<yellow>UUID Premium : <gold>{uuid}</gold></yellow>"
+  info-premium-status: "<yellow>Est Premium : <gold>{status}</gold></yellow>"
+  info-last-ip: "<yellow>Dernière IP : <gold>{ip}</gold></yellow>"
+  info-last-login: "<yellow>Dernière connexion : <gold>{time}</gold></yellow>"
+  info-first-join: "<yellow>Première connexion : <gold>{time}</gold></yellow>"
+
+general:
+  no-permission: "<red>Vous n'avez pas la permission d'exécuter cette commande !</red>"
+  only-players: "<red>Cette commande ne peut être exécutée que par des joueurs !</red>"
+  invalid-syntax: "<red>Syntaxe invalide ! Utilisation : {usage}</red>"
+  database-error: "<red>Une erreur de base de données est survenue. Veuillez réessayer plus tard.</red>"
+
+email:
+  no-email: "<red>Vous n'avez pas défini d'e-mail de récupération !</red>"
+  current-email: "<yellow>Votre e-mail de récupération est : <gold>{email}</gold></yellow>"
+  invalid-email: "<red>Format d'e-mail invalide !</red>"
+  pending-add: "<yellow>Confirmez votre nouvel e-mail (<gold>{email}</gold>) en tapant : <gold>/email confirm <code></gold></yellow>"
+  pending-add-fallback: "<yellow>Confirmez votre nouvel e-mail (<gold>{email}</gold>) en tapant : <gold>/email confirm</gold></yellow>"
+  pending-change: "<yellow>Confirmez le changement d'e-mail vers <gold>{email}</gold> en tapant : <gold>/email confirm <code></gold></yellow>"
+  pending-change-fallback: "<yellow>Confirmez le changement d'e-mail vers <gold>{email}</gold> en tapant : <gold>/email confirm</gold></yellow>"
+  pending-remove: "<yellow>Confirmez la suppression de votre e-mail en tapant : <gold>/email confirm <code></gold></yellow>"
+  pending-remove-fallback: "<yellow>Confirmez la suppression de votre e-mail en tapant : <gold>/email confirm</gold></yellow>"
+  no-pending: "<red>Vous n'avez aucune mise à jour d'e-mail en attente !</red>"
+  invalid-code: "<red>Code de vérification incorrect ! Veuillez réessayer.</red>"
+  success-linked: "<green>L'e-mail de récupération <gold>{email}</gold> a été lié avec succès !</green>"
+  success-removed: "<green>L'e-mail de récupération a été supprimé avec succès !</green>"
+  smtp-error: "<red>Échec de l'envoi de l'e-mail ! Utilisation de la confirmation locale.</red>"
+
+twofactor:
+  already-enabled: "<red>L'authentification à deux facteurs est déjà activée sur votre compte !</red>"
+  not-enabled: "<red>L'authentification à deux facteurs n'est pas activée sur votre compte !</red>"
+  setup-intro: "<yellow>Configuration de Google Authenticator (2FA) :</yellow>"
+  setup-key: "<yellow>Votre clé secrète : <gold>{key}</gold></yellow>"
+  setup-qr: "<yellow>Cliquez pour copier le lien URI : <gold><click:copy_to_clipboard:'{url}'>[Copier l'URI]</click></gold></yellow>"
+  setup-confirm: "<yellow>Scannez le code et confirmez en tapant : <gold>/2fa confirm <code></gold></yellow>"
+  no-pending: "<red>Vous n'avez pas initié la configuration 2FA ! Tapez /2fa setup d'abord.</red>"
+  incorrect-code: "<red>Code de sécurité incorrect ! Veuillez réessayer.</red>"
+  success-enabled: "<green>L'authentification à deux facteurs a été activée avec succès !</green>"
+  success-disabled: "<green>L'authentification à deux facteurs a été désactivée avec succès !</green>"
+  success-verified: "<green>Code 2FA vérifié ! Accès autorisé.</green>"
+  admin-disabled: "<green>Le 2FA a été désactivé pour le joueur {player}.</green>"

@@ -1,4 +1,9 @@
-# peyajAuth Velocity Configuration File
+# General settings
+general:
+  # Language locale for messages:
+  # 'auto' - Automatically detects player client language
+  # 'en' - English, 'es' - Spanish, 'ru' - Russian, 'uk' - Ukrainian, 'zh' - Chinese, 'pt' - Portuguese, 'id' - Indonesian, 'fr' - French, 'de' - German, 'tr' - Turkish
+  language: "auto"
 
 # Timeout in seconds to complete authentication before being kicked
 login-timeout: 60
@@ -12,6 +17,8 @@ session:
   enabled: true
   # Session expiration duration for IP-lock auto-login (e.g. 30m, 1h)
   timeout: "30m"
+  # If true, allows session resumption from the same subnet (/24 for IPv4, /64 for IPv6)
+  subnet-check: false
 
 # Remember Login settings (IP-based auto-login duration)
 remember-login:
@@ -22,6 +29,14 @@ remember-login:
 password:
   minimum-length: 8
   maximum-length: 64
+  # If true, requires at least one digit in the password
+  require-number: false
+  # If true, requires at least one uppercase letter
+  require-uppercase: false
+  # If true, requires at least one lowercase letter
+  require-lowercase: false
+  # If true, prevents players from registering passwords matching or containing their username
+  disallow-username: true
   # Blacklisted weak passwords that players cannot use for registration
   unsafe-passwords:
     - "123456"
@@ -32,8 +47,31 @@ password:
     - "123456789"
     - "help"
 
+# Brute-force protection settings
+brute-force:
+  max-attempts: 5
+
 # Security & Restriction configurations
 security:
+  # Regex pattern of allowed characters in the player name.
+  # Leave empty ("") to allow default Minecraft and Bedrock username patterns.
+  # Both 'allowed-username-regex' and 'allowedNicknameCharacters' are supported.
+  # Example to block bot names like lobbyLink: "^(?!.*(?i)lobbylink)[a-zA-Z0-9_]*$"
+  allowed-username-regex: ""
+
+  # Optional regex pattern of explicitly banned usernames or bot keywords.
+  # If a connecting username matches this regex, they are immediately disconnected.
+  # Example: "(?i).*(lobbylink|discord\\.gg|mc-server).*"
+  banned-username-regex: ""
+
+  # Prevent duplicate logins while a player with the same username is already connected.
+  # This stops bot attacks from kicking legitimate players with "You logged in from another location".
+  prevent-duplicate-login: true
+
+  # If true, allows a reconnecting player with the exact same IP address to rejoin and kick
+  # their previous stale session (e.g. after a client crash or timeout).
+  allow-same-ip-reconnect: true
+
   # Unrestricted player/bot/NPC names that bypass authentication checks (wildcards supported)
   # Example:
   # unrestricted-names:
@@ -96,3 +134,13 @@ webhook:
     password-change: true
     two-factor: true
     admin-actions: true
+
+# Automated SQLite database backup settings
+# (Backups are compressed in GZIP format to save disk space)
+database-backups:
+  enabled: true
+  # Interval in hours between backups (default: 24 hours)
+  interval-hours: 24
+  # Maximum number of backup files to keep (oldest are deleted automatically)
+  retention-limit: 7
+

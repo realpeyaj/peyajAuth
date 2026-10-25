@@ -23,6 +23,8 @@ auth:
   2fa-required-proxy: "<yellow>Esta cuenta usa 2FA. Usa: <gold>/login <contraseña> <código></gold></yellow>"
   too-many-attempts: "<red>Demasiados intentos fallidos de inicio de sesión.</red>"
   access-denied-ip: "<red>Acceso denegado: No estás autorizado a iniciar sesión desde esta IP.</red>"
+  disallowed-username: "<red>Tu nombre de usuario contiene caracteres no permitidos o patrones prohibidos.</red>"
+  already-online: "<red>¡Un jugador con este nombre de usuario ya está jugando en este servidor!</red>"
   premium-prompt-title: "{prefix}"
   premium-prompt-subtitle: "<yellow>¿Eres premium? Elige <green>SÍ</green> o <red>NO</red> en el chat</yellow>"
   premium-prompt-question: "¿Tienes una cuenta <gold><b>premium</b></gold> (Mojang/Microsoft)?"
@@ -46,6 +48,7 @@ auth:
   register-failed-username: "<red>Error en el registro. El nombre de usuario ya está registrado.</red>"
   has-account-use-login: "<red>Ya tienes una cuenta. Por favor usa /login <contraseña>.</red>"
   premium-no-logout: "<red>Los jugadores premium no pueden cerrar sesión.</red>"
+  password-changed-admin: "<yellow>Tu contraseña ha sido cambiada por un administrador.</yellow>"
 
 captcha:
   gui-title: "Haz clic en el objeto: <green>{target}</green>"
@@ -73,6 +76,7 @@ admin:
   force-login-success: "<green>Se forzó el inicio de sesión del jugador {player}.</green>"
   force-logout-success: "<green>Se forzó el cierre de sesión del jugador {player}.</green>"
   unregister-success: "<green>Se eliminó el registro del jugador {player}.</green>"
+  change-password-success: "<green>¡Contraseña cambiada exitosamente para el jugador {player}!</green>"
   set-premium-success: "<green>Se estableció el modo de autenticación de {player} a PREMIUM.</green>"
   set-cracked-success: "<green>Se estableció el modo de autenticación de {player} a CRACKED.</green>"
   info-title: "<yellow>---</yellow> {prefix}<yellow>Información de cuenta: <gold>{player}</gold> ---</yellow>"

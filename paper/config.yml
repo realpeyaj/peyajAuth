@@ -20,7 +20,7 @@ restrictions:
   # and restores their original game mode (Survival, Creative, Adventure) upon successful login.
   spectator-on-join: false
 
-# Language configuration: 'auto' (detects client language: 'en', 'es', 'ru', 'uk', 'zh', 'pt', 'id'), or specific code
+# Language configuration: 'auto' (detects client language: 'en', 'es', 'ru', 'uk', 'zh', 'pt', 'id', 'fr', 'de', 'tr'), or specific code
 language: "auto"
 
 # Data-driven Graphical Dialog UI screen for Minecraft 1.21.6+ clients (Paper 26.2+)
@@ -80,6 +80,8 @@ password:
   require-uppercase: true
   require-lowercase: true
   require-symbol: false
+  # If true, prevents players from registering passwords matching or containing their username
+  disallow-username: true
   # Blacklisted weak passwords that players cannot use for registration
   unsafe-passwords:
     - "123456"
@@ -105,6 +107,9 @@ session:
   enabled: true
   # Supported suffixes: m (minutes), h (hours), d (days)
   timeout: 5m
+  # If true, allows session resumption from the same subnet (/24 for IPv4, /64 for IPv6)
+  # Useful for players with dynamic IPs or mobile data connections whose last IP octet rotates.
+  subnet-check: false
 
 # Remember login settings (IP and token based)
 remember-login:
@@ -144,12 +149,32 @@ verbose: false
 
 # Hashing security configurations
 security:
+  # Regex pattern of allowed characters in the player name.
+  # Leave empty ("") to allow default Minecraft and Bedrock username patterns.
+  # Both 'allowed-username-regex' and 'allowedNicknameCharacters' are supported.
+  # Example to block bot names like lobbyLink: "^(?!.*(?i)lobbylink)[a-zA-Z0-9_]*$"
+  allowed-username-regex: ""
+
+  # Optional regex pattern of explicitly banned usernames or bot keywords.
+  # If a connecting username matches this regex, they are immediately disconnected.
+  # Example: "(?i).*(lobbylink|discord\\.gg|mc-server).*"
+  banned-username-regex: ""
+
+  # Prevent duplicate logins while a player with the same username is already connected.
+  # This stops bot attacks from kicking legitimate players with "You logged in from another location".
+  prevent-duplicate-login: true
+
+  # If true, allows a reconnecting player with the exact same IP address to rejoin and kick
+  # their previous stale session (e.g. after a client crash or timeout).
+  allow-same-ip-reconnect: true
+
   # Unrestricted player/bot/NPC names that bypass authentication checks (wildcards supported)
   # Example:
   # unrestricted-names:
   #   - "BuildCraft"
   #   - "[Citizens]*"
   #   - "ServerBot_*"
+  # unrestricted-names: []
   unrestricted-names: []
 
   # Account IP lock: Binds specific account names to allowed IP addresses or subnets.

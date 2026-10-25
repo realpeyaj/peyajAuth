@@ -23,6 +23,9 @@ auth:
   please-2fa: "<yellow>Por favor verifica tu código 2FA de tu aplicación Authenticator: <gold>/2fa verify <código></gold></yellow>"
   twofactor-timeout: "<red>¡Tiempo de verificación 2FA agotado!</red>"
   disconnect-message: "<red>Desconectado del servidor.</red>"
+  disallowed-username: "<red>Tu nombre de usuario contiene caracteres no permitidos o patrones prohibidos.</red>"
+  already-online: "<red>¡Un jugador con este nombre de usuario ya está jugando en este servidor!</red>"
+  password-changed-admin: "<yellow>Tu contraseña ha sido cambiada por un administrador.</yellow>"
 
 captcha:
   gui-title: "Haz clic en el objeto: <green>{target}</green>"
@@ -50,6 +53,7 @@ admin:
   force-login-success: "<green>Se forzó el inicio de sesión del jugador {player}.</green>"
   force-logout-success: "<green>Se forzó el cierre de sesión del jugador {player}.</green>"
   unregister-success: "<green>Se eliminó el registro del jugador {player}.</green>"
+  change-password-success: "<green>¡Contraseña cambiada exitosamente para el jugador {player}!</green>"
   set-premium-success: "<green>Se estableció el modo de autenticación de {player} a PREMIUM.</green>"
   set-cracked-success: "<green>Se estableció el modo de autenticación de {player} a CRACKED.</green>"
   info-title: "<yellow>---</yellow> {prefix}<yellow>Información de cuenta: <gold>{player}</gold> ---</yellow>"

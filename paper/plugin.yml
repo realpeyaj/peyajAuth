@@ -1,11 +1,11 @@
 name: peyajAuth
-version: '1.7.1'
+version: '1.7.3'
 main: me.peyaj.peyajauth.PeyajAuth
 api-version: '1.21'
 folia-supported: true
 author: Peyaj
 description: A high-performance, secure hybrid authentication plugin.
-softdepend: [PlaceholderAPI, floodgate]
+softdepend: [PlaceholderAPI, floodgate, Geyser-Spigot]
 
 commands:
   register:
@@ -72,6 +72,7 @@ permissions:
       peyajauth.unregister: true
       peyajauth.info: true
       peyajauth.migrate: true
+      peyajauth.changepassword.admin: true
   peyajauth.reload:
     description: Allows reloading the configuration files.
     default: op
@@ -80,6 +81,9 @@ permissions:
     default: op
   peyajauth.unregister:
     description: Allows unregistering player accounts.
+    default: op
+  peyajauth.changepassword.admin:
+    description: Allows admins to directly reset another player's password.
     default: op
   peyajauth.info:
     description: Allows viewing account information.

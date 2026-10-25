@@ -23,6 +23,8 @@ auth:
   2fa-required-proxy: "<yellow>此账号已启用双重认证 (2FA)。请使用：<gold>/login <密码> <动态验证码></gold></yellow>"
   too-many-attempts: "<red>登录失败次数过多，已被断开连接。</red>"
   access-denied-ip: "<red>访问受限：您当前 IP 不被允许登录该账号。</red>"
+  disallowed-username: "<red>您的用户名包含不允许的字符或违禁词。</red>"
+  already-online: "<red>已有使用此用户名的玩家正在此服务器中游玩！</red>"
   premium-prompt-title: "{prefix}"
   premium-prompt-subtitle: "<yellow>您是正版账号吗？请在聊天框中选择 <green>YES</green> 或 <red>NO</red></yellow>"
   premium-prompt-question: "您是否拥有 <gold><b>正版</b></gold> (Mojang/Microsoft) 账号？"
@@ -46,6 +48,7 @@ auth:
   register-failed-username: "<red>注册失败，该用户名已被注册。</red>"
   has-account-use-login: "<red>您已有账号，请使用 /login <密码> 进行登录。</red>"
   premium-no-logout: "<red>正版玩家无法登出。</red>"
+  password-changed-admin: "<yellow>您的密码已被管理员修改。</yellow>"
 
 captcha:
   gui-title: "请点击目标物品：<green>{target}</green>"
@@ -73,6 +76,7 @@ admin:
   force-login-success: "<green>已强制玩家 {player} 登录。</green>"
   force-logout-success: "<green>已强制玩家 {player} 登出。</green>"
   unregister-success: "<green>已成功注销玩家 {player} 的账号。</green>"
+  change-password-success: "<green>已成功修改玩家 {player} 的密码。</green>"
   set-premium-success: "<green>已将 {player} 的认证模式设置为正版 (PREMIUM)。</green>"
   set-cracked-success: "<green>已将 {player} 的认证模式设置为离线 (CRACKED)。</green>"
   info-title: "<yellow>---</yellow> {prefix}<yellow>玩家账号信息：<gold>{player}</gold> ---</yellow>"
